@@ -1,9 +1,15 @@
+body {
+    font-family: inherit;
+    font-size: 100%;
+}
+
 #subjectList {
     width: fit-content;
     padding: 10px;
     margin: left;
-    border-top: 5px solid #69c773;
-    box-shadow: 0 2px 10px rgba(0,0,0,.8)
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 0 2px 10px rgba(0,0,0,.01)
 }
   
 input {
@@ -11,5 +17,5 @@ input {
     padding: .5em;
     font-size: 15px;
     border-radius: 3px;
-    border: 1px solid #d9d9d9
+    border: 1px solid #d9d9d9;
 }

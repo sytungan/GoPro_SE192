@@ -19,3 +19,18 @@ input {
     border-radius: 3px;
     border: 1px solid #d9d9d9;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 2px solid black;
+    width: auto;
+    padding: 10px;
+}
+
+th {
+    text-align: left;
+}

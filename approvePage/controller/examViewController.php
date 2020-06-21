@@ -1,5 +1,5 @@
 <?php
-include '/model/pendingExamDB.php';
+include "{$_SERVER['DOCUMENT_ROOT']}/approvePage/model/pendingExamDB.php";
 include 'exam.php';
 class examViewController {
     private $db;
@@ -10,7 +10,9 @@ class examViewController {
     }
     public function getInfoOfExam() {
         $result = $this->db->getExamByID($this->id);
-        return new exam($result['id'], $result['name'], $result['subject'], $result['author'], $result['question']);
+        foreach ($result as $p) {
+            return $p['question'];
+        }
     }
     public function approveExam() {
         $this->db->moveToTestExamByID($this->id);
@@ -18,6 +20,5 @@ class examViewController {
     public function dropExam() {
         $this->db->removeExamByID($this->id);
     }
-
 }
 ?>

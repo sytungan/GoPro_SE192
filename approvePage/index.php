@@ -9,6 +9,10 @@
 <body>
 <?php
     include 'view/listExamForm.php';
+    $ctrl="listExamController";
+    if(isset($_GET['ctrller']))
+            $ctrl=$_GET['ctrller'];
+    include 'controller/'.$ctrl.'.php'; 
 ?>
 </body>
 </html>

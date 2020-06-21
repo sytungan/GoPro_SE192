@@ -1,5 +1,8 @@
 <?php
 class examViewForm {
+    function __construct() {
+        
+    }
     public function onOpen() {
         
     }

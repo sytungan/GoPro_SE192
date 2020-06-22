@@ -1,3 +1,9 @@
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+</style>
+<body>
 <?php
 include "../controller/examViewController.php";
 class examViewForm {
@@ -13,12 +19,16 @@ class examViewForm {
             echo  "<h1>".$exam['question']."</h1>
                 <h4>".$exam['content']."</h4>
                 <input type='radio' name=answer/>".$exam['answerA'].
-                "<input type='radio' name=answer/>".$exam['answerB'].
-                "<input type='radio' name=answer/>".$exam['answerC'].
-                "<input type='radio' name=answer/>".$exam['answerD'].
-                "<input type='radio' name=answer/>".$exam['answerE'].
-                "<br>"
-                .$exam['key'];
+                "<br>
+                <input type='radio' name=answer/>".$exam['answerB'].
+                "<br>
+                <input type='radio' name=answer/>".$exam['answerC'].
+                "<br>
+                <input type='radio' name=answer/>".$exam['answerD'].
+                "<br>
+                <input type='radio' name=answer/>".$exam['answerE'].
+                "<br>
+                <h5>Đáp án:" .$exam['key']. "</h5>";
             echo "</form>";
         }
 
@@ -56,3 +66,5 @@ if(array_key_exists('drop',$_POST)) {
     onclick="alert('Drop đề thi thành công!')" value="Drop" />
     <br/>
 </form>
+</body>
+</html>

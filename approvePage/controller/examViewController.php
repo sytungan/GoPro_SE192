@@ -1,5 +1,5 @@
 <?php
-include "{$_SERVER['DOCUMENT_ROOT']}/approvePage/model/pendingExamDB.php";
+include "../model/pendingExamDB.php";
 include 'exam.php';
 class examViewController {
     private $db;

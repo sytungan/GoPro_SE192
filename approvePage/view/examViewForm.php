@@ -1,5 +1,5 @@
 <?php
-include "{$_SERVER['DOCUMENT_ROOT']}/approvePage/controller/examViewController.php";
+include "../controller/examViewController.php";
 class examViewForm {
     private $ctrl;
     public function __construct() {

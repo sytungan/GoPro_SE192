@@ -1,6 +1,3 @@
-<html>
-<body>
-
 <?php
 
     $question = $_POST['question'];
@@ -30,19 +27,6 @@
 
     class Question
     {
-        //constructor
-        public function __construct(string $_question, string $_content, string $_answerA, string $_answerB, string $_answerC, string $_answerD, string $_answerE, string $_key)
-        {
-            $this->question = $_question;
-            $this->content  = $_content;
-            $this->answerA  = $_answerA;
-            $this->answerB  = $_answerB;
-            $this->answerC  = $_answerC;
-            $this->answerD  = $_answerD;
-            $this->answerE  = $_answerE;
-            $this->key      = $_key;
-        }
-
 
         private $question;
         private $content;
@@ -50,11 +34,24 @@
         private $answerB;
         private $answerC;
         private $answerD;
-        private $answerE;
         private $key;
+
+        //constructor
+        public function __construct(string $_question, string $_content, string $_answerA, string $_answerB, string $_answerC, string $_answerD, string $_key)
+        {
+            $this->question = $_question;
+            $this->content  = $_content;
+            $this->answerA  = $_answerA;
+            $this->answerB  = $_answerB;
+            $this->answerC  = $_answerC;
+            $this->answerD  = $_answerD;
+            $this->key      = $_key;
+        }
+
+
+        //print to test
+        public function __print(){
+            echo "";
+        }
     }
-
 ?>
-
-</body>
-</html>

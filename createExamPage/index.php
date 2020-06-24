@@ -7,7 +7,8 @@
     <title>Document</title>
     <style>
         <?php
-        include 'css/style.css'
+        include 'css/style.css';
+        include 'controller.php';
         ?>
     </style>
 
@@ -18,7 +19,7 @@
 <body>
     <?php $idx = 0 ?>
 
-    <form action="controller.php" method="POST">
+    <form action="" method="POST">
         <label id="questionLabel" for=Question>Câu hỏi </label>
         <label id="questionOrder" for=Question> <?php echo $idx + 1 ?> : </label><br>
         <textarea id="question" name="question"></textarea><br><br>
@@ -35,16 +36,12 @@
         <label for=ansC>Câu D:</label><br>
         <input type="text" id="ansD" name="ansD"><br><br>
 
-        <label for=ansD>Câu E:</label><br>
-        <input type="text" id="ansE" name="ansE"><br><br>
-
         <label for=key>Đáp án:</label><br>
         <select name="key" id="key">
             <option value="A">A</option>
             <option value="B">B</option>
             <option value="C">C</option>
             <option value="D">D</option>
-            <option value="E">E</option>
         </select> 
         <br><br>
 
@@ -53,22 +50,27 @@
 
 
 
-    <?php
-    $question = $_POST['question'];
-    $ansA     = $_POST['ansA'];
-    $ansB     = $_POST['ansB'];
-    $ansC     = $_POST['ansC'];
-    $ansD     = $_POST['ansD'];
-    $ansE     = $_POST['ansE'];
-    $key      = $_POST['key'];
+    <?php   
+        $question = $_POST['question'];
+        $ansA     = $_POST['ansA'];
+        $ansB     = $_POST['ansB'];
+        $ansC     = $_POST['ansC'];
+        $ansD     = $_POST['ansD'];
+        $key      = $_POST['key'];
+    
+        echo $question;
+        echo $ansA;
+        echo $ansB;
+        echo $ansC;
+        echo $ansD;
+        echo $key;
 
-    echo $question;
-    echo $ansA;
-    echo $ansB;
-    echo $ansC;
-    echo $ansD;
-    echo $ansE;
-    echo $key;
+        $exam = array();
+        if ($idx < 50){
+            $exam[$idx - 1] = new Question("Câu" + $idx, $content, $ansA, $ansB, $ansC, $ansD, $key);
+            $idx++;
+        }
+        
     ?>
 </body>
 

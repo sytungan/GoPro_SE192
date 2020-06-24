@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>GoProToUniversity</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <a id="logo" href="index.html"><img src="image/logo.png" alt="logo" /></a>
+        <div id="webName">
+            <h2>GOPRO TO UNIVERSITY</h2>
+        </div>
+    </div>
+    <div id="searchAndLogin">
+        <div id="login">
+            <a class="login" href="signin.php">Đăng nhập</a> &ensp;
+            <a class="login" href="signup.php">Đăng kí</a>
+        </div>
+        <form>
+            <input class="search" type="text" name="search" placeholder="Tìm kiếm">
+        </form>
+    </div>
+
+    <div id="menu">
+        <ul id="main_menu">
+            <li class="active"> <a href="index.html">Trang chủ</a> </li>
+            <li> <a href="weeklyTest.php">Đề thi tuần</a></li>
+            <li> <a href="testExams.html">Thi thử</a></li class="active">
+            <li> <a href="schedule.php">Thời khóa biểu</a></li>
+            <li> <a href="document.php">Tài liệu</a></li>
+            <li> <a href="news.php">Tin tức</a></li>
+            <li> <a href="topic.php">Diễn đàn</a></li>
+        </ul>
+
+    </div>
+
+    <div id="clockdiv">
+        <h3>Đếm ngược đến kỳ thi THPTQG</h3>
+        <div>
+            <span class="days"></span>
+            <div class="smalltext">Days</div>
+        </div>
+        <div>
+            <span class="hours"></span>
+            <div class="smalltext">Hours</div>
+        </div>
+        <div>
+            <span class="minutes"></span>
+            <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+            <span class="seconds"></span>
+            <div class="smalltext">Seconds</div>
+        </div>
+    </div>
+    <div id="newsAndBxh">
+        <div id="news_img">
+            <h4>TIN NỔI BẬT</h4>
+            <img src="image/news.png" alt="news" />
+        </div>
+        <div id="news">
+            <h4>TIN TỨC KHÁC</h4>
+        </div>
+        <div id="bxh">
+            <h4>BẢNG XẾP HẠNG</h4> <br />
+            <div id="_bxh">
+                <h6>Tuần 45 (22/6-29/6/2020)</h6>
+                <div class="rank">
+                    <img src="image/rank1.png" alt="rank1"/>
+                    <p>&ensp; Có làm mới có ăn </p> <br />
+                </div>
+                <div class="rank">
+                    <img src="image/rank2.png" alt="rank1" />
+                    <p>&ensp; Thăm ngàn</p><br />
+                </div>
+                <div class="rank">
+                    <img src="image/rank3.png" alt="rank1" />
+                    <p>&ensp; NewBitcoin 3,14 </p><br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <script src="./javaScript/countdownClock.js">
+        var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+        initializeClock('clockdiv', deadline);
+    </script>
+
+
+</body>
+<footer>
+    <div id="contact_logo">
+        <ul>
+            <li><a href="https://www.facebook.com/khai.hoquang.773"><img src="image/FB-logo.png" alt="FB logo" /></a></li>
+            <li><a href="#"><img src="image/TW-logo.png" alt="Twitter logo"></a></li>
+            <li><a href="#"><img src="image/Ins-logo.jpg" alt="Instagram logo"></a></li>
+        </ul>
+    </div>
+    <div id="footerContent">
+        <div id="members">
+            <h3>MEMBERS</h3><br />
+            <p>
+                Hồ Quang Khải <br />
+                Sỳ Tùng An <br />
+                Nguyễn Huỳnh Hữu Khiêm <br />
+                Nguyễn Đình Khánh <br />
+                Vũ Nguyễn Minh Đạt
+            </p>
+        </div>
+        <div id="contact">
+            <h3>CONTACT INFORMATION</h3><br />
+            <p>
+                <i class="fa fa-phone"></i>&ensp;0326 264 643  <br><br>
+                <i class="fa fa-envelope"></i>&ensp;gopro@gmail.com <br><br>
+                <i class="fa fa-map-marker"></i>&ensp; KTX khu A, ĐHQG tp HCM, khu phố 6, <br /> phường Linh Trung, Thủ Đức, tp HCM
+            </p>
+        </div>
+        <div id="cpyright">
+            <span>&#169;&ensp; Bản quyền thuộc về GoPro Team</span>
+
+        </div>
+    </div>
+
+
+</footer>

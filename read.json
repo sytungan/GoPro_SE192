@@ -1,0 +1,25 @@
+
+{
+    "exam": [
+        {
+            "question":"Câu 1",
+            "content": "How many EX ?",
+            "answerA": "Want",
+            "answerB": "True",
+            "answerC": "Tree",
+            "answerD": "For",
+            "answerE": "Fine",
+            "key": "A"
+        }, 
+        {
+            "question":"Câu 2",
+            "content": "How many NYC ?",
+            "answerA": "Want",
+            "answerB": "True",
+            "answerC": "Tree",
+            "answerD": "For",
+            "answerE": "Fine",
+            "key": "B"
+        }
+    ]
+}

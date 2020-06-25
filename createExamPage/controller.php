@@ -5,16 +5,14 @@
     $ansB     = $_POST['ansB'];
     $ansC     = $_POST['ansC'];
     $ansD     = $_POST['ansD'];
-    $ansE     = $_POST['ansE'];
-    //$key      = $_POST['key'];
+    $key      = $_POST['key'];
 
     echo $question;
     echo $ansA;
     echo $ansB;
     echo $ansC;
     echo $ansD;
-    echo $ansE;
-    //echo $key;
+    echo $key;
 
 
     class CreateExamController
@@ -51,7 +49,13 @@
 
         //print to test
         public function __print(){
-            echo "";
+            echo $this->question."<br>";
+            echo "Nội dung: ".$this->content."<br>" ;
+            echo "Đáp án: <br>";
+            echo "A: ".$this->answerA."<br>";
+            echo "B: ".$this->answerB."<br>";
+            echo "C: ".$this->answerC."<br>";
+            echo "D: ".$this->answerD."<br>";
         }
     }
 ?>

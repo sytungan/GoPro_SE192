@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create Exam</title>
     <style>
         <?php
         include 'css/style.css';
@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <?php $idx = 0 ?>
+    <?php $idx ; ?>
 
     <form action="" method="POST">
         <label id="questionLabel" for=Question>Câu hỏi </label>
@@ -36,7 +36,8 @@
         <label for=ansC>Câu D:</label><br>
         <input type="text" id="ansD" name="ansD"><br><br>
 
-        <label for=key>Đáp án:</label><br>
+        <label>Đáp án:</label><br>
+
         <select name="key" id="key">
             <option value="A">A</option>
             <option value="B">B</option>
@@ -58,19 +59,10 @@
         $ansD     = $_POST['ansD'];
         $key      = $_POST['key'];
     
-        echo $question;
-        echo $ansA;
-        echo $ansB;
-        echo $ansC;
-        echo $ansD;
-        echo $key;
-
-        $exam = array();
-        if ($idx < 50){
-            $exam[$idx - 1] = new Question("Câu" + $idx, $content, $ansA, $ansB, $ansC, $ansD, $key);
-            $idx++;
-        }
-        
+        $exam[0] = new Question("Câu ".$idx, $question, $ansA, $ansB, $ansC, $ansD, $key);
+        $exam[0]->__print();      
+        echo $idx;
+        $idx++; 
     ?>
 </body>
 

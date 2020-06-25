@@ -17,11 +17,10 @@
 </head>
 
 <body>
-    <?php $idx ; ?>
 
     <form action="" method="POST">
-        <label id="questionLabel" for=Question>Câu hỏi </label>
-        <label id="questionOrder" for=Question> <?php echo $idx + 1 ?> : </label><br>
+        <label id="questionLabel" for=Question>Câu hỏi</label>
+        <label id="questionOrder" for=Question> <?php global $idx; echo $idx++; ?> </label><br>
         <textarea id="question" name="question"></textarea><br><br>
 
         <label for=ansE>Câu A:</label><br>
@@ -60,10 +59,9 @@
         $key      = $_POST['key'];
     
         $exam[0] = new Question("Câu ".$idx, $question, $ansA, $ansB, $ansC, $ansD, $key);
-        $exam[0]->__print();      
-        echo $idx;
-        $idx++; 
+        $exam[0]->__print();
     ?>
+
 </body>
 
 </html>

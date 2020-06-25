@@ -1,19 +1,5 @@
 <?php
 
-    $question = $_POST['question'];
-    $ansA     = $_POST['ansA'];
-    $ansB     = $_POST['ansB'];
-    $ansC     = $_POST['ansC'];
-    $ansD     = $_POST['ansD'];
-    $key      = $_POST['key'];
-
-    echo $question;
-    echo $ansA;
-    echo $ansB;
-    echo $ansC;
-    echo $ansD;
-    echo $key;
-
 
     class CreateExamController
     {
@@ -43,7 +29,7 @@
             $this->answerB  = $_answerB;
             $this->answerC  = $_answerC;
             $this->answerD  = $_answerD;
-            $this->key      = $_key;
+            $this->key = $_key;
         }
 
 
@@ -56,6 +42,8 @@
             echo "B: ".$this->answerB."<br>";
             echo "C: ".$this->answerC."<br>";
             echo "D: ".$this->answerD."<br>";
+            echo "Key: ".$this->key."<br>";
+            $GLOBALS++;
         }
     }
 ?>

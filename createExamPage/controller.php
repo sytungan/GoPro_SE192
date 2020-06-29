@@ -7,7 +7,7 @@
 
 
     
-    $array[0]->__setQuestionInfo("1", "test", "test", "test", "test", "test", "test");
+    //$array[0]->__setQuestionInfo("1", "test", "test", "test", "test", "test", "test");
     //writeJson("test.json", $array);
 
 ?>  

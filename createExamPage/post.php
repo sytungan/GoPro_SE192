@@ -1,7 +1,8 @@
 <?php
     include 'controller.php';
 
-    $content = $_POST["question"];
+    $question= $_POST["question"];
+    $content = $_POST["content"];
     $ansA    = $_POST["ansA"];
     $ansB    = $_POST["ansB"];
     $ansC    = $_POST["ansC"];
@@ -9,7 +10,7 @@
     $key     = $_POST["key"];
 
 
-    $array[0]->__setQuestionInfo("1", $content, $ansA, $ansB, $ansC, $ansD, $key);
+    $idx = intval($question) - 1;
+    $array[$idx]->__setQuestionInfo($question, $content, $ansA, $ansB, $ansC, $ansD, $key);
     writeJson("test.json", $array);
-
 ?>

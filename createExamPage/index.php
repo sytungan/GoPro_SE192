@@ -50,11 +50,6 @@
     </form>
 </body>
 <?php
-    
-    $array[0]->__setQuestionInfo("1", "test", "test", "test", "test", "test", "test");
-    $array[3]->__setQuestionInfo("3", "test", "test", "test", "test", "test", "test");
 
-
-    writeJson("test.json", $array);
 ?>
 </html>

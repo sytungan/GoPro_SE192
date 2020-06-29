@@ -20,10 +20,23 @@ function previous() {
 $(function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
+        var question = $("#questionOrder").text();
+        var content = $('textarea#question').val();
+        var ansA = $("#ansA").val();
+        var ansB = $("#ansB").val();
+        var ansC = $("#ansC").val();
+        var ansD = $("#ansD").val();
+        var key = $("select#key").val();
+
+
+
+
+        var dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key;
+        console.log(dataString);
         $.ajax({
             type: 'post',
             url: 'post.php',
-            data: $('form').serialize(),
+            data: dataString,
             success: function() {
                 alert('form was submitted');
             }

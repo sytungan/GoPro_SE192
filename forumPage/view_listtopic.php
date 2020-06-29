@@ -33,18 +33,19 @@ else
             echo '<td class="rightpart">';
             echo $data_user['user_name'];
             echo '</td>';
-            if ($_SESSION['user_level']) {
-                echo '<td class="afterpart">';
-                echo '<form action="" method="post">';
-                echo '<input type="Submit" name="delete' . $data_topic['topic_id'] . '" value="Xóa">';
-                echo '</form>';
-                if(array_key_exists('delete' . $data_topic['topic_id'],$_POST)) 
-                {   
-                     $delete= $connect->deleteTopic($data_topic['topic_id']);
-                     echo '<script> location.reload() </script>';
+            if (isset($_SESSION['user_level'])) {
+                if ($_SESSION['user_level']) {
+                    echo '<td class="afterpart">';
+                    echo '<form action="" method="post">';
+                    echo '<input type="Submit" name="delete' . $data_topic['topic_id'] . '" value="Xóa">';
+                    echo '</form>';
+                    if(array_key_exists('delete' . $data_topic['topic_id'],$_POST)) 
+                    {   
+                            $delete= $connect->deleteTopic($data_topic['topic_id']);
+                            echo '<script> location.reload() </script>';
+                    }
+                    
                 }
-                
-
             }
         echo '</tr>';
     }

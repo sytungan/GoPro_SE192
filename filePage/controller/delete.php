@@ -1,6 +1,7 @@
 <?php
-	include "config.php";
-	$connect = new config();
+	// include "../config.php";
+	// $connect = new config();
+
 	//   $username = 'root'; // Khai báo username
     //   $password = '';      // Khai báo password
     //   $server   = 'localhost';   // Khai báo server
@@ -18,12 +19,18 @@
 	
 	//echo $_GET['url'];
 	
-	$sql = "DELETE FROM file WHERE url = '".$_GET['url']."'";
-	$connect->traverseFunc($sql);
-	//$result = $connect->query($sql);
-	//}
-	//Đóng database
-	//$connect->close();
-	$message = "Xóa thành công";
-	echo "<script type='text/javascript'>alert('$message'); close(); </script>";
+	include 'controller.php';
+	$ctrl = new File();
+	
+	$url = $_GET['url'];
+    $result = $ctrl->deleteFIle($url);
+
+	// $sql = "DELETE FROM file WHERE url = '".$_GET['url']."'";
+	// $connect->traverseFunc($sql);
+	// //$result = $connect->query($sql);
+	// //}
+	// //Đóng database
+	// //$connect->close();
+	// $message = "Xóa thành công";
+	// echo "<script type='text/javascript'>alert('$message'); close(); </script>";
 ?>

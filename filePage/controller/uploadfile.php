@@ -36,16 +36,21 @@ if (isset($_POST['up']) && isset($_FILES['fileUpload'])) {
 	$url = '../uploads/' . $_FILES['fileUpload']['name'];
 	$date = "" . date("d/m/Y");
     echo $date;
-    
-    include "config.php";
-    $connect = new config();
+
+    include 'controller.php';
+	$ctrl = new File();
 	
-	 $sql = "INSERT INTO file (file,url,date)
-      VALUES ('$file','$url','$date')";
+    $result = $ctrl->uploadFIle($file,$url,$date);
+    
+    // include "../config.php";
+    // $connect = new config();
+	
+	//  $sql = "INSERT INTO file (file,url,date)
+    //   VALUES ('$file','$url','$date')";
 	  
-      if ($connect->traverseFunc($sql) === TRUE) {
-        echo ("Thêm dữ liệu thành công");
-    } // else {
+    //   if ($connect->traverseFunc($sql) === TRUE) {
+    //     echo ("Thêm dữ liệu thành công");
+    // } // else {
     //     echo "Error: " . $sql . "<br>" . $connect->error;
     // }
 }

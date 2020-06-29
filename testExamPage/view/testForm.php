@@ -1,4 +1,5 @@
-﻿<?php
+﻿<link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
+<?php
 include "../controller/testController.php";
 class testForm {
     public $ctrl;
@@ -11,20 +12,21 @@ class testForm {
         $jsonData = $this->ctrl->getInfoOfExam();
         $json = json_decode($jsonData, true);
         $this->listKey=array(0);
-        echo "<form  action='' method='post'>";
+        echo "<form id=form  action='' method='post'>";
 
             foreach($json['exam'] as $exam) {
-                echo  "<h1>".$exam['question']."</h1>
+                echo "<div class='question'";
+                echo  "<h3>Câu".$exam['question']."</h3>
                 <h4>".$exam['content']."</h4>
                 <input type='radio' value ='A' name = '".$exam['question']."'>".$exam['answerA'].
-                "<input type='radio' value ='B' name = '".$exam['question']."'>".$exam['answerB'].
-                "<input type='radio' value ='C' name = '".$exam['question']."'>".$exam['answerC'].
-                "<input type='radio' value ='D' name = '".$exam['question']."'>".$exam['answerD'].
+                "<br><input type='radio' value ='B' name = '".$exam['question']."'>".$exam['answerB'].
+                "<br><input type='radio' value ='C' name = '".$exam['question']."'>".$exam['answerC'].
+                "<br><input type='radio' value ='D' name = '".$exam['question']."'>".$exam['answerD'].
                 $this->listKey[] = $exam['key'];
+                echo "</div>";
             }
         echo "<br>";
-        echo "<input type='submit' name='submit' value='Nộp bài'/>";
-               
+        echo "<input id='submitBtn' type='submit' name='submit' value='Nộp bài'/>";      
         echo "</form>";     
 
     }

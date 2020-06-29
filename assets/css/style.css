@@ -395,3 +395,28 @@ table, td, th {
 th {
     text-align: left;
 }
+
+
+#form {
+    line-height: 2;
+    width: 60%;
+    margin: 20px auto;
+
+}
+.question {
+    border: 2px solid black;
+
+}
+#submitBtn {
+    text-align: center;
+    color: #fff;
+    background-color: #2ea44f;
+    border-color: rgba(27,31,35,.15);
+    box-shadow: 0 1px 0 rgba(27,31,35,.1), inset 0 1px 0 hsla(0,0%,100%,.03);
+    font-weight: 500;
+    line-height: 50px;
+    width: 100px;
+    vertical-align: middle;
+    border: 1px solid;
+    border-radius: 6px;
+}

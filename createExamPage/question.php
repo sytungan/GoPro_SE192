@@ -21,7 +21,7 @@
         file_put_contents("test.json", $jsondata);
         $jsonData = file_get_contents("test.json");
         $json = json_decode($jsonData, true);
-        for ($i = 2; $i <= 50; $i++) {
+        for ($i = 2; $i <= 40; $i++) {
             $temp = array(
                 "question" => "$i",
                 "content" => "",
@@ -85,7 +85,7 @@
 
         $jsonData = file_get_contents($fileName);
         $json = json_decode($jsonData, true);
-        for ($i = 1; $i <= 49; $i++) {
+        for ($i = 1; $i <= 39; $i++) {
             $temp = array(
                 "question" => $array[$i]->__getQuestion(),
                 "content" => $array[$i]->___getContent(),

@@ -21,7 +21,7 @@
         file_put_contents("test.json", $jsondata);
         $jsonData = file_get_contents("test.json");
         $json = json_decode($jsonData, true);
-        for ($i = 2; $i <= 50; $i++) {
+        for ($i = 2; $i <= 40; $i++) {
             $temp = array(
                 "question" => "$i",
                 "content" => "",
@@ -63,7 +63,10 @@
 
     //TODO: write exam to JSON file after modify
     function writeJson(string $fileName, &$array){
+
         $question = $array[0];
+        $array[0]->__print();
+        
         $named_array = array(
             "exam" => array(
               array(
@@ -82,7 +85,7 @@
 
         $jsonData = file_get_contents($fileName);
         $json = json_decode($jsonData, true);
-        for ($i = 1; $i <= 49; $i++) {
+        for ($i = 1; $i <= 39; $i++) {
             $temp = array(
                 "question" => $array[$i]->__getQuestion(),
                 "content" => $array[$i]->___getContent(),
@@ -94,7 +97,7 @@
             );
             array_push($json['exam'], $temp);
         }
-        $jsondata = json_encode($named_array);
+        $jsondata = json_encode($json);
         file_put_contents($fileName, $jsondata);
     }
 

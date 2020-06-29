@@ -2,8 +2,6 @@
     include 'question.php';
     initJson();
 
-    $array; //this array hold the data of the question
+    $array;
     readJson("test.json", $array);
-
-
 ?>  

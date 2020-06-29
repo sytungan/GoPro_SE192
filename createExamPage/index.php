@@ -49,7 +49,4 @@
         <input name="submit" type="submit" value="Submit"/> <br> <br>
     </form>
 </body>
-<?php
-
-?>
 </html>

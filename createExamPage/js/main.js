@@ -1,11 +1,13 @@
 function next() {
     var quantity_temp = document.getElementById("questionOrder").innerText;
     var quantity_int = parseInt(quantity_temp, 10) + 1;
-    document.getElementById("questionOrder").innerHTML = quantity_int.toString();
-
+    if (quantity_int > 50) document.getElementById("questionOrder").innerHTML = "50";
+    else document.getElementById("questionOrder").innerHTML = quantity_int.toString();
     document.getElementById('question').value = ""
     document.getElementById('ansA').value = "";
     document.getElementById('ansB').value = "";
+    document.getElementById('ansC').value = "";
+    document.getElementById('ansD').value = "";
     document.getElementById('key').value = ""
 
 }
@@ -13,7 +15,15 @@ function next() {
 function previous() {
     var quantity_temp = document.getElementById("questionOrder").innerText;
     var quantity_int = parseInt(quantity_temp, 10) - 1;
-    document.getElementById("questionOrder").innerHTML = quantity_int.toString();
+    if (quantity_int < 1) document.getElementById("questionOrder").innerHTML = "1";
+    else document.getElementById("questionOrder").innerHTML = quantity_int.toString();
+
+    document.getElementById('question').value = ""
+    document.getElementById('ansA').value = "";
+    document.getElementById('ansB').value = "";
+    document.getElementById('ansC').value = "";
+    document.getElementById('ansD').value = "";
+    document.getElementById('key').value = ""
 }
 
 

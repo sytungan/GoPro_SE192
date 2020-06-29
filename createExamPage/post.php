@@ -1,5 +1,8 @@
 <?php
-    include 'controller.php';
+    include 'question.php';
+
+    $array;
+    readJson("test.json", $array);
 
     $question= $_POST["question"];
     $content = $_POST["content"];

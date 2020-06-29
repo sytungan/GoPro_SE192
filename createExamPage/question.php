@@ -63,7 +63,10 @@
 
     //TODO: write exam to JSON file after modify
     function writeJson(string $fileName, &$array){
+
         $question = $array[0];
+        $array[0]->__print();
+        
         $named_array = array(
             "exam" => array(
               array(

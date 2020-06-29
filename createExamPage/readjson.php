@@ -1,20 +1,23 @@
 <?php
-    $output;
-    function readJson(string $fileName, $output){
+    function readJson(string $fileName, &$array){
         $jsonData = file_get_contents($fileName);
         $json = json_decode($jsonData, true);
-        $output .= "<ul>";
+        $idx = 0;
+        $questionList = array();
+
         foreach ($json['exam'] as $exam) {
-            $output .=  "<h2>" . $exam['question'] . "</h2>";
-            $output .=  "<h4>" . $exam['content'] . "</h4>";
-            $output .=  "<li>" . $exam['answerA'] . "</li>";
-            $output .=  "<li>" . $exam['answerB'] . "</li>";
-            $output .=  "<li>" . $exam['answerC'] . "</li>";
-            $output .=  "<li>" . $exam['answerD'] . "</li>";
-            $output .=  "<li>" . $exam['answerE'] . "</li>";
-            $output .=  "<li>" . $exam['key'] . "</li>";
+            $question = $exam['question'];
+            $content  = $exam['content'];
+            $ansA     = $exam['answerA'];
+            $ansB     = $exam['answerB'];
+            $ansC     = $exam['answerC'];
+            $ansD     = $exam['answerD'];
+            $key      = $exam['key'];
+            $questionList[$idx] = new Question($question, $content, $ansA, $ansB, $ansC, $ansD, $key);
+            $idx++;
         }
-        $output .= "</ul";
-        echo $output;
-    }
+
+        $array = $questionList;
+        //$array[0]->__print();
+    }    
 ?>

@@ -9,14 +9,12 @@
     <style>
         <?php
         include 'css/style.css';
-        include 'js/main.js';
         include 'controller.php';
         include 'readjson.php'
         ?>
     </style>
 
     <script type="text/javascript" src="js/main.js"></script>
-
 </head>
 
 <body>
@@ -48,25 +46,16 @@
     <br><br>
 
 
-    <button id="Next" class="item_button" type="Button" onclick="next()">Next</button>
+    <button id="Previous" class="item_button" type="Button" onclick="previous()">Previous</button>
+    <button id="Next" class="item_button" type="Button" onclick="next()">Next</button><br> <br>
 
-    <button id="Previous" class="item_button" type="Button" onclick="previous()">Previous</button><br> <br>
-    
 
-    <input type="submit" value="Submit" /> 
+    <input type="submit" value="Submit" /> <br> <br>
+
     <?php
-    $temp;
-    //readJson("read.json", $temp);
-
-    $question = $_POST['question'];
-    $ansA     = $_POST['ansA'];
-    $ansB     = $_POST['ansB'];
-    $ansC     = $_POST['ansC'];
-    $ansD     = $_POST['ansD'];
-    $key      = $_POST['key'];
-
-    $exam[0] = new Question("Câu " . $idx, $question, $ansA, $ansB, $ansC, $ansD, $key);
-    $exam[0]->__print();
+        $array;
+        readJson("read.json", $array);
+        $array[1]->__print();
     ?>
 
 </body>

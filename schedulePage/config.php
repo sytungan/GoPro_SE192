@@ -1,7 +1,7 @@
 <?php
 class config {
     private $host = "localhost";
-    private $dbname = "goproSEDB";
+    private $dbname = "tkb";
     private $username = "root";
     private $password = "";
     private $conn;
@@ -21,4 +21,4 @@ class config {
         return $result;
     }
 }
-?>
+?>  

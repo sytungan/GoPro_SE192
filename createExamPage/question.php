@@ -94,7 +94,7 @@
             );
             array_push($json['exam'], $temp);
         }
-        $jsondata = json_encode($named_array);
+        $jsondata = json_encode($json);
         file_put_contents($fileName, $jsondata);
     }
 

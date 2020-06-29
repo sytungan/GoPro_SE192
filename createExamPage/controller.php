@@ -19,14 +19,8 @@
         $array = $questionList;
     }
 
-    
-
-    class CreateExamController
-    {
-        //constructor
-        public function __construct()
-        {
-        }
+    function checkQuestion(&$array, int $idx){
+        
     }
 
     class Question
@@ -52,7 +46,41 @@
             $this->key = $_key;
         }
 
+        public function __getQuestion(){
+            return $this->question;
+        }
 
+        public function ___getContent(){
+            return $this->content;
+        }
+
+        public function __getAnsA(){
+            return $this->answerA;
+        }
+
+        public function __getAnsB(){
+            return $this->answerB;
+        }
+
+        public function __getAnsC(){
+            return $this->answerC;
+        }
+
+        public function __getAnsD(){
+            return $this->answerD;
+        }
+
+        public function __setQuestionInfo(string $_question, string $_content, string $_answerA, string $_answerB, string $_answerC, string $_answerD, string $_key)
+        {
+            $this->question = $_question;
+            $this->content  = $_content;
+            $this->answerA  = $_answerA;
+            $this->answerB  = $_answerB;
+            $this->answerC  = $_answerC;
+            $this->answerD  = $_answerD;
+            $this->key = $_key;
+        }
+        
         //print to test
         public function __print(){
             echo $this->question."<br>";
@@ -63,7 +91,6 @@
             echo "C: ".$this->answerC."<br>";
             echo "D: ".$this->answerD."<br>";
             echo "Key: ".$this->key."<br>";
-            $GLOBALS++;
         }
     }
 ?>

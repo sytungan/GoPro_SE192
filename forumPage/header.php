@@ -20,11 +20,11 @@
 <?php
     if(isset($_SESSION['signed_in']))
     {
-        echo 'Hello ' . $_SESSION['user_name'] . '. Not you? <a href="signout.php">Sign out</a>';
+        echo 'Hello ' . $_SESSION['user_name'] . '. Not you? <a href="../forumPage/signout.php">Sign out</a>';
     }
     else
     {
-        echo '<a href="signin.php">Sign in</a> or <a href="register.php">create an account</a>.';
+        echo '<a href="signin.php">Sign in</a> or <a href="../forumPage/signup.php">create an account</a>.';
     }
 ?>
     </div>

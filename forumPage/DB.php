@@ -58,9 +58,22 @@ class Database {
         }
         return $this->conn->traverse("SELECT `topic_id`, `topic_subject`, `topic_date`, `topic_cat`, `topic_by`, `topic_content` FROM `topicdb` WHERE topic_cat='$topic_cat' ");
     }
+    public function getTopicByID($topic_id) {
+         $result=$this->conn->traverse("SELECT `topic_id`, `topic_subject`, `topic_date`, `topic_cat`, `topic_by`, `topic_content` FROM `topicdb` WHERE topic_id='$topic_id' ");
+         foreach ($result as $p) {
+             return $p;
+         }
+    }
     public function deleteTopic($topic_id) {
         $this->conn->traverseFunc("DELETE FROM `topicdb` WHERE topic_id='$topic_id' ");
         return 1;
+    }
+    public function insertReply($reply_content,$reply_topic,$reply_by) {
+        $this->conn->traverseFunc("INSERT INTO `replydb`(`reply_content`, `reply_date`, `reply_topic`, `reply_by`) VALUES ('$reply_content',NOW(),'$reply_topic','$reply_by') ");
+        return 1;
+    }
+    public function getReply($reply_topic) {
+        return $this->conn->traverse("SELECT `reply_id`, `reply_content`, `reply_date`, `reply_topic`, `reply_by` FROM `replydb` WHERE reply_topic='$reply_topic' ");
     }
 }
 ?>

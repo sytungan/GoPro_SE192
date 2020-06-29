@@ -25,7 +25,7 @@ else
         $data_user= $connect->getUserByID($data_topic['topic_by']);
         echo '<tr>';
             echo '<td class="leftpart">';
-                echo '<h3><a href="topic.php?id=' . $data_topic['topic_id'] . '">' . $data_topic['topic_subject'] . '</a><h3>';
+                echo '<h3><a href="../forumPage/view_topic.php?id=' . $data_topic['topic_id'] . '">' . $data_topic['topic_subject'] . '</a><h3>';
             echo '</td>';
             echo '<td class="middlepart">';
                 echo date('d-m-Y', strtotime($data_topic['topic_date']));

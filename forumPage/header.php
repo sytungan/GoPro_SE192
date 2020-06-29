@@ -13,18 +13,18 @@
 <h1>My forum</h1>
     <div id="wrapper">
     <div id="menu">
-        <a class="item" href="/forum/view_cat.php">Forum</a> -
-        <a class="item" href="/forum/create_topic.php">Create a topic</a> -
+        <a class="item" href="../forumPage/view_cat.php">Forum</a> -
+        <a class="item" href="../forumPage/create_topic.php">Create a topic</a> -
     <div id="userbar">
     <div id="userbar">
 <?php
     if(isset($_SESSION['signed_in']))
     {
-        echo 'Hello ' . $_SESSION['user_name'] . '. Not you? <a href="signout.php">Sign out</a>';
+        echo 'Hello ' . $_SESSION['user_name'] . '. Not you? <a href="../forumPage/signout.php">Sign out</a>';
     }
     else
     {
-        echo '<a href="signin.php">Sign in</a> or <a href="register.php">create an account</a>.';
+        echo '<a href="signin.php">Sign in</a> or <a href="../forumPage/signup.php">create an account</a>.';
     }
 ?>
     </div>

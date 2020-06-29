@@ -1,6 +1,6 @@
 {
     "exam": [{
-            "question": "Câu 1",
+            "question": "1",
             "content": "How many EX ?",
             "answerA": "Want",
             "answerB": "True",
@@ -9,7 +9,7 @@
             "key": "A"
         },
         {
-            "question": "Câu 2",
+            "question": "2",
             "content": "How many NYC ?",
             "answerA": "Want",
             "answerB": "True",

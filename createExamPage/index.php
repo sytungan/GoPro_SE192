@@ -10,7 +10,6 @@
         <?php
         include 'css/style.css';
         include 'controller.php';
-        include 'readjson.php'
         ?>
     </style>
 
@@ -53,9 +52,52 @@
     <input type="submit" value="Submit" /> <br> <br>
 
     <?php
+
+
+        $named_array = array(
+            "exam" => array(
+                array(
+                    "question" => "1",
+                    "content" => "",
+                    "answerA" => "",
+                    "answerB" => "",
+                    "answerC" => "",
+                    "answerD" => "",
+                    "key" => ""
+                )
+            )
+        );
+        $jsondata = json_encode($named_array);
+        file_put_contents("test.json", $jsondata);
+
+
+
+        $jsonData = file_get_contents("test.json");
+        $json = json_decode($jsonData, true);
+        echo "test";
+
+        for ($i = 2; $i <= 50 ; $i++){
+            $temp = array(
+                "question" => "$i",
+                "content" => "",
+                "answerA" => "",
+                "answerB" => "",
+                "answerC" => "",
+                "answerD" => "",
+                "key" => ""
+            );
+            array_push($json['exam'], $temp);
+        }
+        $jsonData = json_encode($json);
+        file_put_contents('test.json', $jsonData);   
+
         $array;
-        readJson("read.json", $array);
-        $array[1]->__print();
+        readJson("test.json", $array);
+        //$array[1]->__print();
+
+
+
+
     ?>
 
 </body>

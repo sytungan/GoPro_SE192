@@ -16,8 +16,6 @@
             $questionList[$idx] = new Question($question, $content, $ansA, $ansB, $ansC, $ansD, $key);
             $idx++;
         }
-
         $array = $questionList;
-        //$array[0]->__print();
     }    
 ?>

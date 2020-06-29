@@ -22,7 +22,8 @@ class testForm {
                 "<input type='radio' value ='D' name = '".$exam['question']."'>".$exam['answerD'].
                 $this->listKey[] = $exam['key'];
             }
-        echo "<input type='submit' name='submit'/>";
+        echo "<br>";
+        echo "<input type='submit' name='submit' value='Nộp bài'/>";
                
         echo "</form>";     
 
@@ -32,9 +33,8 @@ class testForm {
 $viewExam = new testForm();
 $viewExam->onOpen();
 if (isset($_POST['submit'])) {
-
-    $result = $viewExam->ctrl->markingExam($_GET['subject'], $viewExam->listKey, $_POST);
-    echo $result;
+    include "resultForm.php";
+    
 }
 ?>
                 

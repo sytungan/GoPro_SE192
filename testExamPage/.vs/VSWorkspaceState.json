@@ -3,11 +3,10 @@
     "",
     "\\controller",
     "\\css",
-    "\\image",
     "\\javaScript",
     "\\model",
     "\\view"
   ],
-  "SelectedNode": "\\css\\style.css",
+  "SelectedNode": "\\javaScript\\fontawesome.js",
   "PreviewInSolutionExplorer": false
 }

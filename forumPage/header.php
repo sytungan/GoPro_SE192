@@ -13,8 +13,8 @@
 <h1>My forum</h1>
     <div id="wrapper">
     <div id="menu">
-        <a class="item" href="/forum/view_cat.php">Forum</a> -
-        <a class="item" href="/forum/create_topic.php">Create a topic</a> -
+        <a class="item" href="view_cat.php">Forum</a> -
+        <a class="item" href="create_topic.php">Create a topic</a> -
     <div id="userbar">
     <div id="userbar">
 <?php

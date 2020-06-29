@@ -24,9 +24,7 @@ class examViewForm {
                 "<br>
                 <input type='radio' name=answer/>".$exam['answerC'].
                 "<br>
-                <input type='radio' name=answer/>".$exam['answerD'].
-                "<br>
-                <h5>Đáp án: ". $exam['key']. "</h5>";
+                <input type='radio' name=answer/>".$exam['answerD'];
             echo "</form>";
         }
 

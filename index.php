@@ -16,7 +16,7 @@
     <div id="searchAndLogin">
         <div id="login">
             <a class="login" href="signin.php">Đăng nhập</a> &ensp;
-            <a class="login" href="signup.php">Đăng kí</a>
+            <a class="login" href="register.php">Đăng kí</a>
         </div>
         <form>
             <input class="search" type="text" name="search" placeholder="Tìm kiếm">
@@ -28,10 +28,11 @@
             <li class="active"> <a href="index.php">Trang chủ</a> </li>
             <li> <a href="weeklyTest.php">Đề thi tuần</a></li>
             <li> <a href="testExamPage/testExam.php">Thi thử</a></li class="active">
-            <li> <a href="schedule.php">Thời khóa biểu</a></li>
-            <li> <a href="document.php">Tài liệu</a></li>
-            <li> <a href="news.php">Tin tức</a></li>
-            <li> <a href="topic.php">Diễn đàn</a></li>
+            <li> <a href="schedulePage/view/viewTkb.php">Thời khóa biểu</a></li>
+            <li> <a href="filePage/view/manageFile.php">Tài liệu</a></li>
+            <li> <a href="approvePage/">Duyệt đề thi</a></li>
+            <li> <a href="searchPage/">Tìm kiếm đề thi</a></li>
+            <li> <a href="forumPage/header.php">Diễn đàn</a></li>
         </ul>
 
     </div>

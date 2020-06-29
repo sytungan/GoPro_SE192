@@ -1,5 +1,5 @@
 <?php
-include "../config.php";
+include "../../config.php";
 class pendingExamDB {
     protected $conn;
     public function __construct() {

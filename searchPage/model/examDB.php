@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/searchPage"."/config.php";
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/config.php";
 class examDB {
     protected $conn;
     public function __construct() {

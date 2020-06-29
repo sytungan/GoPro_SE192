@@ -15,7 +15,7 @@
         // foreach ($result as $row)
         // {
         ?> 
-        <form action="../controller/tkbController.php" method="post">
+        <form action="../controller/tkbController.php" method="post" target="_blank">
         <table class="content-table">
             <thead>
            <tr>
@@ -77,8 +77,8 @@
         <?php //} ?> 
         </tbody>
         </table>
-		<button type="submit" class="btn">LƯU TKB</button>
-		<a href="viewtkb.php" class="btn">XEM TKB</a>
+		<button type="submit" class="btn" target="_blank">LƯU TKB</button>
+		<a href="viewtkb.php" class="btn" target="_blank">XEM TKB</a>
       </form>
     </body>
     <footer>

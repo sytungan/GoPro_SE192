@@ -25,9 +25,9 @@ else
         else
         {         
                 echo '<form method="post" action="">
-                    Subject: <input type="text" name="topic_subject" />
+                    Chủ đề: <input type="text" name="topic_subject" />
                     <br>
-                    Category: <br>'; 
+                    Môn học: <br>'; 
                  
                 echo '<select name="topic_cat">';
                     foreach($result as $data)
@@ -36,7 +36,7 @@ else
                     }
                 echo '</select> <br>'; 
                      
-                echo 'Message: <br> <textarea name="topic_content" /></textarea> <br>
+                echo 'Nội dung: <br> <textarea name="topic_content" /></textarea> <br>
                     <input type="submit" value="Create topic" />
                  </form>';
         }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <title>Create Exam</title>
     <style>
         <?php
@@ -12,8 +13,8 @@
         include 'controller.php';
         ?>
     </style>
-
     <script type="text/javascript" src="js/main.js"></script>
+
 </head>
 
 <body>
@@ -45,47 +46,11 @@
         <br><br>
         <button id="Previous" class="item_button" type="Button" onclick="previous()">Previous</button>
         <button id="Next" class="item_button" type="Button" onclick="next()">Next</button><br> <br>
-        <input type="submit" value="Submit" /> <br> <br>
+        <input name="submit" type="submit" value="Submit"/> <br> <br>
     </form>
-    <?php
-    $named_array = array(
-        "exam" => array(
-            array(
-                "question" => "1",
-                "content" => "",
-                "answerA" => "",
-                "answerB" => "",
-                "answerC" => "",
-                "answerD" => "",
-                "key" => ""
-            )
-        )
-    );
-    $jsondata = json_encode($named_array);
-    file_put_contents("test.json", $jsondata);
-
-    $jsonData = file_get_contents("test.json");
-    $json = json_decode($jsonData, true);
-    for ($i = 2; $i <= 50; $i++) {
-        $temp = array(
-            "question" => "$i",
-            "content" => "",
-            "answerA" => "",
-            "answerB" => "",
-            "answerC" => "",
-            "answerD" => "",
-            "key" => ""
-        );
-        array_push($json['exam'], $temp);
-    }
-    $jsonData = json_encode($json);
-    file_put_contents('test.json', $jsonData);
-
-    $array; //this array hold the data of the question
-    readJson("test.json", $array);
-
-    ?>
-
 </body>
-
+<?php
+    $array[0]->__setQuestionInfo("1", "test", "test", "test", "test", "test", "test");
+    writeJson("test.json", $array);
+?>
 </html>

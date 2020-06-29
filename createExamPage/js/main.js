@@ -15,3 +15,19 @@ function previous() {
     var quantity_int = parseInt(quantity_temp, 10) - 1;
     document.getElementById("questionOrder").innerHTML = quantity_int.toString();
 }
+
+
+$(function() {
+    $('form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'post',
+            url: 'post.php',
+            data: $('form').serialize(),
+            success: function() {
+                alert('form was submitted');
+            }
+        });
+
+    });
+});

@@ -396,27 +396,30 @@ th {
     text-align: left;
 }
 
-
 #form {
     line-height: 2;
     width: 60%;
     margin: 20px auto;
 
 }
-.question {
-    border: 2px solid black;
 
+#form h4 {
+    margin-left: 10px;
+}
+.question {
+    border: 1px solid black;
+}
+.answer {
+    margin-left: 20px;
 }
 #submitBtn {
-    text-align: center;
     color: #fff;
     background-color: #2ea44f;
     border-color: rgba(27,31,35,.15);
-    box-shadow: 0 1px 0 rgba(27,31,35,.1), inset 0 1px 0 hsla(0,0%,100%,.03);
-    font-weight: 500;
-    line-height: 50px;
+    box-shadow: 0 1px 0 rgba(27,31,35,.1), inset 0 1px 0 hsla(0,0%,100%,.03); 
     width: 100px;
-    vertical-align: middle;
+    height: 50px;
     border: 1px solid;
     border-radius: 6px;
+    margin-left: 400px;
 }

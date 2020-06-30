@@ -12,18 +12,17 @@ class testForm {
         $jsonData = $this->ctrl->getInfoOfExam();
         $json = json_decode($jsonData, true);
         $this->listKey=array(0);
-        echo "<form id=form  action='' method='post'>";
-
+        echo "<form id='form'  action='' method='post'>";
             foreach($json['exam'] as $exam) {
                 echo "<div class='question'";
                 echo  "<h3>Câu".$exam['question']."</h3>
                 <h4>".$exam['content']."</h4>
-                <input type='radio' value ='A' name = '".$exam['question']."'>".$exam['answerA'].
-                "<br><input type='radio' value ='B' name = '".$exam['question']."'>".$exam['answerB'].
-                "<br><input type='radio' value ='C' name = '".$exam['question']."'>".$exam['answerC'].
-                "<br><input type='radio' value ='D' name = '".$exam['question']."'>".$exam['answerD'].
+                <input class='answer' type='radio' value ='A' name = '".$exam['question']."'>".$exam['answerA'].
+                "<br><input class='answer' type='radio' value ='B' name = '".$exam['question']."'>".$exam['answerB'].
+                "<br><input class='answer' type='radio' value ='C' name = '".$exam['question']."'>".$exam['answerC'].
+                "<br><input class='answer' type='radio' value ='D' name = '".$exam['question']."'>".$exam['answerD'].
+                "</div>";
                 $this->listKey[] = $exam['key'];
-                echo "</div>";
             }
         echo "<br>";
         echo "<input id='submitBtn' type='submit' name='submit' value='Nộp bài'/>";      

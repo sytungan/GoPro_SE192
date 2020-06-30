@@ -18,7 +18,7 @@ class testController {
     public function markingExam($subject, $key, $answer) {
         $result = 0;
         $NUMBER_OF_QUESTIONS = 40;
-        if ($subject == utf8_encode("Toan")) {
+        if ($subject == utf8_encode("Toán")) {
             $NUMBER_OF_QUESTIONS = 50;
         }
         for ($i = 1; $i <= $NUMBER_OF_QUESTIONS; $i++) {

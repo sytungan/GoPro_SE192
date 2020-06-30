@@ -18,7 +18,18 @@
 </head>
 
 <body>
+
+
     <form action="" method="POST">
+        <label for=name>Tên đề thi:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+    
+        <label for=subject>Môn học:</label><br>
+        <input type="text" id="subject" name="subject"><br><br>
+
+        <label for=author>Tác giả:</label><br>
+        <input type="text" id="author" name="author"><br><br>
+
         <label id="questionLabel" for=Question>Câu hỏi </label>
         <label id="questionOrder">1</label><br>
         <textarea id="question" name="question"></textarea><br><br>
@@ -46,7 +57,7 @@
         <br><br>
         <button id="Previous" class="item_button" type="Button" onclick="previous()">Previous</button>
         <button id="Next" class="item_button" type="Button" onclick="next()">Next</button><br> <br>
-        <input name="submit" type="submit" value="Submit"/> <br> <br>
+        <input name="submit" type="submit" id="submit" value="Submit"/> <br> <br>
     </form>
 </body>
 <?php

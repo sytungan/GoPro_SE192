@@ -17,7 +17,7 @@
                 )
             )
         );
-        $jsondata = json_encode($named_array);
+        $jsondata = json_encode($named_array, JSON_UNESCAPED_UNICODE);
         file_put_contents("test.json", $jsondata);
         $jsonData = file_get_contents("test.json");
         $json = json_decode($jsonData, true);
@@ -33,7 +33,7 @@
             );
             array_push($json['exam'], $temp);
         }
-        $jsonData = json_encode($json);
+        $jsonData = json_encode($json, JSON_UNESCAPED_UNICODE);
         file_put_contents('test.json', $jsonData);
     }
 
@@ -62,8 +62,7 @@
 
 
     //TODO: write exam to JSON file after modify
-    function writeJson(string $fileName, &$array){
-
+    function writeJson($fileName, &$array){
         $question = $array[0];
         $array[0]->__print();
         
@@ -80,7 +79,7 @@
                 )
             )
         );
-        $jsondata = json_encode($named_array);
+        $jsondata = json_encode($named_array, JSON_UNESCAPED_UNICODE);
         file_put_contents($fileName, $jsondata);
 
         $jsonData = file_get_contents($fileName);
@@ -97,7 +96,7 @@
             );
             array_push($json['exam'], $temp);
         }
-        $jsondata = json_encode($json);
+        $jsondata = json_encode($json, JSON_UNESCAPED_UNICODE);
         file_put_contents($fileName, $jsondata);
     }
 

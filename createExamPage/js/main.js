@@ -1,13 +1,16 @@
 function next() {
-    var reader = new FileReader();
-    reader.readAsText("test.json");
-    console(reader.result);
-
-
     var quantity_temp = document.getElementById("questionOrder").innerText;
     var quantity_int = parseInt(quantity_temp, 10) + 1;
-    if (quantity_int > 50) document.getElementById("questionOrder").innerHTML = "40";
-    else document.getElementById("questionOrder").innerHTML = quantity_int.toString();
+    if (quantity_int >= 40){
+        document.getElementById("questionOrder").innerHTML = "40";
+        
+        document.getElementById("submit").value = "Hoàn thành";
+
+    }
+    else {
+        document.getElementById("questionOrder").innerHTML = quantity_int.toString();
+        document.getElementById("submit").innerHTML = "submit";
+    }
     document.getElementById('question').value = ""
     document.getElementById('ansA').value = "";
     document.getElementById('ansB').value = "";
@@ -24,7 +27,7 @@ function previous() {
     var quantity_int = parseInt(quantity_temp, 10) - 1;
     if (quantity_int < 1) document.getElementById("questionOrder").innerHTML = "1";
     else document.getElementById("questionOrder").innerHTML = quantity_int.toString();
-
+    document.getElementById("submit").value = "Submit";
     document.getElementById('question').value = ""
     document.getElementById('ansA').value = "";
     document.getElementById('ansB').value = "";
@@ -37,14 +40,19 @@ function previous() {
 $(function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
-        var question = $("#questionOrder").text();
+        var question =  $("#questionOrder").text();
         var content = $('textarea#question').val();
         var ansA = $("#ansA").val();
         var ansB = $("#ansB").val();
         var ansC = $("#ansC").val();
         var ansD = $("#ansD").val();
         var key = $("select#key").val();
-        var dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key;
+        var subject = $("#subject").val();
+        var author = $("#author").val();
+        var name = $("#name").val();
+
+        var dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject  + '&author=' + author + '&name=' + name;
+        console.log(dataString);
         $.ajax({
             type: 'post',
             url: 'post.php',

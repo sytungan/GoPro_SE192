@@ -28,6 +28,7 @@
             <li class="active"> <a href="index.php">Trang chủ</a> </li>
             <li> <a href="weeklyTest.php">Đề thi tuần</a></li>
             <li> <a href="testExamPage/testExam.php">Thi thử</a></li class="active">
+            <li> <a href="createExamPage/">Tạo đề thi</a></li>
             <li> <a href="schedulePage/view/viewTkb.php">Thời khóa biểu</a></li>
             <li> <a href="filePage/view/manageFile.php">Tài liệu</a></li>
             <li> <a href="approvePage/">Duyệt đề thi</a></li>

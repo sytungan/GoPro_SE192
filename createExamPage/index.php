@@ -18,12 +18,10 @@
 </head>
 
 <body>
-
-
     <form action="" method="POST">
         <label for=name>Tên đề thi:</label><br>
         <input type="text" id="name" name="name"><br><br>
-    
+
         <label for=subject>Môn học:</label><br>
         <input type="text" id="subject" name="subject"><br><br>
 
@@ -57,10 +55,23 @@
         <br><br>
         <button id="Previous" class="item_button" type="Button" onclick="previous()">Previous</button>
         <button id="Next" class="item_button" type="Button" onclick="next()">Next</button><br> <br>
-        <input name="submit" type="submit" id="submit" value="Submit"/> <br> <br>
+        <input name="submit" type="submit" id="submit" value="Submit" /> <br> <br>
     </form>
+
+
+    <div id="popUpHover" class="popUpHover">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton">&times;</div>
+            <p class="popUpMessage"> Cảm ơn bạn đã đóng góp đề  thi cho hệ thống!!<br>
+            Đề thi của bạn sẽ được quản trị viên kiểm duyệt.
+            
+            </p>
+        </div>
+    </div>
 </body>
 <?php
 
 ?>
+
 </html>

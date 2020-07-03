@@ -25,6 +25,8 @@ body {
 }
 
 input[type=submit] {
+    font-weight: bold;
+    font-family: "Lucida Console", Courier, monospace;
     background-color: #4E47B1;
     border: none;
     color: white;
@@ -53,6 +55,8 @@ label {
 }
 
 button {
+    font-weight: bold;
+    font-family: "Lucida Console", Courier, monospace;
     background-color: #4E47B1;
     border: none;
     color: white;
@@ -65,4 +69,67 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+
+/* This is css part for the pop up -------------------------------------------------------------------------------------------*/
+
+.popUpHover {
+    background: rgba(0, 0, 0, .4);
+    cursor: pointer;
+    display: none;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.popUpHover .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.popUpHover>div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+
+p.popUpMessage {
+    font-family: "Lucida Console", Courier, monospace;
+    color: #4E47B1;
+    font-size: 13pt;
 }

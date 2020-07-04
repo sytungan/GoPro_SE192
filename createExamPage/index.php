@@ -62,10 +62,9 @@
     <div id="popUpHover" class="popUpHover">
         <span class="helper"></span>
         <div>
-            <div class="popupCloseButton">&times;</div>
             <p class="popUpMessage"> Cảm ơn bạn đã đóng góp đề  thi cho hệ thống!!<br>
-            Đề thi của bạn sẽ được quản trị viên kiểm duyệt.
-            
+            Đề thi của bạn sẽ được quản trị viên kiểm duyệt.<br><br>
+            <button onclick="window.location.href='../index.php'">Về trang chủ</button>
             </p>
         </div>
     </div>

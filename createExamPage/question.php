@@ -1,8 +1,8 @@
 <?php
     //TODO: init a empty JSON file to hold the exam info
     function initJson(){ 
-        static $functionCalled = false;
-        if ($functionCalled) return;
+    static $functionCalled = false;
+    if ($functionCalled) return;
         $functionCalled = true;
         $named_array = array(
             "exam" => array(

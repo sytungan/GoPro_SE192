@@ -48,7 +48,7 @@ $(function() {
     $('form').on('submit', function(e) {
         var submitType = $("#submit").val();
         if (submitType == "Tiếp tục") {
-            e.preventDefault();
+            //e.preventDefault();
             subject = $("#subject").val();
             if (subject == "Toán") questionAmount = 50;
             else questionAmount = 40;

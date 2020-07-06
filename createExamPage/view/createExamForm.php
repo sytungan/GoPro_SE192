@@ -24,12 +24,13 @@
 ?>
 
 <body>
-    <form action="" method="POST">
-        <label for=name>Tên đề thi: <?php echo $examName ?> </label><br>
-        <label for=name>Môn học: <?php echo $subject ?> </label><br>
+    <div class = "infoside">
+        <label for=name>Tên đề thi: <?php echo $examName ?> </label><br><br>
+        <label for=name>Môn học: <?php echo $subject ?> </label><br><br>
         <label for=name>Tác giả: <?php echo $author ?> </label><br><br>
+    </div>
 
-
+    <form action="" method="POST">
         <label id="questionLabel" for=Question>Câu hỏi </label>
         <label id="questionOrder">1</label><br>
         <textarea id="question" name="question"></textarea><br><br>

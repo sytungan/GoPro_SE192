@@ -18,8 +18,8 @@
             )
         );
         $jsondata = json_encode($named_array, JSON_UNESCAPED_UNICODE);
-        file_put_contents("test.json", $jsondata);
-        $jsonData = file_get_contents("test.json");
+        file_put_contents("../controller/test.json", $jsondata);
+        $jsonData = file_get_contents("../controller/test.json");
         $json = json_decode($jsonData, true);
         for ($i = 2; $i <= 40; $i++) {
             $temp = array(
@@ -34,7 +34,7 @@
             array_push($json['exam'], $temp);
         }
         $jsonData = json_encode($json, JSON_UNESCAPED_UNICODE);
-        file_put_contents('test.json', $jsonData);
+        file_put_contents("../controller/test.json", $jsonData);
     }
 
 

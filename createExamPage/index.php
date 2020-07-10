@@ -10,7 +10,6 @@
     <style>
         <?php
         include 'css/style.css';
-        include 'controller.php';
         ?>
     </style>
     <script type="text/javascript" src="js/main.js"></script>

@@ -1,4 +1,4 @@
-var questionAmount;
+var questionAmount = 40;
 var subject;
 
 function next() {
@@ -48,12 +48,9 @@ $(function() {
     $('form').on('submit', function(e) {
         var submitType = $("#submit").val();
         if (submitType == "Tiếp tục") {
-            //e.preventDefault();
             subject = $("#subject").val();
             if (subject == "Toán") questionAmount = 50;
             else questionAmount = 40;
-            console.log(questionAmount);
-
         } else {
             var question = $("#questionOrder").text();
             if (question != "40") {
@@ -67,11 +64,14 @@ $(function() {
                 var key = $("select#key").val();
                 var author = $("#author").val();
                 var name = $("#name").val();
+                subject = $();
+
 
                 var dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + name;
+                console.log(dataString);
                 $.ajax({
                     type: 'post',
-                    url: 'post.php',
+                    url: '../controller/post.php',
                     data: dataString,
                     success: function() {
                         next();

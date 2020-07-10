@@ -10,7 +10,7 @@
     <style>
         <?php
         include '../css/style.css';
-        include '../controller.php';
+        include '../controller/controller.php';
         ?>
     </style>
     <script type="text/javascript" src="../js/main.js"></script>
@@ -25,15 +25,18 @@
 
 <body>
     <div class = "infoside">
-        <label for=name>Tên đề thi: <?php echo $examName ?> </label><br><br>
-        <label for=name>Môn học: <?php echo $subject ?> </label><br><br>
-        <label for=name>Tác giả: <?php echo $author ?> </label><br><br>
+        <label for=name>Tên đề thi: &#160 </label>
+        <label for=name id="name">  <?php echo $examName ?> </label><br><br>
+        <label for=name>Môn học: &#160  </label>
+        <label for=name id="subject"> <?php echo $subject ?></label><br><br>
+        <label for=name>Tác giả: &#160  </label>
+        <label for=name id="author"> <?php echo $author ?></lable><br><br>
     </div>
 
-    <form action="" method="POST">
+    <form action="../post.php" method="POST">
         <label id="questionLabel" for=Question>Câu hỏi </label>
         <label id="questionOrder">1</label><br>
-        <textarea id="question" name="question"></textarea><br><br>
+        <textarea id="question" name="question"></textarea><br><br> 
 
         <label for=ansA>Câu A:</label><br>
         <input type="text" id="ansA" name="ansA"><br><br>

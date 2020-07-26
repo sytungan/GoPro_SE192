@@ -14,8 +14,8 @@ if (ini_get("session.use_cookies")) {
 session_destroy();
 ?>
 <?php
-include 'header.php';
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/header.php";
 ?>
 <?php
-include 'footer.php';
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/footer.php";
 ?>

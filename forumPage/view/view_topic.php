@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php
-include 'DB.php';
-include 'header.php';
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/forumPage/controller/listTopic.php";
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/header.php";
 //first select the topic based on $_GET['topic_id']
 $connect= new Database(); 
 $data_topic= $connect->getTopicByID($_GET['id']);
@@ -84,5 +84,5 @@ else
         }
     }
 }
-include 'footer.php';
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/footer.php";
 ?>

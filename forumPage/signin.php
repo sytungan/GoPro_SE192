@@ -1,13 +1,13 @@
 <?php session_start() ?>
 <?php
-include 'DB.php';
-include 'header.php';
- echo '<h3>Sign in</h3>';
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/forumPage/controller/listTopic.php";
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/header.php";
+echo '<h3>Sign in</h3>';
  
 //first, check if the user is already signed in. If that is the case, there is no need to display this page
 if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
 {
-    echo 'You are already signed in, you can <a href="signout.php">sign out</a> if you want.';
+    echo 'You are already signed in, you can <a href="/GoPro_SE192/forumPage/view/signout.php">sign out</a> if you want.';
 }
 else
 {
@@ -51,7 +51,7 @@ else
             echo '</ul>';
         }
         else
-        {   $connect= new Database();
+        {   $connect= new listTopicConTroller();
             $result=$connect->checkAccount($_POST['user_name'],$_POST['user_pass']);
            
             if($result<0)
@@ -91,5 +91,5 @@ else
     }
 }
  
-include 'footer.php';
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/footer.php";
 ?>

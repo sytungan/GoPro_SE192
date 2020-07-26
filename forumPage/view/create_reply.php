@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php
 //create_cat.php
-include 'DB.php';
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/forumPage/controller/topic.php";
 include 'header.php';
 if(!isset($_SESSION['signed_in']) || $_SESSION['signed_in'] == false)
 {
@@ -35,7 +35,7 @@ else
         }
         else
         {
-            $connect= new Database();
+            $connect= new TopicConTroller();
             $result= $connect->insertReply($_POST['reply_content'],$data_topic['topic_id'],$data_user['user_id']);
             if ($result)
             {

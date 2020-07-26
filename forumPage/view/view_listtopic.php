@@ -1,9 +1,9 @@
 <?php session_start(); ?>
 <?php
-include 'DB.php';
-include 'header.php';
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/forumPage/controller/listTopic.php";
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/header.php";
 //first select the category based on $_GET['cat_id']
-$connect= new Database(); 
+$connect= new listTopicConTroller();
 echo '<h2>Topics in ′' . $_GET['cat_id'] . '′ category</h2>';
 //do a query for the topics
 $topic= $connect->getTopicByCat($_GET['cat_id']);
@@ -51,7 +51,5 @@ else
     }
 }
 echo '</div>';
-
-
-include 'footer.php';
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/footer.php";
 ?>

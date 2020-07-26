@@ -1,7 +1,7 @@
 <?php
 //signup.php
-include 'DB.php';
-include 'header.php';
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/forumPage/controller/listTopic.php";
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/header.php";
 echo '<h3>Sign up</h3>';
  
 if($_SERVER['REQUEST_METHOD'] != 'POST')
@@ -70,7 +70,7 @@ else
     }
     else
     {
-        $connect= new Database();
+        $connect= new listTopicConTroller();
         $result=$connect->insertAccount($_POST['user_name'],$_POST['user_pass'],$_POST['user_role'],$_POST['user_email']);
       if(!$result)
        {
@@ -78,10 +78,10 @@ else
        }
       else
        {
-        echo 'Successfully registered. You can now <a href="signin.php">sign in</a> and start posting! :-)';
+        echo 'Successfully registered. You can now <a href="/GoPro_SE192/forumPage/view/signout.php">sign in</a> and start posting! :-)';
        }
      }
 }
  
-include 'footer.php';
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/footer.php";
 ?>

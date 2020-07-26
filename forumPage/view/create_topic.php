@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php
-include 'DB.php';
-include 'header.php';
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/forumPage/controller/listTopic.php";
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/header.php";
 echo '<h2>Create a topic</h2>';
 if(!isset($_SESSION['signed_in']) || $_SESSION['signed_in'] == false)
 {
@@ -15,7 +15,7 @@ else
     {   
         //the form hasn't been posted yet, display it
         //retrieve the categories from the database for use in the dropdown
-        $connect= new Database();
+        $connect= new listTopicConTroller();
         $result= $connect->getCat();
         if(!$result)
         {
@@ -60,7 +60,7 @@ else
         }
         else 
         { 
-        $connect=new Database();
+        $connect= new listTopicConTroller();
         //start the transaction
         $query  = "BEGIN WORK;";
         $result = $connect->insertTopic($_POST['topic_subject'],$_POST['topic_cat'],$_SESSION['user_id'],$_POST['topic_content']);
@@ -123,5 +123,5 @@ else
     //     }
     // }
 }
-include 'footer.php';
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/footer.php";
 ?>

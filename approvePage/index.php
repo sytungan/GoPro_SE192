@@ -8,7 +8,9 @@
 </head>
 <body>
 <?php
+    include '../header.php';
     include 'view/listExamForm.php';
+    include '../footer.php';
 ?>
 </body>
 </html>

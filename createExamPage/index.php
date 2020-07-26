@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+    include '../header.php';
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +16,6 @@
     </style>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
-
 <body>
     <form action="view/createExamForm.php" method="POST">
         <label for=name>Tên đề thi:</label><br>
@@ -38,6 +39,9 @@
 
         <input name="submit" type="submit" id="submit" value="Tiếp tục"/> <br> <br>
     </form>
+    <?php
+        include '../footer.php';
+    ?>
 </body>
 
 </html>

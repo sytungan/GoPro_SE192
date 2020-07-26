@@ -1,6 +1,6 @@
 <?php
     include 'question.php';
-    include '../config.php';
+    include '../../config.php';
 
     $array;
     readJson("test.json", $array);

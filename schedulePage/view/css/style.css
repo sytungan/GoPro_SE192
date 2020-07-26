@@ -1,8 +1,9 @@
-* {
-    font-family: sans-serif; /* Change your font family */
+body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 100%;
   }
   
-  .title{
+  .title {
       margin-top: 25px;
       margin-left: 570px;
   }

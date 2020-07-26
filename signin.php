@@ -1,4 +1,3 @@
-<?php session_start() ?>
 <?php
 include 'userDB.php';
 include 'header.php';

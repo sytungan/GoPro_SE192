@@ -1,7 +1,7 @@
 ﻿<head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="assets/js/fontAwesome.js"></script>
+    <link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
+    <script src="/GoPro_SE192/assets/js/fontAwesome.js"></script>
 </head>
 <footer>
     <div id="contact_logo">

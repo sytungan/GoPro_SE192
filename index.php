@@ -1,9 +1,6 @@
 ﻿<!DOCTYPE html>
 <head>
-    <meta charset="UTF-8">
     <title>GoProToUniversity</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="assets/js/fontAwesome.js"></script>
 </head>
 
 <body>

@@ -3,14 +3,17 @@
   }
   
   .title{
-      margin-left: 170px;
+      margin-top: 25px;
+      margin-left: 570px;
   }
   
   .content-table {
     border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    min-width: 400px;
+    margin: 25px auto;
+    /*font-size: 0.9em;*/
+    font-size: 20px;
+    min-width: 800px;
+    min-height: 200px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -41,7 +44,9 @@
   }
   
   .btn{
-      margin-left: 170px;
+      font-size: 25px;
+      margin-left: 570px;
+      margin-bottom: 25px;
       text-decoration: none;
       color: white;
       background-color: #e6760e;

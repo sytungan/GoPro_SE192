@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <meta charset="UTF-8">
+    <title>GoProToUniversity</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
     <link rel="stylesheet" type=text/css href="css/style.css">
+    <script src="../assets/js/fontAwesome.js"></script>
     </head>
     <body>
 	<?php
-
+include "../../header.php";
 include '../controller/tkbController.php';
 $ctrl = new Sched();
 $result = $ctrl->getSched();
@@ -91,5 +95,8 @@ break;
       </form>
     </body>
     <footer>
+    <?php
+include "../../footer.php";
+?>
     </footer>
 </html>

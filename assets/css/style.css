@@ -137,12 +137,13 @@ float:right;
     width: 130px;
 
 }
+
 #news_img img{
      width:100%;
      height: auto;
      padding-top:30px;
-   
- }
+}
+
 #otherNews {
     width: 40%;
     float: left;

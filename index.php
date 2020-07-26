@@ -60,11 +60,14 @@
     <div id="newsAndBxh">
         <div id="news_img">
             <h4>TIN NỔI BẬT</h4>
-            <img src="assets/image/news.png" alt="news" />
+            <img src="assets/image/news.png" alt="news" /> 
         </div>
         <div id="otherNews">
             <h4>TIN TỨC KHÁC</h4>
-            <img src="assets/image/other_news.png" alt="news" />
+            <!-- <img src="assets/image/other_news.png" alt="news" /> -->
+            <?php
+            include "news.php";
+            ?> 
         </div>
         <div id="bxh">
             <h4>BẢNG XẾP HẠNG</h4> <br />

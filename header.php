@@ -23,21 +23,17 @@
             ?>
         </span> 
     </div>
-    <form>
-        <input class="search" type="text" name="search" placeholder="Tìm kiếm">
-    </form>
 </div>
 <div id="menu">
         <ul id="main_menu">
-            <li> <a href="index.php">Trang chủ</a> </li>
-            <li> <a href="weeklyTest.php">Đề thi tuần</a></li>
-            <li class="active"> <a href="testExamPage/testExam.php">Thi thử</a></li class="active">
-            <li> <a href="schedulePage/view/viewTkb.php">Thời khóa biểu</a></li>
-            <li> <a href="filePage/view/manageFile.php">Tài liệu</a></li>
-            <li> <a href="approvePage/">Duyệt đề thi</a></li>
-            <li> <a href="searchPage/">Tìm kiếm đề thi</a></li>
-            <li> <a href="forumPage/header.php">Diễn đàn</a></li>
+            <li> <a href="/GoPro_SE192/index.php">Trang chủ</a> </li>
+            <li> <a href="/GoPro_SE192/weeklyTest.php">Đề thi tuần</a></li>
+            <li> <a href="testExamPage/testExam.php">Thi thử</a></li class="active">
+            <li> <a href="/GoPro_SE192/schedulePage/view/viewTkb.php">Thời khóa biểu</a></li>
+            <li> <a href="/GoPro_SE192/filePage/view/manageFile.php">Tài liệu</a></li>
+            <li> <a href="/GoPro_SE192/approvePage/">Duyệt đề thi</a></li>
+            <li> <a href="/GoPro_SE192/searchPage/">Tìm kiếm đề thi</a></li>
+            <li> <a href="/GoPro_SE192/forumPage/header.php">Diễn đàn</a></li>
         </ul>
 
 </div>
-

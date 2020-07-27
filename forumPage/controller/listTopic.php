@@ -16,6 +16,9 @@ class listTopicConTroller{
     public function getCat() { 
         return $this->cat_database->getCat();
     }
+    public function getCatbyID($cat_id) {
+        return $this->cat_database->getCatbyID($cat_id);
+    }
     // Function involving Topic
     // Insert Topic into Database
     public function insertTopic($topic_subject,$topic_cat,$user_id,$topic_content) {
@@ -29,6 +32,9 @@ class listTopicConTroller{
     public function getTopicByCat($topic_cat) {
         return $this->topic_database->getTopicByCat($topic_cat);
     }
+    public function getTopicByCatPage($topic_cat,$start_from,$limit) {
+        return $this->topic_database->getTopicByCatPage($topic_cat,$start_from,$limit);
+    }
     // Get Topic by ID from Database
     public function getTopicByID($topic_id) {
         return $this->topic_database->getTopicByID($topic_id);
@@ -37,6 +43,15 @@ class listTopicConTroller{
     public function deleteTopic($topic_id) {
         return $this->topic_database->deleteTopic($topic_id);
     }
+    public function limit_text($text, $limit=20) {
+      if (str_word_count($text, 0) > $limit) {
+          $words = str_word_count($text, 2);
+          $pos = array_keys($words);
+          $text = substr($text, 0, $pos[$limit]) . '...';
+      }
+      return $text;
+    }
+
     // Function involving Reply
     // Get all reply of a topic
      public function getReply($reply_topic) {
@@ -45,6 +60,10 @@ class listTopicConTroller{
     // Insert reply from a topic to Database
      public function insertReply($reply_content,$reply_topic,$reply_by) {
         return $this->reply_database->insertReply($reply_content,$reply_topic,$reply_by);
+    }
+    public function deleteReply($reply_id) {
+        $this->reply_database->deleteReply($reply_id);
+        return 1;
     }
     // Function involving user
     // Insert new Account to Database

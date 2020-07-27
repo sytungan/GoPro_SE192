@@ -11,4 +11,10 @@ class cat_database {
         }
         return $this->conn->traverse("SELECT `cat_id`, `cat_name`, `cat_description` FROM `catdb` WHERE 1");
     }
+    public function getCatbyID($cat_id) {
+        $result= $this->conn->traverse("SELECT * FROM `catdb` WHERE cat_id='$cat_id' ");
+        foreach ($result as $p) {
+            return $p;
+        }
+    }
 }

@@ -1,3 +1,7 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
+</head>
 <?php session_start(); ?>
 <?php
 //create_cat.php
@@ -5,7 +9,7 @@ include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/forumPage/controller/topic.php";
 include 'header.php';
 if(!isset($_SESSION['signed_in']) || $_SESSION['signed_in'] == false)
 {
-    echo 'Sorry, you have to be <a href="../forumPage/signin.php">signed in</a> to create a topic.';
+    echo 'Sorry, you have to be <a href="../forumPage/signin.php">signed in</a> to create a reply.';
 }
 else
 {
@@ -45,4 +49,4 @@ else
     }
 }
 include 'footer.php';
-?>
+?>  

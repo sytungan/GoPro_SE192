@@ -1,9 +1,10 @@
 <?php
+include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/config.php";
 include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/forumPage/model/catDB.php";
 include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/forumPage/model/replyDB.php";
 include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/forumPage/model/topicDB.php";
 include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/forumPage/model/userDB.php";
-class TopicConTroller{
+class topicConTroller{
     private $user_database, $reply_database, $topic_database, $cat_database;
     public function __construct() {
         $this->user_database = new user_database();
@@ -44,6 +45,10 @@ class TopicConTroller{
     // Insert reply from a topic to Database
      public function insertReply($reply_content,$reply_topic,$reply_by) {
         return $this->reply_database->insertReply($reply_content,$reply_topic,$reply_by);
+    }
+      public function deleteReply($reply_id) {
+        $this->reply_database->deleteReply($reply_id);
+        return 1;
     }
     // Function involving user
     // Insert new Account to Database

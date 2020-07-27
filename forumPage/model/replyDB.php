@@ -11,5 +11,9 @@ class reply_database {
         $this->conn->traverseFunc("INSERT INTO `replydb`(`reply_content`, `reply_date`, `reply_topic`, `reply_by`) VALUES ('$reply_content',NOW(),'$reply_topic','$reply_by') ");
         return 1;
     }
+    public function deleteReply($reply_id) {
+        $this->conn->traverseFunc("DELETE FROM `replydb` WHERE reply_id='$reply_id' ");
+        return 1;
+    }
 }
 ?>

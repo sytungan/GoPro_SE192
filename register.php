@@ -12,6 +12,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
         Username: <input type="text" name="user_name" placeholder="Username" /> <br>
         Password: <input type="password" name="user_pass" placeholder="Password"> <br>
         Password again: <input type="password" name="user_pass_check" placeholder="Password again"> <br>
+        Your nickname: <input type="text" name="user_nickname" placeholder="Nickname"> <br>
         Email <input type="email" name="user_email" placeholder="Email@"> <br>
         Role <br>
         <input type="radio" name="user_role" value="Student" checked> Student <br>
@@ -57,7 +58,18 @@ else
     {
         $errors[] = 'The password field cannot be empty.';
     }
-     
+    if (!$_POST['user_nickname']=='')
+    {
+        //the user name exists
+        if(strlen($_POST['user_name']) > 30)
+        {
+            $errors[] = 'The nickname cannot be longer than 30 characters.';
+        }
+    }
+    else
+    {
+        $errors[] = 'The nickname field must not be empty.';
+    }
     if(!empty($errors)) /*check for an empty array, if there are errors, they're in this array (note the ! operator)*/
     {
         echo 'Uh-oh.. a couple of fields are not filled in correctly..';
@@ -71,7 +83,7 @@ else
     else
     {
         $connect= new Database();
-        $result=$connect->insertAccount($_POST['user_name'],$_POST['user_pass'],$_POST['user_role'],$_POST['user_email']);
+        $result=$connect->insertAccount($_POST['user_name'],$_POST['user_pass'],$_POST['user_nickname'],$_POST['user_role'],$_POST['user_email']);
       if(!$result)
        {
            echo 'Username has been used. Please choose another name!';

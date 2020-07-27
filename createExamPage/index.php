@@ -14,7 +14,7 @@
         include 'css/style.css';
         ?>
     </style>
-    <script type="text/javascript" src="js/main.js"></script>
+    <!--<script type="text/javascript" src="js/main.js"></script>-->
 </head>
 <body>
     <form action="view/createExamForm.php" method="POST">

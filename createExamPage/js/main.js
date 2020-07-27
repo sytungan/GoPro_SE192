@@ -1,5 +1,9 @@
 var questionAmount = 40;
-var subject;
+var subject = document.getElementById("#subject").innerText;
+var examName;
+var author;
+
+console.log(subject);
 
 function next() {
     var quantity_temp = document.getElementById("questionOrder").innerText;
@@ -44,15 +48,16 @@ function popUpShow() {
 }
 
 
+
 $(function() {
     $('form').on('submit', function(e) {
+        e.preventDefault();
         var submitType = $("#submit").val();
         if (submitType == "Tiếp tục") {
             subject = $("#subject").val();
             if (subject == "Toán") questionAmount = 50;
             else questionAmount = 40;
         } else {
-            var question = $("#questionOrder").text();
             e.preventDefault();
             var question = $("#questionOrder").text();
             var content = $('textarea#question').val();
@@ -61,12 +66,11 @@ $(function() {
             var ansC = $("#ansC").val();
             var ansD = $("#ansD").val();
             var key = $("select#key").val();
-            var author = $("#author").val();
-            var name = $("#name").val();
-            subject = $();
+            author = $("#name").val();
+            subject = $("#subject").val();
+            examName = $("#name").val();
 
-
-            var dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + name;
+            var dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + examName;
             console.log(dataString);
             $.ajax({
                 type: 'post',
@@ -77,6 +81,7 @@ $(function() {
                 }
             });
             if (question == 40) {
+                console.log
                 popUpShow();
             }
         }

@@ -29,7 +29,8 @@ table {
 }
 
 table, td, th {
-    border: 2px solid black;
+    border: 2px solid #999;
+    border-radius: 10px;
     width: auto;
     padding: 10px;
 }

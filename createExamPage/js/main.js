@@ -53,32 +53,30 @@ $(function() {
             else questionAmount = 40;
         } else {
             var question = $("#questionOrder").text();
-            if (question != "40") {
-                e.preventDefault();
-                var question = $("#questionOrder").text();
-                var content = $('textarea#question').val();
-                var ansA = $("#ansA").val();
-                var ansB = $("#ansB").val();
-                var ansC = $("#ansC").val();
-                var ansD = $("#ansD").val();
-                var key = $("select#key").val();
-                var author = $("#author").val();
-                var name = $("#name").val();
-                subject = $();
+            e.preventDefault();
+            var question = $("#questionOrder").text();
+            var content = $('textarea#question').val();
+            var ansA = $("#ansA").val();
+            var ansB = $("#ansB").val();
+            var ansC = $("#ansC").val();
+            var ansD = $("#ansD").val();
+            var key = $("select#key").val();
+            var author = $("#author").val();
+            var name = $("#name").val();
+            subject = $();
 
 
-                var dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + name;
-                console.log(dataString);
-                $.ajax({
-                    type: 'post',
-                    url: '../controller/post.php',
-                    data: dataString,
-                    success: function() {
-                        next();
-                    }
-                });
-            } else {
-                e.preventDefault();
+            var dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + name;
+            console.log(dataString);
+            $.ajax({
+                type: 'post',
+                url: '../controller/post.php',
+                data: dataString,
+                success: function() {
+                    next();
+                }
+            });
+            if (question == 40) {
                 popUpShow();
             }
         }

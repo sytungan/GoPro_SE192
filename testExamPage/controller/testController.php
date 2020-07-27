@@ -22,10 +22,33 @@ class testController {
             $NUMBER_OF_QUESTIONS = 50;
         }
         for ($i = 1; $i <= $NUMBER_OF_QUESTIONS; $i++) {
-           if ($key[$i] == $answer[$i]) $result = $result + 10/$NUMBER_OF_QUESTIONS;
+            $indexOfAnswer = $i - 1;
+            if (isset($answer[$i]) && $key[$i] == $answer[$i]) {
+                $result = $result + 10/$NUMBER_OF_QUESTIONS;
+                echo "<script>
+                    showTick(".$indexOfAnswer.", 'right') 
+                </script>";
+            }
+            else if (isset($answer[$i])) {
+                echo "<script>
+                    showTick(".$indexOfAnswer.", 'wrong') 
+                </script>";
+            }
         }
+        echo "<script>
+                hideButton(); 
+            </script>";
         return $result;
     }
     
 }
 ?>
+<script>
+    function showTick(i, typeTick) {
+        var answer = document.querySelectorAll("input[class='answer']:checked");
+        answer[i].nextSibling.insertAdjacentHTML("afterend", "<img src='/GoPro_SE192/assets/image/"+ typeTick + ".png' width='20' height='20'>");
+    }
+    function hideButton() {
+        document.getElementById("submitBtn").remove();
+    }
+</script>

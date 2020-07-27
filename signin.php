@@ -1,7 +1,7 @@
+<link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
 <?php
 include 'userDB.php';
 include 'header.php';
- echo '<h3>Đăng nhập</h3>';
  
 //first, check if the user is already signed in. If that is the case, there is no need to display this page
 if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
@@ -14,11 +14,26 @@ else
     {
         /*the form hasn't been posted yet, display it
           note that the action="" will cause the form to post to the same page it is on */
-        echo '<form method="post" action="">
-            Username: <input type="text" name="user_name" />
-            Password: <input type="password" name="user_pass">
-            <input type="submit" value="Sign in" />
-         </form>';
+        // echo '<form method="post" action="">
+        //     Username: <input type="text" name="user_name" />
+        //     Password: <input type="password" name="user_pass">
+        //     <input type="submit" value="Sign in" />
+        //  </form>';
+
+         echo '<form method="post" action="">
+         <div class="joinOuterContainer">
+         <div class="joinInnerContainer">
+           <h1 class="heading">SIGN IN</h1>
+           <div>
+             <input placeholder="Username" class="joinInput" type="text" name="user_name" />
+           </div>
+           <div>
+             <input placeholder="Password" class="joinInput mt-20" type="password" name="user_pass"/>
+           </div>
+           <input class="button mt-20" type="submit" value="Sign in"></input>
+         </div>
+       </div>
+       </form>';
     }
     else
     {

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <head>
     <title>GoProToUniversity</title>
 </head>
@@ -33,7 +33,9 @@
         </div>
         <div id="otherNews">
             <h4>TIN TỨC KHÁC</h4>
-            <img src="assets/image/other_news.png" alt="news" />
+            <?php
+            include "news.php";
+            ?> 
         </div>
         <div id="bxh">
             <h4>BẢNG XẾP HẠNG</h4> <br />
@@ -68,4 +70,5 @@
 
 <?php
 include "footer.php";
+
 ?>

@@ -25,6 +25,13 @@
         text-align: left;
         font-weight: bold;
     }
+    .content-table thead th {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+    }
+
 
     .content-table th,
     .content-table td {

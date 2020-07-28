@@ -39,7 +39,7 @@ else {
         if (isset($_POST['upload'])) { 
             $msg = ""; 
             $filename = $_FILES["uploadfile"]["name"]; 
-            $tempname = $_FILES["uploadfile"]["tmp_name"];     
+            $tempname = $_FILES["uploadfile"]["tmp_name"];
             $folder = $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/assets/image/".$filename; 
             $result=$connect->insertImage($filename,$_SESSION['user_id']);
             if (move_uploaded_file($tempname, $folder))  { 
@@ -49,7 +49,7 @@ else {
             $msg = "Đã có lỗi xảy ra, xin vui lòng thử lại"; 
             } 
             echo $msg;
-            echo '<script>  window.location.href = window.location.href </script>';
+            // echo '<script>  window.location.href = window.location.href </script>';
         }
     }
     echo '<h3> Tên : ' . $data_user['user_nickname']. '</h3> <br>';

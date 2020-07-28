@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
              <input placeholder="Password again" class="joinInput mt-20" type="password" name="user_pass_check"/>
            </div>
            <div>
-            Your nickname: <input type="text" name="user_nickname" placeholder="Nickname"> <br>
+             <input type="text" class="joinInput mt-20"  name="user_nickname" placeholder="Nickname"> <br>
            </div>
            <div> 
            <input type="email" class="joinInput mt-20" name="user_email" placeholder="Email@"> <br>

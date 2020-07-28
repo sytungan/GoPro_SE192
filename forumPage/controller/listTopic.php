@@ -43,6 +43,9 @@ class listTopicConTroller{
     public function deleteTopic($topic_id) {
         return $this->topic_database->deleteTopic($topic_id);
     }
+    public function countTopicByCat($topic_cat) {
+        return $this->topic_database->countTopicByCat($topic_cat);
+    }
     public function limit_text($text, $limit=20) {
       if (str_word_count($text, 0) > $limit) {
           $words = str_word_count($text, 2);

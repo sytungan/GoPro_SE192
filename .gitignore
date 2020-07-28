@@ -1,2 +1,3 @@
 .vscode/
-createExamPage/controller/test.json
+*.json
+*.log

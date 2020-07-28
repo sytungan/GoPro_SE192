@@ -2,10 +2,11 @@
 <?php
 include 'userDB.php';
 include 'header.php';
+ 
 //first, check if the user is already signed in. If that is the case, there is no need to display this page
 if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
 {
-    echo 'You are already signed in, you can <a href="signout.php">sign out</a> if you want.';
+    echo 'Bạn đã đăng nhập rồi, bạn có thể <a href="signout.php">đăng xuất</a> nếu muốn.';
 }
 else
 {
@@ -45,17 +46,17 @@ else
          
         if(($_POST['user_name'])=='')
         {
-            $errors[] = 'The username field must not be empty.';
+            $errors[] = 'Không được để trống tên tài khoản';
         }
          
         if(($_POST['user_pass'])=='')
         {
-            $errors[] = 'The password field must not be empty.';
+            $errors[] = 'Không được để trống mật khẩu';
         }
          
         if(!empty($errors)) /*check for an empty array, if there are errors, they're in this array (note the ! operator)*/
         {
-            echo 'Uh-oh.. a couple of fields are not filled in correctly..';
+            echo 'Có một số lỗi đã xảy ra. Bạn vui lòng kiểm tra lại';
             echo '<ul>';
             foreach($errors as $key => $value) /* walk through the array so all the errors get displayed */
             {
@@ -70,7 +71,7 @@ else
             if($result<0)
             {
                 //something went wrong, display the error
-                echo 'Something went wrong while signing in. Please try again later.';
+                echo 'Có lỗi xảy ra khi đăng nhập, xin vui lòng thử lại sau';
             }
             else
             {
@@ -79,30 +80,33 @@ else
                 //2. the query returned an empty result set, the credentials were wrong
                 if($result==0)
                 {
-                    echo 'You have supplied a wrong user/password combination. Please try again.';
+                    echo 'Tài khoản hoặc mật khẩu không đúng. Xin vui lòng thử lại!';
                 }
                 else
-                {
-                    //set the $_SESSION['signed_in'] variable to TRUE
-                    $_SESSION['signed_in'] = true;
-                     
-                    //we also put the user_id and user_name values in the $_SESSION, so we can use it at various pages
-                    $data=$connect->getUserByName($_POST['user_name']);
-                    {
-                        $_SESSION['user_id']    = $data['user_id'];
-                        $_SESSION['user_name']  = $data['user_name'];
-                        $_SESSION['user_role'] = $data['user_role'];
-                        $_SESSION['user_email'] = $data['user_email'];
-                        $_SESSION['user_level'] = $data['user_level'];
-                         echo '<script> location.reload() </script>';
+                {   $data=$connect->getUserByName($_POST['user_name']);
+                    if ($data['user_active'] !=1) {
+                    echo 'Tài khoản của bạn đã bị khóa.';
                     }
-                     
-                    echo 'Welcome, ' . $_SESSION['user_name'] . '. <a href="index.php">Proceed to the forum overview</a>.';
+                    else
+                    {
+                        //set the $_SESSION['signed_in'] variable to TRUE
+                        $_SESSION['signed_in'] = true;
+                        //we also put the user_id and user_name values in the $_SESSION, so we can use it at various pages
+                        {
+                            $_SESSION['user_id']    = $data['user_id'];
+                            $_SESSION['user_name']  = $data['user_name'];
+                            $_SESSION['user_nickname'] = $data['user_nickname'];
+                            $_SESSION['user_role'] = $data['user_role'];
+                            $_SESSION['user_email'] = $data['user_email'];
+                            $_SESSION['user_level'] = $data['user_level'];
+                            echo '<script> location.reload() </script>';
+                        } 
+                     echo 'Welcome, ' . $_SESSION['user_nickname'] . '. <a href="index.php">Proceed to the forum overview</a>.';
+                    }
                 }
             }
-        }
+         }
     }
 }
- 
 include 'footer.php';
 ?>

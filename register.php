@@ -32,6 +32,9 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
            <div>
              <input placeholder="Password again" class="joinInput mt-20" type="password" name="user_pass_check"/>
            </div>
+           <div>
+            Your nickname: <input type="text" name="user_nickname" placeholder="Nickname"> <br>
+           </div>
            <div> 
            <input type="email" class="joinInput mt-20" name="user_email" placeholder="Email@"> <br>
            Role <br>
@@ -81,7 +84,18 @@ else
     {
         $errors[] = 'The password field cannot be empty.';
     }
-     
+    if (!$_POST['user_nickname']=='')
+    {
+        //the user name exists
+        if(strlen($_POST['user_name']) > 30)
+        {
+            $errors[] = 'The nickname cannot be longer than 30 characters.';
+        }
+    }
+    else
+    {
+        $errors[] = 'The nickname field must not be empty.';
+    }
     if(!empty($errors)) /*check for an empty array, if there are errors, they're in this array (note the ! operator)*/
     {
         echo 'Uh-oh.. a couple of fields are not filled in correctly..';
@@ -95,7 +109,7 @@ else
     else
     {
         $connect= new Database();
-        $result=$connect->insertAccount($_POST['user_name'],$_POST['user_pass'],$_POST['user_role'],$_POST['user_email']);
+        $result=$connect->insertAccount($_POST['user_name'],$_POST['user_pass'],$_POST['user_nickname'],$_POST['user_role'],$_POST['user_email']);
       if(!$result)
        {
            echo 'Username has been used. Please choose another name!';

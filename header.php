@@ -17,7 +17,8 @@
             }
             if(isset($_SESSION['signed_in']))
             {
-                echo 'Hello ' . $_SESSION['user_name'] . '. Not you? <a href="/GoPro_SE192/signout.php">Sign out</a>';
+                echo '<a href="/GoPro_SE192/Userprofile.php?user_id=' .$_SESSION['user_id'].'">' . $_SESSION['user_nickname'] . '</a>  Not you? <a href="/GoPro_SE192/signout.php">Sign out</a>';
+                
             }
             else
             {
@@ -37,7 +38,7 @@
             <li> <a href="/GoPro_SE192/filePage/view/manageFile.php">Tài liệu</a></li>
             <li> <a href="/GoPro_SE192/approvePage/">Duyệt đề thi</a></li>
             <li> <a href="/GoPro_SE192/searchPage/">Tìm kiếm đề thi</a></li>
-            <li> <a href="/GoPro_SE192/forumPage/header.php">Diễn đàn</a></li>
+            <li> <a href="/GoPro_SE192/forumPage/view/view_cat.php">Diễn đàn</a></li>
         </ul>
 
 </div>

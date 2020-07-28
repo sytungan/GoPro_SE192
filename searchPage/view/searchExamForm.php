@@ -15,15 +15,15 @@ class searchExamForm {
             $this->output .= "<br>";
             $this->output .= "<table>
             <tr>
-            <th>ID</th>
-            <th>Đề</th>
-            <th>Tác giả</th>
+            <th scope='header'>ID</th>
+            <th scope='header'>Đề thi</th>
+            <th scope='header'>Tác giả</th>
             </tr>";
             foreach ($result as $row) {
                 $this->output .= "<tr>";
-                $this->output .=  "<td>" .$row['id']. "</td>";
-                $this->output .=  "<td><a href='view/examViewForm.php?subjectID=" . $row['id'] . "'target='_blank'>" . $row['name'] . "</a></td>";
-                $this->output .=  "<td>" . $row['author'] . "</td>";
+                $this->output .=  "<td id='idx'>" .$row['id']. "</td>";
+                $this->output .=  "<td id='name'><a href='view/examViewForm.php?subjectID=" . $row['id'] . "'target='_blank'>" . $row['name'] . "</a></td>";
+                $this->output .=  "<td id='author'>" . $row['author'] . "</td>";
                 $this->output .=  "</tr>";
             }  
         }              

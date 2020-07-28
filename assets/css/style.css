@@ -362,23 +362,6 @@ footer div#contact_logo {
 
 /*--------------------------------------------*/
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-table,
-td,
-th {
-  border: 2px solid black;
-  width: auto;
-  padding: 10px;
-}
-
-th {
-  text-align: left;
-}
-
 #form {
   line-height: 2;
   width: 60%;
@@ -478,6 +461,45 @@ th {
 
 button:focus {
   outline: 0;
+}
+/*--------------------------------------------------*/
+table {
+  align-self: center;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 20px;
+  background: #ddd;
+  border-bottom: 1px solid #DBC8C8;
+}
+
+th[scope='header'] {
+  text-align: left;
+  color: #ffffff;
+  background: #6c7ae0;
+}
+
+td a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #cc8356;
+}
+
+td#idx {
+  width: 50px;
+  text-align: left;
+}
+
+td#name {
+  width: 500px;
+  text-align: left;
+}
+td#author {
+  width: 200px;
+  text-align: left;
 }
 
 /*CSS for profile*/

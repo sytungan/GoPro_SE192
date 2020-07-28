@@ -1,6 +1,7 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/userDB.php";
 include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/header.php";
+echo '<br>';
 $connect= new Database();
 $data_user= $connect->getUserByID($_GET['user_id']);
 if ($data_user['user_active'] == 0) {
@@ -28,13 +29,23 @@ else {
     }
     else {
         foreach($image as $data_image) {
-        echo '<img src="/GoPro_SE192/assets/image/' . $data_image['file_name'] . '" alt="Ảnh đại diện"  height="280" width="320" >';
+        echo '<div class="card-container">
+        <div class="upper-container">
+           <div class="image-container">
+                <img src="/GoPro_SE192/assets/image/' . $data_image['file_name'] . '" alt="Ảnh đại diện"  height="280" width="320" >;
+           </div>
+        </div>';
+        // echo '<img src="/GoPro_SE192/assets/image/' . $data_image['file_name'] . '" alt="Ảnh đại diện"  height="280" width="320" >';
         }
     }
     if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $data_user['user_id']) {
         echo '<form method="POST" action="" enctype="multipart/form-data">';
+        echo ' <div class="lower-container">';
+        echo '<br>';
+        echo '<br>';
+        echo '<br>';
         echo '<input type="file" name="uploadfile" value=""/>';
-        echo '<button type="submit" name="upload">Thay đổi ảnh đại diện</button>';
+        echo '<button type="submit" name="upload" class="btn_">Thay đổi ảnh đại diện</button>';
         // If upload button is clicked ... 
         if (isset($_POST['upload'])) { 
             $msg = ""; 
@@ -52,11 +63,17 @@ else {
             echo '<script>  window.location.href = window.location.href </script>';
         }
     }
+    // echo ' <div class="lower-container">
+    echo '<div>';
+    echo '<br>';
     echo '<h3> Tên : ' . $data_user['user_nickname']. '</h3> <br>';
     echo 'ID người dùng: ' . $data_user['user_id']. '<br>';
     echo 'Tên đăng nhập: ' . $data_user['user_name']. '<br>';
     echo 'Email của người dùng: ' . $data_user['user_email']. '<br>';
     echo 'Người dùng là: ' . $data_user['user_role']. '<br>';
+    echo ' </div>
+    </div>
+    </div>';
     if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 1) {
         if ($data_user['user_level'] != 1) {
             echo '<form action="" method="post">';
@@ -72,5 +89,7 @@ else {
         }
     }
 }
+echo '<br>';
+echo '<br>';
 include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/footer.php";
 ?>

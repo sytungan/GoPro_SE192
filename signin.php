@@ -6,7 +6,7 @@ include 'header.php';
 //first, check if the user is already signed in. If that is the case, there is no need to display this page
 if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
 {
-    echo 'Bạn đã đăng nhập rồi, bạn có thể <a href="signout.php">đăng xuất</a> nếu muốn.';
+    echo '<p>Bạn đã đăng nhập rồi, bạn có thể <a href="signout.php">đăng xuất</a> nếu muốn.</p>';
 }
 else
 {

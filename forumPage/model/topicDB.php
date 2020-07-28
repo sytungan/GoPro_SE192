@@ -18,6 +18,12 @@ class topic_database {
         }
         return $this->conn->traverse("SELECT `topic_id`, `topic_subject`, `topic_date`, `topic_cat`, `topic_by`, `topic_content` FROM `topicdb` WHERE topic_cat='$topic_cat' ");
     }
+    public function countTopicByCat($topic_cat) {
+        $result= $this->conn->traverse("SELECT COUNT(*) AS 'exist' FROM `topicdb` WHERE topic_cat='$topic_cat' ");
+        foreach ($result as $p) {
+            return $p['exist'];
+        }
+    }
     public function getTopicByCatPage($topic_cat,$start_from,$limit) {
         $result= $this->conn->traverse("SELECT COUNT(*) AS 'exist' FROM `topicdb` WHERE topic_cat='$topic_cat' ");
         foreach ($result as $p) {

@@ -5,8 +5,20 @@ class pendingExamDB {
     public function __construct() {
         $this->conn = new config();
     }
+    public function countList($dbName, $title, $value) {
+        $sql= "SELECT COUNT(*) as 'total' FROM $dbName WHERE $title='$value'";
+        $result = $this->conn->traverse($sql);
+        foreach ($result as $row) {
+            $total = $row['total'];
+            break;
+        }
+        return $total;
+    }
     public function getListPenExam($_subject) {
-        return $this->conn->traverse("SELECT * FROM pendingExamDB WHERE subject='$_subject'");
+        if ($this->countList('pendingExamDB', 'subject', $_subject) > 0) {
+            return $this->conn->traverse("SELECT * FROM pendingExamDB WHERE subject='$_subject'");
+        } 
+        else return null;   
     }    
     public function getExamByID($_id) {
         return $this->conn->traverse("SELECT * FROM pendingExamDB WHERE id='$_id'");

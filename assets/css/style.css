@@ -362,23 +362,6 @@ footer div#contact_logo {
 
 /*--------------------------------------------*/
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-table,
-td,
-th {
-  border: 2px solid black;
-  width: auto;
-  padding: 10px;
-}
-
-th {
-  text-align: left;
-}
-
 #form {
   line-height: 2;
   width: 60%;
@@ -617,4 +600,116 @@ button:focus {
 }
 .comments-box p {
   word-wrap: break-word;
+}
+/*--------------------------------------------------*/
+table {
+  align-self: center;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 20px;
+  background: #ddd;
+  border-bottom: 1px solid #dbc8c8;
+}
+
+th[scope="header"] {
+  text-align: left;
+  color: #ffffff;
+  background: #6c7ae0;
+}
+
+td a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #cc8356;
+}
+
+td#idx {
+  width: 50px;
+  text-align: left;
+}
+
+td#name {
+  width: 500px;
+  text-align: left;
+}
+td#author {
+  width: 200px;
+  text-align: left;
+}
+
+/*CSS for profile*/
+.card-container {
+  width: 300px;
+  /* height: 430px; */
+  background: #fff;
+  border-radius: 6px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  box-shadow: 0px 1px 10px 1px #000;
+  overflow: hidden;
+  display: inline-block;
+}
+.upper-container {
+  height: 150px;
+  /* background: #7F00FF; */
+  background: #6c7ae0;
+}
+.image-container {
+  background: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 5px;
+  transform: translate(45px, 50px);
+}
+.image-container img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.lower-container {
+  height: 280px;
+  background: #fff;
+  padding: 20px;
+  padding-top: 40px;
+  text-align: center;
+}
+.lower-container h3,
+h4 {
+  box-sizing: border-box;
+  line-height: 0.6;
+  font-weight: lighter;
+}
+.lower-container h4 {
+  color: #7f00ff;
+  opacity: 0.6;
+  font-weight: bold;
+}
+.lower-container p {
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 30px;
+}
+.lower-container .btn_ {
+  padding: 12px 20px;
+  background: #7f00ff;
+  border: none;
+  color: white;
+  border-radius: 30px;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+}
+.lower-container .btn_:hover {
+  background: transparent;
+  color: #7f00ff;
+  border: 2px solid #7f00ff;
 }

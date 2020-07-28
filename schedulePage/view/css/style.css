@@ -5,7 +5,7 @@ body {
   
   .title {
       margin-top: 25px;
-      margin-left: 570px;
+      margin-left: 700px;
   }
   
   .content-table {
@@ -21,6 +21,13 @@ body {
   }
   
   .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .content-table thead th {
     background-color: #009879;
     color: #ffffff;
     text-align: left;
@@ -46,7 +53,7 @@ body {
   
   .btn{
       font-size: 25px;
-      margin-left: 570px;
+      margin-left: 700px;
       margin-bottom: 25px;
       text-decoration: none;
       color: white;

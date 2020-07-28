@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-
+<?php 
+include "../../header.php";
+?>
 <head> 
     <link rel="stylesheet" type=text/css href="css/style.css">
     <meta charset="UTF-8">
     <title>GoProToUniversity</title>
-    <link rel="stylesheet" href="../../assets/css/style.css" />
     <script src="../assets/js/fontAwesome.js"></script>
 </head>
 <body>
@@ -30,7 +31,6 @@
 	// $sql = "SELECT * FROM file";
     // // $result = $connect->query($sql);
     // $result = $connect->traverse($sql);
-    include "../../header.php";
     include '../controller/controller.php';
     $ctrl = new File();
     $result = $ctrl->getFile();
@@ -71,6 +71,9 @@
     <!-- <a href="" class="btn">Chỉnh</a> -->
     <a href="../controller/uploadfile.php" target="_blank" class="btn">Tải lên</a>
     <a href="deletefile.php" target="_blank" class="btn">Xóa</a>
+    <br>
+    <br>
+    <br>
     <?php
 include "../../footer.php";
 ?>

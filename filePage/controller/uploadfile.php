@@ -18,6 +18,7 @@ if (isset($_POST['up']) && isset($_FILES['fileUpload'])) {
         echo 'Dường dẫn: uploads/' . $_FILES['fileUpload']['name'] . '<br>';
         echo 'Loại file: ' . $_FILES['fileUpload']['type'] . '<br>';
         echo 'Dung lượng: ' . ((int)$_FILES['fileUpload']['size'] / 1024) . 'KB';
+        echo '<script>close()</script>';
     }
 	// $username = 'root'; // Khai báo username
     //   $password = '';      // Khai báo password
@@ -40,7 +41,7 @@ if (isset($_POST['up']) && isset($_FILES['fileUpload'])) {
     include 'controller.php';
 	$ctrl = new File();
 	
-    $result = $ctrl->uploadFIle($file,$url,$date);
+    $result = $ctrl->uploadFile($file,$url,$date);
     
     // include "../config.php";
     // $connect = new config();

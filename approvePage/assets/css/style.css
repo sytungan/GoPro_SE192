@@ -4,6 +4,7 @@ body {
 }
 
 #subjectList {
+    text-align: center;
     width: fit-content;
     padding: 10px;
     margin: left;
@@ -11,7 +12,10 @@ body {
     border: 2px solid black;
     box-shadow: 0 2px 10px rgba(0,0,0,.01)
 }
-  
+#listExamOfSubject {
+    display: flex;
+    justify-content: center;
+}
 input {
     width: fit-content;
     padding: 8px;
@@ -23,17 +27,40 @@ input {
 }
 
 table {
-    width: 100%;
+    align-self: center;
     border-collapse: collapse;
-
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-table, td, th {
-    border: 2px solid black;
-    width: auto;
-    padding: 10px;
+th, td {
+    padding: 20px;
+    background: #ddd;
+    border-bottom: 1px solid #DBC8C8;
 }
 
-th {
+th[scope='header'] {
+    text-align: left;
+    color: #ffffff;
+    background: #6c7ae0;
+}
+
+td a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #cc8356;
+}
+
+td#idx {
+    width: 50px;
+    text-align: left;
+}
+
+td#name {
+    width: 500px;
+    text-align: left;
+}
+td#author {
+    width: 200px;
     text-align: left;
 }

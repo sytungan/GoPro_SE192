@@ -23,7 +23,7 @@
 	$ctrl = new File();
 	
 	$url = $_GET['url'];
-    $result = $ctrl->deleteFIle($url);
+    $result = $ctrl->deleteFile($url);
 
 	// $sql = "DELETE FROM file WHERE url = '".$_GET['url']."'";
 	// $connect->traverseFunc($sql);

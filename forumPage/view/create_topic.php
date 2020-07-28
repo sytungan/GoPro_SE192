@@ -2,14 +2,15 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/forumPage/controller/listTopic.php";
 include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/header.php";
-echo '<h2>Create a topic</h2>';
+echo '<div class="create_topic">';
+echo '<h2>Tạo topic mới</h2>';
 if(!isset($_SESSION['signed_in']) || $_SESSION['signed_in'] == false)
 {
     //the user is not signed in
-    echo 'Sorry, you have to be <a href="/GoPro_SE192/signin.php">signed in</a> to create a topic.';
+    echo '<p>Sorry, you have to be <a href="/GoPro_SE192/signin.php">signed in</a> to create a topic.</p>';
 }
 else
-{
+{ 
     //the user is signed in
     if($_SERVER['REQUEST_METHOD'] != 'POST')
     {   
@@ -25,7 +26,7 @@ else
         else
         {         
                 echo '<form method="post" action="">
-                    Chủ đề: <input type="text" name="topic_subject" />
+                    Chủ đề:<br> <input type="text" name="topic_subject" />
                     <br>
                     Môn học: <br>'; 
                  
@@ -37,8 +38,9 @@ else
                 echo '</select> <br>'; 
                      
                 echo 'Nội dung: <br> <textarea name="topic_content" /></textarea> <br>
-                    <input type="submit" value="Create topic" />
-                 </form>';
+                    <input type="submit" value="Create topic" />';
+                        
+                echo '</form>';
         }
     }
     else
@@ -123,5 +125,6 @@ else
     //     }
     // }
 }
+echo '</div> ';
 include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/footer.php";
 ?>

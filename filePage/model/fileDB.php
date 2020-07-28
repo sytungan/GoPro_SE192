@@ -14,7 +14,8 @@ class FileDB {
       VALUES ('$file','$url','$date')";
 	  
       if ($this->conn->traverseFunc($sql) === TRUE) {
-        echo ("Thêm dữ liệu thành công");
+        $message = "Thêm dữ liệu thành công";
+        echo "<script type='text/javascript'>alert('$message'); close(); </script>";
     }
     }
     public function deleteFile($url) {

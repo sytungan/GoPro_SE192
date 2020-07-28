@@ -17,7 +17,7 @@
             }
             if(isset($_SESSION['signed_in']))
             {
-                echo '<a href="/GoPro_SE192/Userprofile.php?user_id=' .$_SESSION['user_id'].'">' . $_SESSION['user_nickname'] . '</a>  Not you? <a href="/GoPro_SE192/signout.php">Sign out</a>';
+                echo '<a text-decoration="none" href="/GoPro_SE192/Userprofile.php?user_id=' .$_SESSION['user_id'].'">' . $_SESSION['user_nickname'] . '</a>  Not you? <a href="/GoPro_SE192/signout.php">Sign out</a>';
                 
             }
             else

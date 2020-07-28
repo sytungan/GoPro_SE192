@@ -71,6 +71,9 @@
     <!-- <a href="" class="btn">Chỉnh</a> -->
     <a href="../controller/uploadfile.php" target="_blank" class="btn">Tải lên</a>
     <a href="deletefile.php" target="_blank" class="btn">Xóa</a>
+    <br>
+    <br>
+    <br>
     <?php
 include "../../footer.php";
 ?>

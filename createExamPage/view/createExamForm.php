@@ -26,11 +26,11 @@
 <body>
     <div class = "infoside">
         <label for=name>Tên đề thi: &#160 </label>
-        <label for=name id="name"> <?php echo $examName ?></label><br><br>
+        <label for=name id="name"><?php echo $examName ?></label><br><br>
         <label for=name>Môn học: &#160  </label>
-        <label for=name id="subject"> <?php echo $subject ?></label><br><br>
+        <label for=name id="subject"><?php echo $subject ?></label><br><br>
         <label for=name>Tác giả: &#160  </label>
-        <label for=name id="author"> <?php echo $author ?></lable><br><br>
+        <label for=name id="author"><?php echo $author ?></lable><br><br>
     </div>
 
     <form action="../controller/post.php" method="POST">

@@ -13,7 +13,7 @@
         include '../controller/controller.php';
         ?>
     </style>
-    <script type="text/javascript" src="../js/main.js"></script>
+
 </head>
 
 
@@ -26,7 +26,7 @@
 <body>
     <div class = "infoside">
         <label for=name>Tên đề thi: &#160 </label>
-        <label for=name id="name"> <?php echo $examName ?><</label><br><br>
+        <label for=name id="name"> <?php echo $examName ?></label><br><br>
         <label for=name>Môn học: &#160  </label>
         <label for=name id="subject"> <?php echo $subject ?></label><br><br>
         <label for=name>Tác giả: &#160  </label>
@@ -76,4 +76,6 @@
 
 </body>
 
+
+<script type="text/javascript" src="../js/main.js"></script>
 </html>

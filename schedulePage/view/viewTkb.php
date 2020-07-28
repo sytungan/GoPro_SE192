@@ -10,7 +10,11 @@
 include "../../header.php";
 include '../controller/tkbController.php';
 $ctrl = new Sched();
-$result = $ctrl->getSched();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+// $data_user= $ctrl->getUserByID($_GET['user_id']);
+$result = $ctrl->getSched($_SESSION['user_id']);
 
 //   include "../config.php";
 //   $connect = new Config();

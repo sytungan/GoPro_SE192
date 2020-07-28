@@ -2,6 +2,10 @@
     // include "../config.php";
     // $connect = new config();
 
+  if (session_status() == PHP_SESSION_NONE) {
+      session_start();
+  }
+
   $subject21 = "";
 	$subject22 = "";
 	$subject23 = "";
@@ -144,8 +148,12 @@
         $this->db = new SchedDB();
         //$this->subject = $subject_;
       }
-        public function getSched() {
-          return $this->db->getSchedDB();
+        public function getSched($user_id) {
+          return $this->db->getSchedDB($user_id);
+        }
+
+        public function getUserByID($user_id){
+          return $this->db->getUserByID($user_id);
         }
 
         public function getTotal(){
@@ -157,14 +165,14 @@
         $subject51,$subject52,$subject53,$subject54,$subject55,
         $subject61,$subject62,$subject63,$subject64,$subject65,
         $subject71,$subject72,$subject73,$subject74,$subject75,
-        $subject81,$subject82,$subject83,$subject84,$subject85){
+        $subject81,$subject82,$subject83,$subject84,$subject85,$tkb_by,$subject_){
           $this->db->insertTkb($subject21,$subject22,$subject23,$subject24,$subject25,
           $subject31,$subject32,$subject33,$subject34,$subject35,
           $subject41,$subject42,$subject43,$subject44,$subject45,
           $subject51,$subject52,$subject53,$subject54,$subject55,
           $subject61,$subject62,$subject63,$subject64,$subject65,
           $subject71,$subject72,$subject73,$subject74,$subject75,
-          $subject81,$subject82,$subject83,$subject84,$subject85);
+          $subject81,$subject82,$subject83,$subject84,$subject85,$tkb_by,$subject_);
         }
         public function updateTkb($subject_){
           $this->db->updateTkb($subject_);
@@ -217,22 +225,33 @@
 // }
 
 //echo $subject_;
+// $ctrl = new Sched();
+// $total = $ctrl->getTotal();
+// if ($total == 0){
+//   $ctrl->insertTkb($subject21,$subject22,$subject23,$subject24,$subject25,
+//   $subject31,$subject32,$subject33,$subject34,$subject35,
+//   $subject41,$subject42,$subject43,$subject44,$subject45,
+//   $subject51,$subject52,$subject53,$subject54,$subject55,
+//   $subject61,$subject62,$subject63,$subject64,$subject65,
+//   $subject71,$subject72,$subject73,$subject74,$subject75,
+//   $subject81,$subject82,$subject83,$subject84,$subject85);
+//   $message = "Đã thêm TKB mới";
+//   echo "<script type='text/javascript'>alert('$message'); close(); </script>";
+// }
+// else {
+//   $ctrl->updateTkb($subject_);
+//   $message = "Đã lưu TKB";
+//   //echo "<script type='text/javascript'>alert('$message'); close(); </script>";
+// }
+
 $ctrl = new Sched();
-$total = $ctrl->getTotal();
-if ($total == 0){
-  $ctrl->insertTkb($subject21,$subject22,$subject23,$subject24,$subject25,
+// $data_user= $ctrl->getUserByID($_GET['user_id'])$_SESSION['user_id'];
+$ctrl->insertTkb($subject21,$subject22,$subject23,$subject24,$subject25,
   $subject31,$subject32,$subject33,$subject34,$subject35,
   $subject41,$subject42,$subject43,$subject44,$subject45,
   $subject51,$subject52,$subject53,$subject54,$subject55,
   $subject61,$subject62,$subject63,$subject64,$subject65,
   $subject71,$subject72,$subject73,$subject74,$subject75,
-  $subject81,$subject82,$subject83,$subject84,$subject85);
-  $message = "Đã thêm TKB mới";
-  echo "<script type='text/javascript'>alert('$message'); close(); </script>";
-}
-else {
-  $ctrl->updateTkb($subject_);
-  $message = "Đã lưu TKB";
-  //echo "<script type='text/javascript'>alert('$message'); close(); </script>";
-}
+  $subject81,$subject82,$subject83,$subject84,$subject85,$_SESSION['user_id'],$subject_);
 ?>
+

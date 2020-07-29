@@ -15,14 +15,15 @@
     $subject = $_POST["subject"];
     $author  = $_POST["author"];
     $name    = $_POST["name"];
+    $submit = $_POST["submit"];
 
     $idx = intval($question) - 1;
     $array[$idx]->__setQuestionInfo( $question, $content , $ansA, $ansB,$ansC, $ansD, $key);
     writeJson("test.json", $array);
 
     readJson("test.json", $array);
-    $temp = intval($question);
-    if ($temp == 40){
+
+    if ($submit == 1){
         $jsonData = file_get_contents("test.json");
         $Db = new config();
         $Db->traverseFunc("INSERT INTO `pendingexamdb`(`name`, `subject`, `author`, `question`) VALUES ('$name','$subject','$author','$jsonData');");

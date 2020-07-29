@@ -2,11 +2,15 @@ var questionAmount = 40;
 var subject = document.getElementById("subject").textContent;
 var examName = document.getElementById("name").textContent;;
 var author = document.getElementById("author").textContent;;
+var confirmVar = 0;
+
+if (subject == "Toán") questionAmount = 50;
 
 function next() {
     var quantity_temp = document.getElementById("questionOrder").innerText;
     var quantity_int = parseInt(quantity_temp, 10) + 1;
-    if (quantity_int >= questionAmount) {
+
+    if (quantity_int > questionAmount) {
         document.getElementById("questionOrder").innerHTML = questionAmount;
         document.getElementById("submit").value = "Hoàn thành";
 
@@ -44,6 +48,13 @@ function popUpShow() {
     });
 }
 
+function confirmShow() {
+
+}
+
+function confirmFuc() {
+    confirm = 1;
+}
 
 
 $(function() {
@@ -57,7 +68,7 @@ $(function() {
         var ansD = $("#ansD").val();
         var key = $("select#key").val();
 
-        var dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + examName;
+        var dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + examName + '&submit=' + confirmVar;
         console.log(dataString);
         $.ajax({
             type: 'post',

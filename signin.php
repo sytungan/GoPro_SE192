@@ -80,12 +80,12 @@ else
                 //2. the query returned an empty result set, the credentials were wrong
                 if($result==0)
                 {
-                    echo 'Tài khoản hoặc mật khẩu không đúng. Xin vui lòng thử lại!';
+                    echo '<p> Tài khoản hoặc mật khẩu không đúng. Xin vui lòng thử lại! </p>';
                 }
                 else
                 {   $data=$connect->getUserByName($_POST['user_name']);
                     if ($data['user_active'] !=1) {
-                    echo 'Tài khoản của bạn đã bị khóa.';
+                    echo '<p>Tài khoản của bạn đã bị khóa.</p>';
                     }
                     else
                     {

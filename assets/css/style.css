@@ -391,29 +391,19 @@ footer div#contact_logo {
 /*--------------------------------------------*/
 
 #form {
-<<<<<<< HEAD
     line-height: 2;
     width: 60%;
     margin: 20px auto;
     float: left;
     margin-left: 20%;
-=======
-  line-height: 2;
-  width: 60%;
-  margin: 20px auto;
->>>>>>> acadb6d1d5b1ae81a61342fa555b4fd2af5f27f4
 }
 
 
 #form h4 {
-<<<<<<< HEAD
     margin-left: 10px;
 }
 .question {
     border: 1px solid #0a2947;
-=======
-  margin-left: 10px;
->>>>>>> acadb6d1d5b1ae81a61342fa555b4fd2af5f27f4
 }
 
 .answer {
@@ -423,38 +413,25 @@ footer div#contact_logo {
     text-align: center;
 }
 #submitBtn {
-<<<<<<< HEAD
-    color: #fff;
-    background-color: #2ea44f;
-    border-color: rgba(27,31,35,.15);
-    box-shadow: 0 1px 0 rgba(27,31,35,.1), inset 0 1px 0 hsla(0,0%,100%,.03); 
-    width: 100px;
-    height: 50px;
-    border: 1px solid;
-    border-radius: 6px;
-    margin-bottom: 20px;
+color: #fff;
+background-color: #2ea44f;
+border-color: rgba(27,31,35,.15);
+box-shadow: 0 1px 0 rgba(27,31,35,.1), inset 0 1px 0 hsla(0,0%,100%,.03); 
+width: 100px;
+height: 50px;
+border: 1px solid;
+border-radius: 6px;
+margin-bottom: 20px;
 }
 
 
 #clockdivTest h3 {
-    font-weight: 100;
-    color: #034688;
-    text-align: center;
-    font-size: 35px;
-    margin: 0 0 16px
-=======
-  color: #fff;
-  background-color: #2ea44f;
-  border-color: rgba(27, 31, 35, 0.15);
-  box-shadow: 0 1px 0 rgba(27, 31, 35, 0.1),
-    inset 0 1px 0 hsla(0, 0%, 100%, 0.03);
-  width: 100px;
-  height: 50px;
-  border: 1px solid;
-  border-radius: 6px;
-  margin-left: 400px;
+font-weight: 100;
+color: #034688;
+text-align: center;
+font-size: 35px;
+margin: 0 0 16px
 }
-
 /*CSS for sign_in*/
 
 .joinOuterContainer {
@@ -779,7 +756,6 @@ h4 {
   background: transparent;
   color: #7f00ff;
   border: 2px solid #7f00ff;
->>>>>>> acadb6d1d5b1ae81a61342fa555b4fd2af5f27f4
 }
 
 #clockdivTest {

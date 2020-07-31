@@ -21,6 +21,12 @@
 $examName = $_POST["name"];
 $subject  = $_POST["subject"];
 $author   = $_POST["author"];
+
+if ($subject == "Toán") initJson(50); 
+else initJson(40); 
+
+if ($subject == "Toán") readJson("../controller/test.json", $array);
+else readJson("../controller/test.json", $array);
 ?>
 
 <body>
@@ -64,14 +70,6 @@ $author   = $_POST["author"];
         <input name="submit" type="submit" id="submit" value="Submit" /> <br> <br>
     </form>
 
-
-    <div id="popUpConfirm" class="popUpconfirm">
-        <span class="helper"></span>
-        <p class="popUpMessage"> Xác nhận và đăng tải đề thi.<br><br>
-            <button id="confirm" onclick="">Xác nhận</button>
-            <button id="cancel" onclick="">Quay lại</button>
-        </p>
-    </div>
 
 
     </div>

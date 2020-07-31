@@ -19,8 +19,8 @@
 
     $idx = intval($question) - 1;
     $array[$idx]->__setQuestionInfo( $question, $content , $ansA, $ansB,$ansC, $ansD, $key);
-    writeJson("test.json", $array);
-
+    if ($subject == "Toán") writeJson("test.json", $array, 50);
+    else writeJson("test.json", $array, 40);
     readJson("test.json", $array);
 
     if ($submit == 1){

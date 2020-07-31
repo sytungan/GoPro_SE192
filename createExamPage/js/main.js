@@ -13,6 +13,8 @@ function next() {
     if (quantity_int > questionAmount) {
         document.getElementById("questionOrder").innerHTML = questionAmount;
         document.getElementById("submit").value = "Hoàn thành";
+        confirmVar = 1;
+        return;
 
     } else {
         document.getElementById("questionOrder").innerHTML = quantity_int.toString();
@@ -28,6 +30,7 @@ function next() {
 
 
 function previous() {
+    confirmVar = 0;
     var quantity_temp = document.getElementById("questionOrder").innerText;
     var quantity_int = parseInt(quantity_temp, 10) - 1;
     if (quantity_int < 1) document.getElementById("questionOrder").innerHTML = "1";
@@ -48,13 +51,6 @@ function popUpShow() {
     });
 }
 
-function confirmShow() {
-
-}
-
-function confirmFuc() {
-    confirm = 1;
-}
 
 
 $(function() {
@@ -75,7 +71,7 @@ $(function() {
             url: '../controller/post.php',
             data: dataString,
             success: function() {
-                if (question != 40) next();
+                if (confirmVar == 0) next();
                 else { popUpShow(); }
             }
         });

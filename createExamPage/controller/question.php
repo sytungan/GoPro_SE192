@@ -1,6 +1,6 @@
 <?php
     //TODO: init a empty JSON file to hold the exam info
-    function initJson(){ 
+    function initJson($num){ 
     static $functionCalled = false;
     if ($functionCalled) return;
         $functionCalled = true;
@@ -21,7 +21,7 @@
         file_put_contents("../controller/test.json", $jsondata);
         $jsonData = file_get_contents("../controller/test.json");
         $json = json_decode($jsonData, true);
-        for ($i = 2; $i <= 40; $i++) {
+        for ($i = 2; $i <= $num; $i++) {
             $temp = array(
                 "question" => "$i",
                 "content" => "",
@@ -62,7 +62,7 @@
 
 
     //TODO: write exam to JSON file after modify
-    function writeJson($fileName, &$array){
+    function writeJson($fileName, &$array, $num){
         $question = $array[0];
         $array[0]->__print();
         
@@ -84,7 +84,7 @@
 
         $jsonData = file_get_contents($fileName);
         $json = json_decode($jsonData, true);
-        for ($i = 1; $i <= 39; $i++) {
+        for ($i = 1; $i <= $num-1; $i++) {
             $temp = array(
                 "question" => $array[$i]->__getQuestion(),
                 "content" => $array[$i]->___getContent(),
@@ -177,4 +177,3 @@
             echo "Key: ".$this->key."<br>";
         }
     }
-?>

@@ -1,4 +1,4 @@
-﻿<link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
+﻿﻿<link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
 <?php
 include "../controller/testController.php";
 class testForm {
@@ -37,8 +37,20 @@ class testForm {
                 $this->listKey[] = $exam['key'];
             }
         echo "<br>";
-        echo "<input id='submitBtn' type='submit' name='submit' value='Nộp bài'>";      
-        echo "</form>";     
+        echo "
+        <div id='submitDiv'>
+        <input id='submitBtn' type='submit' name='submit' value='Nộp bài'/>
+        </div>";
+        echo "</form>";
+        echo "
+        <div id='clockdivTest'>
+            <h3>Thời gian còn lại</h3>
+            <div><span class='minutes'></span>
+            <div class='smalltext'>Phút</div>
+            <span class='seconds'></span>
+            <div class='smalltext'>Giây</div>
+            </div>
+        </div>";
 
     }
    
@@ -49,3 +61,8 @@ if (isset($_POST['submit'])) {
     include "resultForm.php";
 }
 ?>          
+<script src="/GoPro_SE192/assets/js/countdownClockTest.js">
+        var deadline = new Date(Date.parse(new Date()) + 15*24*60*60*1000);
+        initializeClock('clockdiv', deadline);
+</script>
+

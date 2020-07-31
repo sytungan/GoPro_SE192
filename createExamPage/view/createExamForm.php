@@ -18,25 +18,31 @@
 
 
 <?php
-    $examName = $_POST["name"];
-    $subject  = $_POST["subject"];
-    $author   = $_POST["author"];
+$examName = $_POST["name"];
+$subject  = $_POST["subject"];
+$author   = $_POST["author"];
+
+if ($subject == "Toán") initJson(50); 
+else initJson(40); 
+
+if ($subject == "Toán") readJson("../controller/test.json", $array);
+else readJson("../controller/test.json", $array);
 ?>
 
 <body>
-    <div class = "infoside">
+    <div class="infoside">
         <label for=name>Tên đề thi: &#160 </label>
         <label for=name id="name"><?php echo $examName ?></label><br><br>
-        <label for=name>Môn học: &#160  </label>
+        <label for=name>Môn học: &#160 </label>
         <label for=name id="subject"><?php echo $subject ?></label><br><br>
-        <label for=name>Tác giả: &#160  </label>
+        <label for=name>Tác giả: &#160 </label>
         <label for=name id="author"><?php echo $author ?></lable><br><br>
     </div>
 
     <form action="../controller/post.php" method="POST">
         <label id="questionLabel" for=Question>Câu hỏi </label>
         <label id="questionOrder">1</label><br>
-        <textarea id="question" name="question"></textarea><br><br> 
+        <textarea id="question" name="question"></textarea><br><br>
 
         <label for=ansA>Câu A:</label><br>
         <input type="text" id="ansA" name="ansA"><br><br>
@@ -64,12 +70,15 @@
         <input name="submit" type="submit" id="submit" value="Submit" /> <br> <br>
     </form>
 
+
+
+    </div>
     <div id="popUpHover" class="popUpHover">
         <span class="helper"></span>
         <div>
-            <p class="popUpMessage"> Cảm ơn bạn đã đóng góp đề  thi cho hệ thống!!<br>
-            Đề thi của bạn sẽ được quản trị viên kiểm duyệt.<br><br>
-            <button onclick="window.location.href='../../index.php'">Về trang chủ</button>
+            <p class="popUpMessage"> Cảm ơn bạn đã đóng góp đề thi cho hệ thống!!<br>
+                Đề thi của bạn sẽ được quản trị viên kiểm duyệt.<br><br>
+                <button onclick="window.location.href='../../index.php'">Về trang chủ</button>
             </p>
         </div>
     </div>
@@ -78,4 +87,5 @@
 
 
 <script type="text/javascript" src="../js/main.js"></script>
+
 </html>

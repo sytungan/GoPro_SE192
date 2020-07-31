@@ -60,7 +60,7 @@
     
 
 
-    <script src="assets/js/countdownClock.js">
+    <script src="/GoPro_SE192/assets/js/countdownClock.js">
         var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
         initializeClock('clockdiv', deadline);
     </script>

@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
-
-<head> <link rel="stylesheet" type=text/css href="css/style.css">
+<?php 
+include "../../header.php";
+?>
+<head> 
+    <link rel="stylesheet" type=text/css href="css/style.css">
+    <meta charset="UTF-8">
+    <title>GoProToUniversity</title>
+    <script src="../assets/js/fontAwesome.js"></script>
 </head>
 <body>
-
     <body>
 	<?php
     // include "../config.php";
@@ -26,7 +31,6 @@
 	// $sql = "SELECT * FROM file";
     // // $result = $connect->query($sql);
     // $result = $connect->traverse($sql);
-
     include '../controller/controller.php';
     $ctrl = new File();
     $result = $ctrl->getFile();
@@ -67,4 +71,10 @@
     <!-- <a href="" class="btn">Chỉnh</a> -->
     <a href="../controller/uploadfile.php" target="_blank" class="btn">Tải lên</a>
     <a href="deletefile.php" target="_blank" class="btn">Xóa</a>
+    <br>
+    <br>
+    <br>
+    <?php
+include "../../footer.php";
+?>
 </html>

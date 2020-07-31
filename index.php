@@ -1,12 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <head>
-    <meta charset="UTF-8">
     <title>GoProToUniversity</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="assets/js/fontAwesome.js"></script>
 </head>
 
 <body>
+<<<<<<< HEAD
     <div id="header">
         <a id="logo" class="col-2" href="index.php"><img src="assets/image/logo.png" alt="logo" /></a>
         <div id="webName">
@@ -38,6 +36,11 @@
 
     </div>
 
+=======
+<?php 
+    include 'header.php'; 
+?>
+>>>>>>> acadb6d1d5b1ae81a61342fa555b4fd2af5f27f4
     <div id="clockdiv">
         <h3>Đếm ngược đến kỳ thi THPTQG</h3>
         <div>
@@ -64,7 +67,9 @@
         </div>
         <div id="otherNews">
             <h4>TIN TỨC KHÁC</h4>
-            <img src="assets/image/other_news.png" alt="news" />
+            <?php
+            include "news.php";
+            ?> 
         </div>
         <div id="bxh">
             <h4>BẢNG XẾP HẠNG</h4> <br />
@@ -99,4 +104,5 @@
 
 <?php
 include "footer.php";
+
 ?>

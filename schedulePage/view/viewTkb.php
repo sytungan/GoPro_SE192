@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <meta charset="UTF-8">
+    <title>GoProToUniversity</title>
     <link rel="stylesheet" type=text/css href="css/style.css">
     </head>
     <body>
 	<?php
-
+include "../../header.php";
 include '../controller/tkbController.php';
 $ctrl = new Sched();
-$result = $ctrl->getSched();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+// $data_user= $ctrl->getUserByID($_GET['user_id']);
+$result = $ctrl->getSched($_SESSION['user_id']);
 
 //   include "../config.php";
 //   $connect = new Config();
@@ -91,5 +97,8 @@ break;
       </form>
     </body>
     <footer>
+    <?php
+include "../../footer.php";
+?>
     </footer>
 </html>

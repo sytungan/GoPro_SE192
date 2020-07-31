@@ -8,6 +8,34 @@ body {
     
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
+
+/*------------------reponsive----------------*/
+
+.row:after{
+    content:"";
+    clear:both;
+    display:table;
+}
+[class*="col-"] {
+    float:left;
+}
+/* For dekstop */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+
 /*------------------header----------------*/
 #header {
     background-image: url(../image/menu_bgr.png);
@@ -400,17 +428,22 @@ th {
     line-height: 2;
     width: 60%;
     margin: 20px auto;
-
+    float: left;
+    margin-left: 20%;
 }
+
 
 #form h4 {
     margin-left: 10px;
 }
 .question {
-    border: 1px solid black;
+    border: 1px solid #0a2947;
 }
 .answer {
     margin-left: 20px;
+}
+#submitDiv{
+    text-align: center;
 }
 #submitBtn {
     color: #fff;
@@ -421,5 +454,48 @@ th {
     height: 50px;
     border: 1px solid;
     border-radius: 6px;
-    margin-left: 400px;
+    margin-bottom: 20px;
+}
+
+
+#clockdivTest h3 {
+    font-weight: 100;
+    color: #034688;
+    text-align: center;
+    font-size: 35px;
+    margin: 0 0 16px
+}
+
+#clockdivTest {
+    
+    color: #fff;
+    background: rgba(255,255,255,0.63);
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    padding: 0px;
+    width: 20%;
+    float: right;
+    position: fixed;
+    margin-top: 210px;
+}
+
+#clockdivTest > div {
+    padding: 10px 35px;
+    border-radius: 3px;
+    background: #55595d;
+    display: inline-block
+}
+
+#clockdivTest div > span {
+    padding: 0;
+    border-radius: 3px;
+    font-size: 50px;
+    display: inline-block;
+}
+
+#clockdivTest .smalltext {
+    padding-top: 5px;
+    font-size: 16px;
 }

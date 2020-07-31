@@ -17,16 +17,28 @@ class testForm {
                 echo "<div class='question'";
                 echo  "<h3>Câu".$exam['question']."</h3>
                 <h4>".$exam['content']."</h4>
-                <input class='answer' type='radio' value ='A' name = '".$exam['question']."'>".$exam['answerA'].
-                "<br><input class='answer' type='radio' value ='B' name = '".$exam['question']."'>".$exam['answerB'].
-                "<br><input class='answer' type='radio' value ='C' name = '".$exam['question']."'>".$exam['answerC'].
-                "<br><input class='answer' type='radio' value ='D' name = '".$exam['question']."'>".$exam['answerD'].
+                <input class='answer' type='radio' value ='A' name = '".$exam['question']."'>".' '.$exam['answerA'].
+                "<br><input class='answer' type='radio' value ='B' name = '".$exam['question']."'>".' '.$exam['answerB'].
+                "<br><input class='answer' type='radio' value ='C' name = '".$exam['question']."'>".' '.$exam['answerC'].
+                "<br><input class='answer' type='radio' value ='D' name = '".$exam['question']."'>".' '.$exam['answerD'].
                 "</div>";
                 $this->listKey[] = $exam['key'];
             }
         echo "<br>";
-        echo "<input id='submitBtn' type='submit' name='submit' value='Nộp bài'/>";      
-        echo "</form>";     
+        echo "
+        <div id='submitDiv'>
+        <input id='submitBtn' type='submit' name='submit' value='Nộp bài'/>
+        </div>";
+        echo "</form>";
+        echo "
+        <div id='clockdivTest'>
+            <h3>Thời gian còn lại</h3>
+            <div><span class='minutes'></span>
+            <div class='smalltext'>Phút</div>
+            <span class='seconds'></span>
+            <div class='smalltext'>Giây</div>
+            </div>
+        </div>";
 
     }
    
@@ -38,4 +50,7 @@ if (isset($_POST['submit'])) {
     
 }
 ?>
-                
+<script src="/GoPro_SE192/assets/js/countdownClockTest.js">
+        var deadline = new Date(Date.parse(new Date()) + 15*24*60*60*1000);
+        initializeClock('clockdiv', deadline);
+</script>

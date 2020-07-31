@@ -1,5 +1,6 @@
 <?php
 $result = $viewExam->ctrl->markingExam($_GET['subject'], $viewExam->listKey, $_POST);
+echo "Kết quả của bạn là:";
 echo "$result";
 echo "<br>";
 echo "<a href='viewSuggestion.php'>Xem gợi ý</a><br>";

@@ -8,7 +8,7 @@
 
 <body>
     <div id="header">
-        <a id="logo" href="index.php"><img src="assets/image/logo.png" alt="logo" /></a>
+        <a id="logo" class="col-2" href="index.php"><img src="assets/image/logo.png" alt="logo" /></a>
         <div id="webName">
             <h2>GOPRO TO UNIVERSITY</h2>
         </div>
@@ -89,7 +89,7 @@
     
 
 
-    <script src="assets/js/countdownClock.js">
+    <script src="/GoPro_SE192/assets/js/countdownClock.js">
         var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
         initializeClock('clockdiv', deadline);
     </script>

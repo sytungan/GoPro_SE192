@@ -92,8 +92,10 @@ break;
     ?>
         </tbody>
         </table>
+        <div class="beforebtn">
         <a href="editTkb.php" class="btn">SỬA TKB</a> 
 		<!-- <button type="submit" class="btn">LƯU TKB</button> -->
+        </div>
       </form>
     </body>
     <footer>

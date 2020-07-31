@@ -86,8 +86,8 @@
         </table>
         <div class="beforebtn">
 		<button type="submit" class="btn" target="_blank">LƯU TKB</button>
-		<!-- <a href="viewtkb.php" class="btn" target="_blank">XEM TKB</a> -->
-        <button type="submit" onclick="viewtkb.php" class="btn" target="_blank">XEM TKB</button>
+		<a href="viewtkb.php" class="btn" target="_blank">XEM TKB</a>
+        <!-- <button type="submit" onclick="viewtkb.php" class="btn" target="_blank">XEM TKB</button> -->
         </div>
       </form>
     </body>

@@ -6,7 +6,7 @@ include 'header.php';
 //first, check if the user is already signed in. If that is the case, there is no need to display this page
 if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
 {
-    echo '<p>Bạn đã đăng nhập rồi, bạn có thể <a href="signout.php">đăng xuất</a> nếu muốn.</p>';
+    echo '<h3 class="notice">Bạn đã đăng nhập thành công.</h3>';
 }
 else
 {
@@ -23,14 +23,14 @@ else
          echo '<form method="post" action="">
          <div class="joinOuterContainer">
          <div class="joinInnerContainer">
-           <h1 class="heading">SIGN IN</h1>
+           <h1 class="heading">ĐĂNG NHẬP</h1>
            <div>
-             <input placeholder="Username" class="joinInput" type="text" name="user_name" />
+             <input placeholder="Tên đăng nhập" class="joinInput" type="text" name="user_name" />
            </div>
            <div>
-             <input placeholder="Password" class="joinInput mt-20" type="password" name="user_pass"/>
+             <input placeholder="Mật khẩu" class="joinInput mt-20" type="password" name="user_pass"/>
            </div>
-           <input class="button mt-20" type="submit" value="Sign in"></input>
+           <input class="button mt-20" type="submit" value="ĐĂNG NHẬP"></input>
          </div>
        </div>
        </form>';
@@ -56,7 +56,7 @@ else
          
         if(!empty($errors)) /*check for an empty array, if there are errors, they're in this array (note the ! operator)*/
         {
-            echo 'Có một số lỗi đã xảy ra. Bạn vui lòng kiểm tra lại';
+            echo '<h3 class="notice">Có một số lỗi đã xảy ra. Bạn vui lòng kiểm tra lại</h3>';
             echo '<ul>';
             foreach($errors as $key => $value) /* walk through the array so all the errors get displayed */
             {
@@ -71,7 +71,7 @@ else
             if($result<0)
             {
                 //something went wrong, display the error
-                echo 'Có lỗi xảy ra khi đăng nhập, xin vui lòng thử lại sau';
+                echo '<h3 class="notice">Có lỗi xảy ra khi đăng nhập, xin vui lòng thử lại sau</h3>';
             }
             else
             {
@@ -80,12 +80,12 @@ else
                 //2. the query returned an empty result set, the credentials were wrong
                 if($result==0)
                 {
-                    echo '<p> Tài khoản hoặc mật khẩu không đúng. Xin vui lòng thử lại! </p>';
+                    echo '<h3 class="notice">Tài khoản hoặc mật khẩu không đúng. Xin vui lòng thử lại! </h3>';
                 }
                 else
                 {   $data=$connect->getUserByName($_POST['user_name']);
                     if ($data['user_active'] !=1) {
-                    echo '<p>Tài khoản của bạn đã bị khóa.</p>';
+                    echo '<h3 class="notice">Tài khoản của bạn đã bị khóa.</h3>';
                     }
                     else
                     {

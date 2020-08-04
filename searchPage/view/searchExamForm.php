@@ -41,7 +41,7 @@ if(isset($_GET['search'])) {
     else $output = "<h4>Vui lòng nhập lại từ khóa</h4>";
 }
 ?>
-<form>
+<form id="searchForm">
 <input class="search" type="text" name="search" placeholder="Tìm kiếm">
 </form>
 <div class="result">

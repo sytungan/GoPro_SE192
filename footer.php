@@ -1,9 +1,4 @@
-﻿<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
-    <script src="/GoPro_SE192/assets/js/fontAwesome.js"></script>
-</head>
-<footer>
+﻿<footer>
     <div id="contact_logo">
         <ul>
             <li><a href="https://www.facebook.com/khai.hoquang.773"><img src="/GoPro_SE192/assets/image/FB-logo.png" alt="FB logo" /></a></li>

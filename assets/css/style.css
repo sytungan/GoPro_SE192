@@ -773,7 +773,7 @@ h4 {
     font-size: 30px;
     padding: 0px;
     width: 20%;
-    float: right;
+    /* float: right; */
     position: fixed;
     margin-top: 210px;
 }

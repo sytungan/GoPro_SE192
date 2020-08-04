@@ -276,6 +276,13 @@ body {
 }
 
 /*--------------------------------------------*/
+/*---------------select type test---------------*/
+#listTypeExam {
+  padding: 10px 100px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
 /*---------------select subject----------------*/
 #listObject {
   padding: 10px 100px;

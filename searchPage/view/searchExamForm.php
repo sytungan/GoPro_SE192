@@ -25,7 +25,8 @@ class searchExamForm {
                 $this->output .=  "<td id='name'><a href='view/examViewForm.php?subjectID=" . $row['id'] . "'target='_blank'>" . $row['name'] . "</a></td>";
                 $this->output .=  "<td id='author'>" . $row['author'] . "</td>";
                 $this->output .=  "</tr>";
-            }  
+            }
+            $this->output .= "</table>";  
         }              
         else $this->output = "<h4> Không tìm thấy </h4>";
     }

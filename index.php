@@ -38,22 +38,9 @@
             ?> 
         </div>
         <div id="bxh">
-            <h4>BẢNG XẾP HẠNG</h4> <br />
-            <div id="_bxh">
-                <h6>TUẦN 45<br>(22/6-29/6/2020)</h6>
-                <div class="rank">
-                    <img src="assets/image/rank1.png" alt="rank1"/>
-                    <p>&ensp; Có làm mới có ăn </p> <br />
-                </div>
-                <div class="rank">
-                    <img src="assets/image/rank2.png" alt="rank1" />
-                    <p>&ensp; Thăm ngàn</p><br />
-                </div>
-                <div class="rank">
-                    <img src="assets/image/rank3.png" alt="rank1" />
-                    <p>&ensp; NewBitcoin 3,14 </p><br />
-                </div>
-            </div>
+            <?php
+            include "ranked.php";
+            ?>
         </div>
     </div>
 

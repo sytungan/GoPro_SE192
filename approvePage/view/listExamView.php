@@ -17,6 +17,7 @@ if ($result != null) {
         echo "<td id='author'>" . $row['author'] . "</td>";
         echo "</tr>";
     }
+    echo "</table>";
 }
 else echo "<h3> Không có nội dung cần duyệt </h4>"
 ?>

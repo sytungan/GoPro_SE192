@@ -9,6 +9,7 @@
     <title>Create Exam</title>
     <style>
         <?php
+        session_start();
         include '../css/style.css';
         include '../controller/controller.php';
         ?>

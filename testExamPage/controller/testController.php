@@ -1,12 +1,17 @@
 <?php
+session_start();
 header('Content-Type: text/html; charset=utf-8');
-include "../model/examDB.php"; 
+include "../model/examDB.php";
+include "../model/markDB.php";
 class testController {
     private $db;
     private $id;
-    function __construct($_id) {
+    private $ranked = false;
+    function __construct($_id, $option) {
         $this->db = new examDB();
         $this->id = $_id;
+        $this->db->setTableName($option); //1 to normal, 2 to weekly
+        if ($option == 2) $this->ranked = true;
     }
     public function getInfoOfExam() {
         $result = $this->db->getExamByID($this->id);
@@ -38,9 +43,15 @@ class testController {
         echo "<script>
                 hideButton(); 
             </script>";
+        if ($this->ranked == true) {
+            if(isset($_SESSION['signed_in'])) {
+                $markRecord = new markDB();
+                $pMR = $markRecord->insertMark($result, $_SESSION['user_id'], $_SESSION['user_name'], $_SESSION['user_nickname'], $this->id, $subject);
+                if ($pMR == null) return $result . " (Không được tính vào xếp hạng)";
+            }
+        }
         return $result;
     }
-    
 }
 ?>
 <script>

@@ -2,7 +2,7 @@
 include '../../header.php';
 if(isset($_GET['subject'])) {
     include '../controller/examController.php';
-    $ctrl = new examController($_GET['subject']);
+    $ctrl = new examController($_GET['subject'], $_GET['option']);
     $result = $ctrl->getAllExam();
     echo "<br>";
     if ($result != null) {
@@ -16,7 +16,7 @@ if(isset($_GET['subject'])) {
         foreach ($result as $row) {
             echo "<tr>";
             echo "<td id='idx'>" .$row['id']. "</td>";
-            echo "<td id='name'><a href='testForm.php?subject=".$_GET['subject']."&testID=" . $row['id'] . "'target='_blank'>" . $row['name'] . "</a></td>";
+            echo "<td id='name'><a href='testForm.php?subject=".$_GET['subject']."&option=".$_GET['option']."&testID=" . $row['id'] . "'target='_blank'>" . $row['name'] . "</a></td>";
             echo "<td id='author'>" . $row['author'] . "</td>";
             echo "</tr>";
         }

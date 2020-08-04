@@ -6,7 +6,7 @@ class testForm {
     public $listKey=array(0);
 
     public function __construct() {
-        $this->ctrl = new testController($_GET['testID']);
+        $this->ctrl = new testController($_GET['testID'],$_GET['option']);
     }
     public function onOpen() {
         $jsonData = $this->ctrl->getInfoOfExam();

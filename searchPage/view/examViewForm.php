@@ -5,6 +5,7 @@ body {
 </style>
 <body>
 <?php
+session_start();
 include "../controller/examViewController.php";
 class examViewForm {
     private $ctrl;
@@ -27,6 +28,7 @@ class examViewForm {
                 <input type='radio' name=answer/>".$exam['answerD'];
             echo "</form>";
         }
+        $this->ctrl->checkRole();
 
     }
     public function mousingOnAQuestion() {

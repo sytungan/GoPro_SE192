@@ -15,7 +15,16 @@ class examViewController {
         }
     }
     public function checkRole() {
-
+        if(isset($_SESSION['signed_in'])) {
+            if ($_SESSION['user_role'] == 'Student') {
+                echo '<form method="post">';
+                echo '<input type="submit" name="testEx" id="testEx" value="Thi thử" />';
+                echo '</from>';
+            }
+            if(array_key_exists('testEx',$_POST)) {
+                $this->changeToExamForm();
+            }
+        }
     }
     public function changeToExamForm() {
         

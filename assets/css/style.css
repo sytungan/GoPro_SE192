@@ -504,8 +504,6 @@ margin: 0 0 16px
 button:focus {
   outline: 0;
 }
-.view_listtopic {
-}
 .view_listtopic a {
   text-decoration: none;
   color: #e39f9f;

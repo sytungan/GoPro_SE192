@@ -4,8 +4,10 @@ body {
   }
   
   .title {
-      margin-top: 25px;
-      margin-left: 700px;
+      /* margin-top: 25px;
+      margin-left: 700px; */
+      width: 300px;
+      margin: 0 auto;
   }
   
   .content-table {
@@ -50,19 +52,31 @@ body {
   .content-table tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
   }
+
+  .beforebtn{
+    text-align: center;
+  }
   
   .btn{
+    display: inline-block;
+    width: 190px;
+    /*margin: 0 auto; */
+    margin: 10px auto;
+ 
       font-size: 25px;
-      margin-left: 700px;
-      margin-bottom: 25px;
+      /* margin-left: 700px; */
+      /* margin-bottom: 25px; */
       text-decoration: none;
       color: white;
       background-color: #e6760e;
       padding: 15px 30px;
       border-radius: 20px;
       /* margin: 0 5px; */
-      width: 190px;
-      display: inline-block;
-      text-align: center;
+      
+      /* display: inline-block;
+      margin: 0 auto; */
+      /* text-align: center; */
       transition: all .3s;
   }
+
+  

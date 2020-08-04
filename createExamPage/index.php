@@ -40,7 +40,7 @@
         <input name="submit" type="submit" id="submit" value="Tiếp tục"/> <br> <br>
     </form>
     <?php
-        include '../footer.php';
+        include "../footer.php";
     ?>
 </body>
 

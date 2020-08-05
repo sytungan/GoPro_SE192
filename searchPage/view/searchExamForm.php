@@ -28,7 +28,7 @@ class searchExamForm {
             }
             $this->output .= "</table>";  
         }              
-        else $this->output = "<h4> Không tìm thấy </h4>";
+        else $this->output = '<h3 class="notice"> Không tìm thấy </h3>';
     }
 }
 $output = '';
@@ -38,7 +38,7 @@ if(isset($_GET['search'])) {
         $search->onSearchButtonClick();
         $output = '';
     }
-    else $output = "<h4>Vui lòng nhập lại từ khóa</h4>";
+    else $output = '<h3 class="notice">Vui lòng nhập lại từ khóa</h3>';
 }
 ?>
 <form id="searchForm">

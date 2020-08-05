@@ -8,6 +8,7 @@ body {
 .result {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 #searchForm {
     min-height: 59%;
@@ -60,3 +61,13 @@ td#author {
     width: 200px;
     text-align: left;
 }
+.notice {
+    min-height: 38.6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .notice a {
+    text-decoration: none;
+    color: #cc8356;
+  }

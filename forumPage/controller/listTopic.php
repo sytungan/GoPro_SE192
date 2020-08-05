@@ -47,12 +47,16 @@ class listTopicConTroller{
         return $this->topic_database->countTopicByCat($topic_cat);
     }
     public function limit_text($text, $limit=20) {
-      if (str_word_count($text, 0) > $limit) {
-          $words = str_word_count($text, 2);
-          $pos = array_keys($words);
-          $text = substr($text, 0, $pos[$limit]) . '...';
-      }
-      return $text;
+        mb_internal_encoding("UTF-8");
+        if (str_word_count($text, 0) > $limit) {
+            $words = str_word_count($text, 2);
+            $pos = array_keys($words);
+            $text = mb_substr($text, 0, $pos[$limit]) . '...';
+        }
+        if (strpos($text, "\n") > 0) {
+            $text = mb_substr($text, 0, strpos($text, "\n")-1) . '...';
+        }
+        return $text;
     }
 
     // Function involving Reply

@@ -13,7 +13,7 @@ echo "<div class='view_listtopic'>";
 $connect= new listTopicConTroller();
 $data_cat=$connect->getCatbyID($_GET['cat_id']);
 echo '<div class="beautify"><h3><a href="/GoPro_SE192/forumPage/view/create_topic.php">Tạo topic mới</a></h3></div>';
-echo '<h2>Bài viết thuộc chủ đề: ′'.$data_cat['cat_name']  . '′</h2>';
+echo '<br><h2>Bài viết thuộc chủ đề: ′'.$data_cat['cat_name']  . '′</h2><br>';
 //do a query for the topics
 $topic= $connect->getTopicByCat($_GET['cat_id']);
 if($topic==NULL)
@@ -37,7 +37,7 @@ else
         echo '<div class="topic">'; 
         $data_user= $connect->getUserByID($data_topic['topic_by']);
         echo '<div class="col-8">';
-        echo '<h2><a href="/GoPro_SE192/forumPage/view/view_topic.php?id=' . $data_topic['topic_id'] . '">' . $data_topic['topic_subject'] . '</a></h2>';
+        echo '<h3><a href="/GoPro_SE192/forumPage/view/view_topic.php?id=' . $data_topic['topic_id'] . '">' . $data_topic['topic_subject'] . '</a></h3>';
         echo '<h4>Created at: ' .date('d-m-Y', strtotime($data_topic['topic_date'])) . ' | ';
         echo '  Created by: <a href="/GoPro_SE192/Userprofile.php?user_id=' .$data_user['user_id'].'">' . $data_user['user_nickname'] . '</a><br></h4>';
         echo '<p>' . nl2br($connect->limit_text($data_topic['topic_content'])) . '</p>';
@@ -73,7 +73,7 @@ else
             echo '<div class="buttons"><a href="/GoPro_SE192/forumPage/view/view_listtopic.php?cat_id=' . $cat_id . '&page=' . $i . ' "> ' . $i . '</a></div>';
         }             
         else  { 
-            echo '<div class="buttons"> <a href="/GoPro_SE192/forumPage/view/view_listtopic.php?cat_id=' . $cat_id . '&page=' . $i .' "> ' . $i . '</div>';
+            echo '<div class="buttons"> <a href="/GoPro_SE192/forumPage/view/view_listtopic.php?cat_id=' . $cat_id . '&page=' . $i .' "> ' . $i . '</a></div>';
         }   
     };   
     echo '</div>'; 

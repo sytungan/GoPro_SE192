@@ -17,6 +17,7 @@
     <!--<script type="text/javascript" src="js/main.js"></script>-->
 </head>
 <body>
+    <br>
     <form action="view/createExamForm.php" method="POST">
         <label for=name>Tên đề thi:</label><br>
         <input type="text" id="name" name="name"><br><br>

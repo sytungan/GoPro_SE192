@@ -449,12 +449,13 @@ footer div#contact_logo {
   font-size: 20px;
   font-weight: 400;
   margin-left: 50px;
+  display: inline;
 }
 
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
     position: absolute;
-    left: px;
+    left: -999px;
 }
 [type="radio"]:checked + .answer,
 [type="radio"]:not(:checked) + .answer
@@ -470,8 +471,8 @@ footer div#contact_logo {
 [type="radio"]:not(:checked) + .answer:before {
     content: '';
     position: absolute;
-    left: 10;
-    top: 3;
+    left: 0;
+    top: 0;
     width: 18px;
     height: 18px;
     border: 1px solid #ddd;
@@ -485,8 +486,8 @@ footer div#contact_logo {
     height: 12px;
     background: #2ea44f;
     position: absolute;
-    top: 7px;
-    left: 14px;
+    top: 4px;
+    left: 4px;
     border-radius: 100%;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;

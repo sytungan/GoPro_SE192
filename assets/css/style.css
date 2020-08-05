@@ -53,10 +53,10 @@ body {
   height: 100%;
 }
 #header a#logo img {
-  height: 80px;
+  height: 100px;
   width: auto;
-  margin-left: 300px;
-  margin-top: 35px;
+  margin-left: 100px;
+  margin-top: -5px;
 }
 #header a#logo:hover img {
   transform: scale(1.2);
@@ -281,7 +281,9 @@ body {
   font-weight: bold;
 }
 
-/*--------------------------------------------*/
+/*--------------------list question-----------------------*/
+#testSlide {
+}
 /*---------------select type test---------------*/
 #listTypeExam {
   display: flex;
@@ -291,7 +293,12 @@ body {
   content: "";
   display: block;
   clear: both;
-} 
+}
+#listExam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /*---------------select subject----------------*/
 #listObject {
   padding: 10px 100px;
@@ -440,8 +447,11 @@ footer div#contact_logo {
 
 
 .question {
+    background-color: #d9edf7;
+    margin: 20px;
     line-height: 2;
     border: 2px solid #0a2947;
+    border-radius: 10px;
 }
 
 .answer {
@@ -453,10 +463,10 @@ footer div#contact_logo {
   display: inline;
 }
 
-[type="radio"]:checked,
-[type="radio"]:not(:checked) {
+input[type="radio"][class = "answerRadio"]:checked,
+input[type="radio"][class = "answerRadio"]:not(:checked){
     position: absolute;
-    left: -999px;
+    left: -9999px;
 }
 [type="radio"]:checked + .answer,
 [type="radio"]:not(:checked) + .answer
@@ -519,7 +529,16 @@ footer div#contact_logo {
   margin-bottom: 20px;
   font-weight: bold;
 }
-
+#approveButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#testWithBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #clockdivTest h3 {
 font-weight: 100;
 color: #034688;
@@ -925,4 +944,32 @@ h4 {
 .notice a {
   text-decoration: none;
   color: #cc8356;
+}
+#typeUser {
+  font-size: 20px;
+  padding-top: 15px;
+}
+#typeUser h5 {
+  margin-bottom: -20px;
+  
+}
+#result {
+  text-align: center;
+  color: #034688;
+}
+#result a {
+  text-decoration: none;
+  color: #034688;
+  font-size: 22px;
+}
+#result a:hover {
+  color: red;
+}
+#result h3 {
+  font-size: 22px;
+}
+#result h3 span {
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
 }

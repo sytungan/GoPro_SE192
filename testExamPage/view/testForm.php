@@ -1,6 +1,6 @@
-﻿﻿<link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
+﻿﻿<html id="testSlide">
+<link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
 <body>
-<div id = "testSlide">
 <?php
 include "../controller/testController.php";
 class testForm {
@@ -67,5 +67,5 @@ if (isset($_POST['submit'])) {
         var deadline = new Date(Date.parse(new Date()) + 15*24*60*60*1000);
         initializeClock('clockdiv', deadline);
 </script>
-</div>
 </body>
+</html>

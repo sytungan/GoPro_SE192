@@ -7,7 +7,7 @@ body {
     text-align: center;
     width: fit-content;
     padding: 10px;
-    margin: left;
+    margin: 10px;
     border-radius: 5px;
     border: 2px solid black;
     box-shadow: 0 2px 10px rgba(0,0,0,.01)
@@ -15,6 +15,7 @@ body {
 #listExamOfSubject {
     display: flex;
     justify-content: center;
+    min-height: 300px;
 }
 input {
     width: fit-content;

@@ -264,7 +264,7 @@ body {
 
 #main_menu li a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
   height: auto;
   color: black;
   text-align: center;
@@ -336,6 +336,8 @@ body {
 
 /*-----------------footer-----------------*/
 footer {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background-image: url(../image/footer-background.png);
   background-repeat: repeat;
   width: 100%;
@@ -452,10 +454,10 @@ footer div#contact_logo {
   display: inline;
 }
 
-[type="radio"]:checked,
-[type="radio"]:not(:checked) {
+input[type="radio"][class = "answerRadio"]:checked,
+input[type="radio"][class = "answerRadio"]:not(:checked){
     position: absolute;
-    left: -999px;
+    left: -9999px;
 }
 [type="radio"]:checked + .answer,
 [type="radio"]:not(:checked) + .answer
@@ -507,15 +509,16 @@ footer div#contact_logo {
     text-align: center;
 }
 #submitBtn {
-color: #fff;
-background-color: #2ea44f;
-border-color: rgba(27,31,35,.15);
-box-shadow: 0 1px 0 rgba(27,31,35,.1), inset 0 1px 0 hsla(0,0%,100%,.03); 
-width: 100px;
-height: 50px;
-border: 1px solid;
-border-radius: 6px;
-margin-bottom: 20px;
+  color: #fff;
+  background-color: #2ea44f;
+  border-color: rgba(27,31,35,.15);
+  box-shadow: 0 1px 0 rgba(27,31,35,.1), inset 0 1px 0 hsla(0,0%,100%,.03); 
+  width: 100px;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 #clockdivTest h3 {
@@ -526,6 +529,10 @@ font-size: 35px;
 margin: 0 0 16px
 }
 
+<<<<<<< HEAD
+=======
+/*-----------------------------------------*/
+>>>>>>> bfc98802bd9aa3d9926f4713db300a547fead3a0
 /*CSS for sign_in*/
 
 .joinOuterContainer {
@@ -534,12 +541,6 @@ margin: 0 0 16px
   text-align: center;
   height: 100vh;
   align-items: center;
-  /*background-color: #1A1A1D;*/
-  /* background-image: url("../image/background_.jpg");
-    background-repeat: no-repeat;
-    background-size: 2000px; */
-  /* background-image: url("../image/background.png"); */
-  background-color: #2361746b;
 }
 
 .joinInnerContainer {
@@ -601,9 +602,13 @@ margin: 0 0 16px
 button:focus {
   outline: 0;
 }
+.view_listtopic {
+  min-height: 39%;
+}
 .view_listtopic a {
   text-decoration: none;
-  color: #e39f9f;
+  color:rgba(0, 0, 0, 0.692);
+  font-weight: bold;
 }
 .view_listtopic .container {
   background-color: black;
@@ -631,10 +636,11 @@ button:focus {
     inset 0 1px 0 hsla(0, 0%, 100%, 0.03);
   border: 1px solid;
   border-radius: 6px;
-  text-align: center;
-  width: 200px;
-  display: inline-block;
-  padding-left: 10px;
+  width: 15%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .topic {
   border: 1px solid #000000;
@@ -647,13 +653,15 @@ button:focus {
   width: 10%;
 }
 .create_topic {
-  background-image: linear-gradient(#616161, #9bc5c3);
+  padding-left: 10px;
+  line-height: 1.6;
+  min-height: 36%;
 }
 .create_topic h2 {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.692);;
 }
 .create_topic input[type="text"] {
-  width: 100%;
+  width: 40%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -910,8 +918,8 @@ h4 {
 }
 
 #clockdivTest .smalltext {
-    padding-top: 5px;
-    font-size: 16px;
+  padding-top: 5px;
+  font-size: 16px;
 }
 .notice {
   min-height: 38.6%;
@@ -922,4 +930,27 @@ h4 {
 .notice a {
   text-decoration: none;
   color: #cc8356;
+}
+#typeUser {
+  font-size: 20px;
+  padding-top: 15px;
+}
+#typeUser h5 {
+  margin-bottom: -20px;
+  
+}
+#result {
+  text-align: center;
+  color: #034688;
+}
+#result a {
+  text-decoration: none;
+  color: #034688;
+  font-size: 22px;
+}
+#result a:hover {
+  color: red;
+}
+#result h3 {
+  font-size: 22px;
 }

@@ -1,13 +1,3 @@
-<!-- <style>
-    #screen {
-        height: 2000px;
-        color: #0053a6;
-    }
-    #space1 {
-        color: #0053a6;
-        height: 500px;
-    }
-</style> -->
 <link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
 <style>
 .w3-button {width:150px}
@@ -23,12 +13,12 @@ echo "<div class='view_listtopic'>";
 $connect= new listTopicConTroller();
 $data_cat=$connect->getCatbyID($_GET['cat_id']);
 echo '<div class="beautify"><h3><a href="/GoPro_SE192/forumPage/view/create_topic.php">Tạo topic mới</a></h3></div>';
-echo '<h2>Topics in ′'.$data_cat['cat_name']  . '′ category</h2>';
+echo '<h2>Bài viết thuộc chủ đề: ′'.$data_cat['cat_name']  . '′</h2>';
 //do a query for the topics
 $topic= $connect->getTopicByCat($_GET['cat_id']);
 if($topic==NULL)
 {  
-    echo '<p>There are no topics in this category yet.</p>';
+    echo '<h3 class="notice">Hiện tại chưa có bài viết nào.</h3>';
 }
 else   
 {  $limit=10;

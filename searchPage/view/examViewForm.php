@@ -28,7 +28,11 @@ class examViewForm {
                 <input type='radio' name=answer/>".$exam['answerD'];
             echo "</form>";
         }
-        $this->ctrl->checkRole();
+        if ($this->ctrl->checkRole()) {
+            echo '<form id="testWithBtn" method="post" action="/GoPro_SE192/testExamPage/view/testForm.php?subject='.$this->ctrl->getSubjectOfExam().'&option=1&testID='.$_GET['subjectID'].'">';
+            echo '<input type="submit" name="testEx" id="testEx" value="Thi thử" />';
+            echo '</from>';
+        }
 
     }
     public function mousingOnAQuestion() {

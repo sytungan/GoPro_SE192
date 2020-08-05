@@ -16,18 +16,16 @@ class examViewController {
     }
     public function checkRole() {
         if(isset($_SESSION['signed_in'])) {
-            if ($_SESSION['user_role'] == 'Student') {
-                echo '<form method="post">';
-                echo '<input type="submit" name="testEx" id="testEx" value="Thi thử" />';
-                echo '</from>';
-            }
-            if(array_key_exists('testEx',$_POST)) {
-                $this->changeToExamForm();
-            }
+            if ($_SESSION['user_role'] == 'Student') return true;
+            return false;
         }
+        return -1;
     }
-    public function changeToExamForm() {
-        
+    public function getSubjectOfExam() {
+        $result = $this->db->getExamByID($this->id);
+        foreach ($result as $p) {
+            return $p['subject'];
+        }
     }
 }
 ?>

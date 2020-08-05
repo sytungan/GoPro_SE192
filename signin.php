@@ -103,7 +103,6 @@ else
                             $_SESSION['user_level'] = $data['user_level'];
                             echo '<script> location.reload() </script>';
                         } 
-                     echo 'Welcome, ' . $_SESSION['user_nickname'] . '. <a href="index.php">Proceed to the forum overview</a>.';
                     }
                 }
             }

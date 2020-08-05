@@ -8,9 +8,10 @@ body {
 .result {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 #searchForm {
-    min-height: 59%;
+    padding-bottom: 295px;
 }
 input {
     width: fit-content;
@@ -27,6 +28,7 @@ table {
     border-collapse: collapse;
     border-radius: 10px;
     overflow: hidden;
+    margin-top: -200px;
 }
 
 th, td {
@@ -60,3 +62,13 @@ td#author {
     width: 200px;
     text-align: left;
 }
+.notice {
+    min-height: 38.6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .notice a {
+    text-decoration: none;
+    color: #cc8356;
+  }

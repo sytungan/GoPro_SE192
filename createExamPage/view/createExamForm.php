@@ -31,15 +31,21 @@ else readJson("../controller/test.json", $array);
 ?>
 
 <body>
+    <?php
+    include "../../header.php";
+    ?>
     <div class="infoside">
         <label for=name>Tên đề thi: &#160 </label>
-        <label for=name id="name"><?php echo $examName ?></label><br><br>
+        <label for=name id="name"><?php echo $examName ?></label>
+        <br>
         <label for=name>Môn học: &#160 </label>
-        <label for=name id="subject"><?php echo $subject ?></label><br><br>
+        <label for=name id="subject"><?php echo $subject ?></label>
+        <br>
         <label for=name>Tác giả: &#160 </label>
-        <label for=name id="author"><?php echo $author ?></lable><br><br>
+        <label for=name id="author"><?php echo $author ?></lable>
     </div>
 
+    <br>
     <form action="../controller/post.php" method="POST">
         <label id="questionLabel" for=Question>Câu hỏi </label>
         <label id="questionOrder">1</label><br>
@@ -83,7 +89,9 @@ else readJson("../controller/test.json", $array);
             </p>
         </div>
     </div>
-
+    <?php
+    include "../../footer.php";
+    ?>
 </body>
 
 

@@ -14,6 +14,8 @@ session_destroy();
 ?>
 <?php
 include 'header.php';
+echo '<h3 class="notice">Bạn đã đăng xuất thành công, bạn có thể &nbsp;<a href="signin.php">Đăng nhập</a> &nbsp; nếu muốn.</h3>';
+header( "refresh:1 ; url=index.php" ); 
 ?>
 <?php
 include 'footer.php';

@@ -164,16 +164,15 @@ p.popUpMessage {
     width: 30%;
     position: fixed;
     z-index: 1;
-    top: 20px;
+    top: 250px;
     left: 10px;
     background: #eee;
     overflow-x: hidden;
-    padding: 8px 0;
+    padding: 15px;
 }
 
 .infoside label {
     color: #4E47B1;
     font-size: 15pt;
-    text-align: left;
-    float: left;
+
 }

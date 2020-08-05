@@ -6,42 +6,30 @@ include 'header.php';
 
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
-    /*the form hasn't been posted yet, display it
-      note that the action="" will cause the form to post to the same page it is on */
-    // echo '<form method="post" action="">
-    //     Username: <input type="text" name="user_name" placeholder="Username" /> <br>
-    //     Password: <input type="password" name="user_pass" placeholder="Password"> <br>
-    //     Password again: <input type="password" name="user_pass_check" placeholder="Password again"> <br>
-    //     Email <input type="email" name="user_email" placeholder="Email@"> <br>
-    //     Role <br>
-    //     <input type="radio" name="user_role" value="Student" checked> Student <br>
-    //     <input type="radio" name="user_role" value="Teacher">Teacher <br>
-    //     <input type="submit" value="Submit" />
-    //  </form>';
-
+  
     echo '<form method="post" action="">
          <div class="joinOuterContainer">
          <div class="joinInnerContainer">
-           <h1 class="heading">SIGN UP</h1>
+           <h1 class="heading">ĐĂNG KÍ</h1>
            <div>
-             <input placeholder="Username" class="joinInput" type="text" name="user_name" />
+             <input placeholder="Tên đăng nhập" class="joinInput" type="text" name="user_name" />
            </div>
            <div>
-             <input placeholder="Password" class="joinInput mt-20" type="password" name="user_pass"/>
+             <input placeholder="Mật khẩu" class="joinInput mt-20" type="password" name="user_pass"/>
            </div>
            <div>
-             <input placeholder="Password again" class="joinInput mt-20" type="password" name="user_pass_check"/>
+             <input placeholder="Nhập lại mật khẩu" class="joinInput mt-20" type="password" name="user_pass_check"/>
            </div>
            <div>
              <input type="text" class="joinInput mt-20"  name="user_nickname" placeholder="Nickname"> <br>
            </div>
            <div> 
            <input type="email" class="joinInput mt-20" name="user_email" placeholder="Email@"> <br>
-           Role <br>
-           <input type="radio" name="user_role" value="Student" checked> Student <br>
-           <input type="radio" name="user_role" value="Teacher">Teacher <br>
+           Loại tài khoản <br>
+           <input type="radio" name="user_role" value="Student" checked> Học sinh <br>
+           <input type="radio" name="user_role" value="Teacher"> Giáo viên <br>
            </div>
-           <input class="button mt-20" type="submit" value="Sign in"></input>
+           <input class="button mt-20" type="submit" value="Đăng kí"></input>
          </div>
        </div>
        </form>';
@@ -60,16 +48,16 @@ else
         //the user name exists
         if(!ctype_alnum($_POST['user_name']))
         {
-            $errors[] = 'The username can only contain letters and digits.';
+            $errors[] = 'Tên đăng nhập không được chứa kí tự đặc biệt.';
         }
         if(strlen($_POST['user_name']) > 30)
         {
-            $errors[] = 'The username cannot be longer than 30 characters.';
+            $errors[] = 'Tên đăng nhập phải ít hơn 30 kí tự.';
         }
     }
     else
     {
-        $errors[] = 'The username field must not be empty.';
+        $errors[] = 'Tên đăng nhập là bắt buộc.';
     }
      
      
@@ -77,34 +65,33 @@ else
     {
         if($_POST['user_pass'] != $_POST['user_pass_check'])
         {
-            $errors[] = 'The two passwords did not match.';
+            $errors[] = 'Mật khẩu nhập lại không khớp.';
         }
     }
     else 
     {
-        $errors[] = 'The password field cannot be empty.';
+        $errors[] = 'Mật khẩu là bắt buộc.';
     }
     if (!$_POST['user_nickname']=='')
     {
         //the user name exists
         if(strlen($_POST['user_name']) > 30)
         {
-            $errors[] = 'The nickname cannot be longer than 30 characters.';
+            $errors[] = 'Nickname phải ít hơn 30 kí tự.';
         }
     }
     else
     {
-        $errors[] = 'The nickname field must not be empty.';
+        $errors[] = 'Nickname là bắt buộc.';
     }
     if(!empty($errors)) /*check for an empty array, if there are errors, they're in this array (note the ! operator)*/
     {
-        echo 'Uh-oh.. a couple of fields are not filled in correctly..';
-        echo '<ul>';
+        echo '<h3 class="notice">Vui lòng điền đầy đủ thông tin sau:<br>';
         foreach($errors as $key => $value) /* walk through the array so all the errors get displayed */
         {
-            echo '<li>' . $value . '</li>'; /* this generates a nice error list */
+            echo "&emsp; - ".$value . "<br>"; /* this generates a nice error list */
         }
-        echo '</ul>';
+        echo '</h3>';
     }
     else
     {
@@ -112,11 +99,11 @@ else
         $result=$connect->insertAccount($_POST['user_name'],$_POST['user_pass'],$_POST['user_nickname'],$_POST['user_role'],$_POST['user_email']);
       if(!$result)
        {
-           echo 'Username has been used. Please choose another name!';
+           echo '<h3 class="notice">Tên đăng nhập đã được đăng kí, vui lòng chọn tên đăng nhập khác!</h3>';
        }
       else
        {
-        echo 'Successfully registered. You can now <a href="signin.php">sign in</a> and start posting! :-)';
+        echo '<h3 class="notice">Đăng kí thành công. Bạn có thể <a href="signin.php">Đăng nhập</a> ngay bây giờ </h3>';
        }
      }
 }

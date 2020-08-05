@@ -416,24 +416,95 @@ footer div#contact_logo {
 /*--------------------------------------------*/
 
 #form {
-    line-height: 2;
     width: 60%;
     margin: 20px auto;
     float: left;
     margin-left: 20%;
 }
 
-
-#form h4 {
+#form h3 {
+    line-height: 2;
     margin-left: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    font-size: 22px;
 }
+
+#form .content {
+    line-height: 2;
+    margin-left: 20px;
+    margin-right: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
 .question {
-    border: 1px solid #0a2947;
+    line-height: 2;
+    border: 2px solid #0a2947;
 }
 
 .answer {
-  margin-left: 20px;
+  line-height:3px ;
+  font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 50px;
+  display: inline;
 }
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -999px;
+}
+[type="radio"]:checked + .answer,
+[type="radio"]:not(:checked) + .answer
+{
+    position: relative;
+    padding-left: 50px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #000;
+}
+[type="radio"]:checked + .answer:before,
+[type="radio"]:not(:checked) + .answer:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + .answer:after,
+[type="radio"]:not(:checked) + .answer:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #2ea44f;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + .answer:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + .answer:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
 #submitDiv{
     text-align: center;
 }
@@ -450,7 +521,6 @@ footer div#contact_logo {
   font-weight: bold;
 }
 
-
 #clockdivTest h3 {
 font-weight: 100;
 color: #034688;
@@ -458,6 +528,11 @@ text-align: center;
 font-size: 35px;
 margin: 0 0 16px
 }
+
+<<<<<<< HEAD
+=======
+/*-----------------------------------------*/
+>>>>>>> 8df51420392205668e2491d840893b01df212072
 /*CSS for sign_in*/
 
 .joinOuterContainer {
@@ -470,19 +545,21 @@ margin: 0 0 16px
   /* background-image: url("../image/background_.jpg");
     background-repeat: no-repeat;
     background-size: 2000px; */
-  background-color: #9b9b9b;
+  /* background-image: url("../image/background.png"); */
+  background-color: #2361746b;
 }
 
 .joinInnerContainer {
   /*width: 20%;*/
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(48, 98, 145, 0.425);
   margin: 0 auto;
   width: 30%;
-  padding: 20px;
+  padding: 40px;
+  border-radius: 10px;
 }
 
 .joinInput {
-  border-radius: 0;
+  border-radius: 10px;
   padding: 15px 20px;
   width: 100%;
 }
@@ -491,7 +568,7 @@ margin: 0 0 16px
   color: white;
   font-size: 2.5em;
   padding-bottom: 10px;
-  border-bottom: 2px solid white;
+  /* border-bottom: 2px solid white; */
 }
 
 .footing {
@@ -503,6 +580,7 @@ margin: 0 0 16px
 
 .button {
   color: #fff !important;
+  font-size: 20px; 
   text-transform: uppercase;
   text-decoration: none;
   background: #2979ff;

@@ -14,25 +14,25 @@ class testForm {
         $this->listKey=array(0);
         echo "<form id='form'  action='' method='post'>";
             foreach($json['exam'] as $exam) {
-                echo "<div class='question'";
-                echo  "<h3>Câu ".$exam['question']."</h3>
-                <h4>".$exam['content']."</h4>";
-                echo "<input class='answer' type='radio' value ='A' name ='".$exam['question']."'";
+                echo "<div class='question'>";
+                echo  "<h3>Câu ".$exam['question'].": </h3>
+                <p class = 'content'>".$exam['content']."</p><br>";
+                echo "<p><input class='answerRadio' type='radio'   id='A".$exam['question']."'  value ='A' name ='".$exam['question']."'";
                 if (isset($_POST[$exam['question']]) && $_POST[$exam['question']] =='A') echo " checked";
-                echo "><p style='display:inline'>".$exam['answerA']."</p>";
-                echo "<br>";
-                echo "<input class='answer' type='radio' value ='B' name ='".$exam['question']."'";
+                echo "><label class='answer' for='A".$exam['question']."' > &#160".$exam['answerA']."</label>";
+                echo "</p><br>";
+                echo "<p><input class='answerRadio' type='radio' id='B".$exam['question']."'  value ='B' name ='".$exam['question']."'";
                 if (isset($_POST[$exam['question']]) && $_POST[$exam['question']] =='B') echo " checked";
-                echo "><p style='display:inline'>".$exam['answerB']."</p>";
-                echo "<br>";
-                echo "<input class='answer' type='radio' value ='C' name ='".$exam['question']."'";
+                echo "><label class='answer' for='B".$exam['question']."'>  &#160".$exam['answerB']."</label>";
+                echo "</p><br>";
+                echo "<p><input class='answerRadio' type='radio' id='C".$exam['question']."' value ='C' name ='".$exam['question']."'";
                 if (isset($_POST[$exam['question']]) && $_POST[$exam['question']] =='C') echo " checked";
-                echo "><p style='display:inline'>".$exam['answerC']."</p>";
-                echo "<br>";
-                echo "<input class='answer' type='radio' value ='D' name ='".$exam['question']."'";
+                echo "><label class='answer' for='C".$exam['question']."'>  &#160".$exam['answerC']."</label>";
+                echo "</p><br>";
+                echo "<p><input class='answerRadio' type='radio' id='D".$exam['question']."' value ='D' name ='".$exam['question']."'";
                 if (isset($_POST[$exam['question']]) && $_POST[$exam['question']] =='D') echo " checked";
-                echo "><p style='display:inline'>".$exam['answerD']."</p>";
-                echo "<br>";
+                echo "><label class='answer' for='D".$exam['question']."' >  &#160".$exam['answerD']."</label>";
+                echo "</p><br>";
                 echo "</div>";
                 $this->listKey[] = $exam['key'];
             }

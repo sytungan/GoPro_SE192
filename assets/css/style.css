@@ -526,10 +526,7 @@ font-size: 35px;
 margin: 0 0 16px
 }
 
-<<<<<<< HEAD
-=======
 /*-----------------------------------------*/
->>>>>>> 8df51420392205668e2491d840893b01df212072
 /*CSS for sign_in*/
 
 .joinOuterContainer {
@@ -538,12 +535,6 @@ margin: 0 0 16px
   text-align: center;
   height: 100vh;
   align-items: center;
-  /*background-color: #1A1A1D;*/
-  /* background-image: url("../image/background_.jpg");
-    background-repeat: no-repeat;
-    background-size: 2000px; */
-  /* background-image: url("../image/background.png"); */
-  background-color: #2361746b;
 }
 
 .joinInnerContainer {
@@ -899,4 +890,12 @@ h4 {
 .notice a {
   text-decoration: none;
   color: #cc8356;
+}
+#typeUser {
+  font-size: 20px;
+  padding-top: 15px;
+}
+#typeUser h5 {
+  margin-bottom: -20px;
+  
 }

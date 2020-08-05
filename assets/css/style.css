@@ -457,7 +457,7 @@ footer div#contact_logo {
 input[type="radio"][class = "answerRadio"]:checked,
 input[type="radio"][class = "answerRadio"]:not(:checked){
     position: absolute;
-    left: -999px;
+    left: -9999px;
 }
 [type="radio"]:checked + .answer,
 [type="radio"]:not(:checked) + .answer

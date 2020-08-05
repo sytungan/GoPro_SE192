@@ -18,7 +18,7 @@
             }
             if(isset($_SESSION['signed_in']))
             {
-                echo '<h3>Xin chào <a text-decoration="none" href="/GoPro_SE192/Userprofile.php?user_id=' .$_SESSION['user_id'].'">' . $_SESSION['user_nickname'] . '</a>&emsp; <a href="/GoPro_SE192/signout.php">Đăng xuất</a></h3>';
+                echo '<h3>Xin chào <a text-decoration="none" href="/GoPro_SE192/Userprofile.php?user_id=' .$_SESSION['user_id'].'">' . $_SESSION['user_nickname'] . '</a>, <a href="/GoPro_SE192/signout.php">Đăng xuất</a></h3>';
                 
             }
             else

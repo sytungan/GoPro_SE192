@@ -28,7 +28,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
            </div>
            <div id="typeUser">
            <h5> Vui lòng chọn loại tài khoản:</h5> <br>
-           <input type="radio" name="user_role" value="student"> Học sinh  <br>
+           <input type="radio" name="user_role" value="student" checked="checked"> Học sinh  <br>
            <input type="radio" name="user_role" value="teacher"> Giáo viên <br>
            </div>
            <input class="button mt-20" type="submit" value="Đăng kí">

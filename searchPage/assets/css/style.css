@@ -11,7 +11,7 @@ body {
     align-items: center;
 }
 #searchForm {
-    min-height: 59%;
+    padding-bottom: 295px;
 }
 input {
     width: fit-content;
@@ -28,6 +28,7 @@ table {
     border-collapse: collapse;
     border-radius: 10px;
     overflow: hidden;
+    margin-top: -200px;
 }
 
 th, td {

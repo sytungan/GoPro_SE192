@@ -2,6 +2,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
     <script src="/GoPro_SE192/assets/js/fontAwesome.js"></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
 </head>
 <div id="header">
     <a id="logo" href="/GoPro_SE192/index.php"><img src="/GoPro_SE192/assets/image/logo.png" alt="logo" /></a>

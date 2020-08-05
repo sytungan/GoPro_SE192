@@ -7,6 +7,8 @@ include 'header.php';
 if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
 {
     echo '<h3 class="notice">Bạn đã đăng nhập thành công.</h3>';
+    header( "refresh:1 ; url=index.php" ); 
+
 }
 else
 {

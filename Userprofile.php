@@ -25,7 +25,15 @@ else {
     $image = $connect->getImageByUserID($data_user['user_id']);
     if ($image == NULL)
     {
-        echo '<img src="/GoPro_SE192/assets/image/icon.png" height="280" width="320">';
+        // echo  '<div class="image-container">
+        //  <img src="/GoPro_SE192/assets/image/icon.png" height="280" width="320">;
+        //  </div>'
+         echo '<div class="card-container">
+         <div class="upper-container">
+            <div class="image-container">
+            <img src="/GoPro_SE192/assets/image/icon.png" alt="Ảnh đại diện"  height="280" width="320" >;
+            </div>
+         </div>';
     }
     else {
         foreach($image as $data_image) {
@@ -44,8 +52,10 @@ else {
         echo '<br>';
         echo '<br>';
         echo '<br>';
+        // echo '<div id="uploadImg">';
         echo '<input type="file" name="uploadfile" value=""/>';
         echo '<button type="submit" name="upload" class="btn_">Thay đổi ảnh đại diện</button>';
+        // echo '</div>';
         // If upload button is clicked ... 
         if (isset($_POST['upload'])) { 
             $msg = ""; 
@@ -71,7 +81,7 @@ else {
     echo 'Tên đăng nhập: ' . $data_user['user_name']. '<br>';
     echo 'Email của người dùng: ' . $data_user['user_email']. '<br>';
     echo 'Người dùng là: ' . $data_user['user_role']. '<br>';
-    echo ' </div>
+    echo '</div>
     </div>
     </div>';
     if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 1) {

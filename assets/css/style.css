@@ -526,10 +526,6 @@ font-size: 35px;
 margin: 0 0 16px
 }
 
-<<<<<<< HEAD
-=======
-/*-----------------------------------------*/
->>>>>>> 8df51420392205668e2491d840893b01df212072
 /*CSS for sign_in*/
 
 .joinOuterContainer {
@@ -787,7 +783,9 @@ td#author {
 
 /*CSS for profile*/
 .card-container {
-  width: 300px;
+  width: 1000px;
+  /* width: 100%; */
+  margin: 0 auto;
   /* height: 430px; */
   background: #fff;
   border-radius: 6px;
@@ -799,10 +797,13 @@ td#author {
   overflow: hidden;
   display: inline-block;
 }
+
 .upper-container {
   height: 150px;
   /* background: #7F00FF; */
   background: #6c7ae0;
+  /* width: 30%;
+  float: left; */
 }
 .image-container {
   background: white;
@@ -810,7 +811,7 @@ td#author {
   height: 200px;
   border-radius: 50%;
   padding: 5px;
-  transform: translate(45px, 50px);
+  transform: translate(400px, 50px);
 }
 .image-container img {
   width: 200px;
@@ -818,12 +819,34 @@ td#author {
   border-radius: 50%;
 }
 .lower-container {
-  height: 280px;
+  height: auto;
   background: #fff;
   padding: 20px;
   padding-top: 40px;
   text-align: center;
+  /* width: 100%; */
+  /* width: 70%;
+  float: right; */
+  font-size: 30px;
 }
+
+/* .lower-container::after {
+clear: both;
+content: "";
+display: block;
+} */
+
+.uploadImg{
+  width: 40%;
+  float: left;
+}
+
+.info{
+  font-size: 25px;
+  width: 60%;
+  float: right;
+}
+
 .lower-container h3,
 h4 {
   box-sizing: border-box;

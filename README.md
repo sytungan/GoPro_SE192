@@ -16,7 +16,7 @@ Trên nền web sẽ cung cấp 2 dạng thi thử  cho học sinh là `thi th�
 - Về `thi thử luyện tập`, đề thi ở đây sẽ do các giáo viên ra và được duyệt bởi Admin một cách kĩ càng. Hoặc Admin cũng có thể tự tạo đề. Học sinh có thể làm đề trực tiếp như bình thường, tuy nhiên sẽ có gợi ý cho từng câu ngay sau khi kết thúc bài làm và điểm của đề thi không tính vào bảng xếp hạng. Điều này thích hợp để các bạn học sinh có thể ôn thêm đề của các thầy cô từ nhiều khu vực khác nhau.
 
 ### 3. Thêm tài liệu
-Admin và giáo viên có thể tự mình các tài liệu lên trang web để từ đó các bạn học sinh có thể tham khảo từ đó ôn luyện hoặc củng cố kiến thức.
+Admin có thể tự mình các tài liệu lên trang web để từ đó các bạn học sinh có thể tham khảo từ đó ôn luyện hoặc củng cố kiến thức.
 
 ### 4. Tìm kiếm đề thi
 Các học sinh và giáo viên có thể thực hiện tự tìm kiếm đề thi đã có trong kho. Riêng với học sinh có thể thực hiện thi trực tiếp với đề từ chức năng tìm kiếm này

@@ -909,3 +909,17 @@ h4 {
   margin-bottom: -20px;
   
 }
+#result a {
+  text-decoration: none;
+  color: #034688;
+  font-size: 18px;
+}
+#result a:hover {
+  color: red;
+  transform: scale(1.1);
+}
+#result {
+  text-align: center;
+  color: #034688;
+}
+

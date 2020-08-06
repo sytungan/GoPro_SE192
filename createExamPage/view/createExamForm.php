@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
     <title>Create Exam</title>
     <style>
         <?php
@@ -23,10 +22,10 @@ $examName = $_POST["name"];
 $subject  = $_POST["subject"];
 $author   = $_POST["author"];
 
-if ($subject == "Toán") initJson(50); 
+if ($subject == "Toán" || $subject == "Anh") initJson(50); 
 else initJson(40); 
 
-if ($subject == "Toán") readJson("../controller/test.json", $array);
+if ($subject == "Toán" || $subject == "Anh") readJson("../controller/test.json", $array);
 else readJson("../controller/test.json", $array);
 ?>
 

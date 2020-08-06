@@ -1,6 +1,12 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/userDB.php";
 include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/header.php";
+echo '<head>
+<link rel="stylesheet" href="/GoPro_SE192/assets/css/profile.css" />
+    </head>
+';
+echo '<br>';
+echo '<br>';
 echo '<br>';
 $connect= new Database();
 $data_user= $connect->getUserByID($_GET['user_id']);

@@ -23,10 +23,10 @@ $examName = $_POST["name"];
 $subject  = $_POST["subject"];
 $author   = $_POST["author"];
 
-if ($subject == "Toán") initJson(50); 
+if ($subject == "Toán" || $subject == "Anh") initJson(50); 
 else initJson(40); 
 
-if ($subject == "Toán") readJson("../controller/test.json", $array);
+if ($subject == "Toán" || $subject == "Anh") readJson("../controller/test.json", $array);
 else readJson("../controller/test.json", $array);
 ?>
 

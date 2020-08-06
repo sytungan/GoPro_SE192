@@ -22,7 +22,7 @@
 
     $idx = intval($question) - 1;
     $array[$idx]->__setQuestionInfo( $question, $content , $ansA, $ansB,$ansC, $ansD, $key);
-    if ($subject == "Toán") writeJson("test.json", $array, 50);
+    if ($subject == "Toán" || $subject == "Anh" ) writeJson("test.json", $array, 50);
     else writeJson("test.json", $array, 40);
     readJson("test.json", $array);
 

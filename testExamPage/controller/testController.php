@@ -61,5 +61,6 @@ class testController {
     }
     function hideButton() {
         document.getElementById("submitBtn").remove();
+        document.getElementById("clockdivTest").remove();
     }
 </script>

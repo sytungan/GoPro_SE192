@@ -70,7 +70,7 @@ else
     echo '<div class="container">';
     for ($i=1; $i<=$total_pages; $i++) { 
         if ($i==$pn) { 
-            echo '<div class="buttons"><a href="/GoPro_SE192/forumPage/view/view_listtopic.php?cat_id=' . $cat_id . '&page=' . $i . ' "> ' . $i . '</a></div>';
+            echo '<div class="active"><a href="/GoPro_SE192/forumPage/view/view_listtopic.php?cat_id=' . $cat_id . '&page=' . $i . ' "> ' . $i . '</a></div>';
         }             
         else  { 
             echo '<div class="buttons"> <a href="/GoPro_SE192/forumPage/view/view_listtopic.php?cat_id=' . $cat_id . '&page=' . $i .' "> ' . $i . '</a></div>';

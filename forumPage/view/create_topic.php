@@ -39,7 +39,7 @@ else
                 echo '<br>';
                      
                 echo 'Nội dung: <br> <textarea name="topic_content" /></textarea> <br> <br>
-                    <input id="submitBtn" type="submit" value="Đăng bài" />';
+                    <input  type="submit" value="Đăng bài" />';
                         
                 echo '</form>';
         }

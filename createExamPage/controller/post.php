@@ -8,14 +8,11 @@
     
     $question= $_POST["question"];
     
-
     $content = str_replace("[plus]","+",$_POST["content"]);
-
-
-    $ansA    = $_POST["ansA"];
-    $ansB    = $_POST["ansB"];
-    $ansC    = $_POST["ansC"];
-    $ansD    = $_POST["ansD"];
+    $ansA    = str_replace("[plus]","+",$_POST["ansA"]);
+    $ansB    = str_replace("[plus]","+",$_POST["ansB"]);
+    $ansC    = str_replace("[plus]","+",$_POST["ansC"]);
+    $ansD    = str_replace("[plus]","+",$_POST["ansD"]);
     $key     = $_POST["key"];
     $subject = $_POST["subject"];
     $author  = $_POST["author"];
@@ -23,9 +20,6 @@
     $submit = $_POST["submit"];
     $typeEx = "";
     if (isset($_POST["typeEx"])) $typeEx = $_POST["typeEx"];
-
-
-
 
     $idx = intval($question) - 1;
     $array[$idx]->__setQuestionInfo( $question, $content , $ansA, $ansB,$ansC, $ansD, $key);

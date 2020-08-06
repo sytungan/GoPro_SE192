@@ -6,8 +6,12 @@
     $array;
     readJson("test.json", $array);
     
-    $question=  $_POST["question"];
-    $content = $_POST["content"];
+    $question= $_POST["question"];
+    
+
+    $content = str_replace("[plus]","+",$_POST["content"]);
+
+
     $ansA    = $_POST["ansA"];
     $ansB    = $_POST["ansB"];
     $ansC    = $_POST["ansC"];
@@ -19,6 +23,9 @@
     $submit = $_POST["submit"];
     $typeEx = "";
     if (isset($_POST["typeEx"])) $typeEx = $_POST["typeEx"];
+
+
+
 
     $idx = intval($question) - 1;
     $array[$idx]->__setQuestionInfo( $question, $content , $ansA, $ansB,$ansC, $ansD, $key);

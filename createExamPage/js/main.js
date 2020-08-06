@@ -67,9 +67,13 @@ $(function() {
         var ansC = $("#ansC").val();
         var ansD = $("#ansD").val();
         var key = $("select#key").val();
+        
+        var content1 = content.replace("+","[plus]");
 
-        var dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + examName + '&submit=' + confirmVar;
-        if (usrLv == 1) dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + examName + '&submit=' + confirmVar + '&typeEx=' + typeEx;
+
+
+        var dataString = 'question=' + question + '&content=' + content1 + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + examName + '&submit=' + confirmVar;
+        if (usrLv == 1) dataString = 'question=' + question + '&content=' + content1 + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + examName + '&submit=' + confirmVar + '&typeEx=' + typeEx;
         console.log(dataString);
         $.ajax({
             type: 'post',

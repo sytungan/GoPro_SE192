@@ -17,7 +17,8 @@
     $author  = $_POST["author"];
     $name    = $_POST["name"];
     $submit = $_POST["submit"];
-    $typeEx = $_POST["typeEx"];
+    $typeEx = "";
+    if (isset($_POST["typeEx"])) $typeEx = $_POST["typeEx"];
 
     $idx = intval($question) - 1;
     $array[$idx]->__setQuestionInfo( $question, $content , $ansA, $ansB,$ansC, $ansD, $key);

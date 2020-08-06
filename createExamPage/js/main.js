@@ -3,7 +3,8 @@ var subject = document.getElementById("subject").textContent;
 var examName = document.getElementById("name").textContent;
 var author = document.getElementById("author").textContent;
 var usrLv = document.getElementById("usrLv").textContent;
-var typeEx = document.getElementById("typeEx").textContent;
+var typeEx = "";
+if (usrLv == 1) typeEx = document.getElementById("typeEx").textContent;
 
 var confirmVar = 0;
 

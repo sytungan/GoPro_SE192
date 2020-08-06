@@ -45,8 +45,7 @@ class testForm {
         echo "<br>";
         echo "
         <div id='submitDiv'>
-        <input id='submitBtn' type='submit' name='submitted' value='Nộp bài'/>
-        <input type='hidden' name='submitted' value='10'/>
+        <input id='submitBtn' type='submit' name='submit' value='Nộp bài'/>
         </div>";
         echo "</form>";
         echo "
@@ -64,16 +63,13 @@ class testForm {
 }
 $viewExam = new testForm();
 $viewExam->onOpen();
-$flag = false;
-if (isset($_POST['submitted'])) {
+if (isset($_POST['submit'])) {
     include "resultForm.php";
-    $flag = true; 
 }
-if (!$flag) {
-    echo '<script src="/GoPro_SE192/assets/js/countdownClockTest.js">
-    </script>';
-}
-?>
-
+?>          
+<script src="/GoPro_SE192/assets/js/countdownClockTest.js">
+    var deadline = new Date(Date.parse(new Date()) + 15*24*60*60*1000);
+    initializeClock('clockdiv', deadline);
+</script>
 </body>
 </html>

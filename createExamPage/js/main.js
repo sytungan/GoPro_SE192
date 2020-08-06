@@ -68,25 +68,25 @@ $(function() {
         var ansD = $("#ansD").val();
         var key = $("select#key").val();
         
-        content = content.replace("+","[plus]");
-        content = content.replace("'","''");
-        content = content.replace(String.fromCharCode(92),String.fromCharCode(92,92));
+        content = content.replaceAll("+","[plus]");
+        content = content.replaceAll("'","''");
+        content = content.replaceAll(String.fromCharCode(92),String.fromCharCode(92,92));
 
-        ansA = ansA.replace("+","[plus]");
-        ansA = ansA.replace("'","''");
-        ansA = ansA.replace(String.fromCharCode(92),String.fromCharCode(92,92));
+        ansA = ansA.replaceAll("+","[plus]");
+        ansA = ansA.replaceAll("'","''");
+        ansA = ansA.replaceAll(String.fromCharCode(92),String.fromCharCode(92,92));
 
-        ansB = ansB.replace("+","[plus]");
-        ansB = ansB.replace("'","''");
-        ansB = ansB.replace(String.fromCharCode(92),String.fromCharCode(92,92));
+        ansB = ansB.replaceAll("+","[plus]");
+        ansB = ansB.replaceAll("'","''");
+        ansB = ansB.replaceAll(String.fromCharCode(92),String.fromCharCode(92,92));
 
-        ansC = ansC.replace("+","[plus]");
-        ansC = ansC.replace("'","''");
-        ansC = ansC.replace(String.fromCharCode(92),String.fromCharCode(92,92));
+        ansC = ansC.replaceAll("+","[plus]");
+        ansC = ansC.replaceAll("'","''");
+        ansC = ansC.replaceAll(String.fromCharCode(92),String.fromCharCode(92,92));
 
-        ansD = ansD.replace("+","[plus]");
-        ansD = ansD.replace("'","''");
-        ansD = ansD.replace(String.fromCharCode(92),String.fromCharCode(92,92));
+        ansD = ansD.replaceAll("+","[plus]");
+        ansD = ansD.replaceAll("'","''");
+        ansD = ansD.replaceAll(String.fromCharCode(92),String.fromCharCode(92,92));
 
         var dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + examName + '&submit=' + confirmVar;
         if (usrLv == 1) dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + examName + '&submit=' + confirmVar + '&typeEx=' + typeEx;

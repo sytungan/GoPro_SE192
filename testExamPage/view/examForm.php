@@ -21,9 +21,10 @@ if(isset($_GET['subject'])) {
             echo "<td id='idx'>" .$row['id']. "</td>";
             echo "<td id='name'><a href='testForm.php?subject=".$_GET['subject']."&option=".$_GET['option']."&testID=" . $row['id'] . "'target='_blank'>" . $row['name'] . "</a></td>";
             echo "<td id='author'>" . $row['author'] . "</td>";
-            echo "</tr></table>";
+            echo "</tr>";
             $found = true;
         }
+        echo "</table>";
     }
     else echo "<h3> Xin lỗi hiện tại không có đề thi cho môn này </h3>";
     echo '</div>';

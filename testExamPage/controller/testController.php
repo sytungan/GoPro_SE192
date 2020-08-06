@@ -57,7 +57,7 @@ class testController {
 <script>
     function showTick(i, typeTick) {
         var answer = document.querySelectorAll("input[class='answerRadio']:checked");
-        answer[i].nextSibling.insertAdjacentHTML("afterend", "<img src='/GoPro_SE192/assets/image/"+ typeTick + ".png' width='20' height='20'>");
+        answer[i].nextElementSibling.innerHTML += ("&nbsp;<img src='/GoPro_SE192/assets/image/"+ typeTick + ".png' width='20' height='20'></img>");
     }
     function hideButton() {
         document.getElementById("submitBtn").remove();

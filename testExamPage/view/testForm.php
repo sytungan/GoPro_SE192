@@ -1,5 +1,12 @@
 ﻿﻿<html id="testSlide">
 <link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
+<head>
+    <script>
+        window.onbeforeunload = function() {
+            return "Bạn có muốn hủy thi?";
+        };
+    </script>
+</head>
 <body>
 <?php
 include "../controller/testController.php";
@@ -64,8 +71,8 @@ if (isset($_POST['submit'])) {
 }
 ?>          
 <script src="/GoPro_SE192/assets/js/countdownClockTest.js">
-        var deadline = new Date(Date.parse(new Date()) + 15*24*60*60*1000);
-        initializeClock('clockdiv', deadline);
+    var deadline = new Date(Date.parse(new Date()) + 15*24*60*60*1000);
+    initializeClock('clockdiv', deadline);
 </script>
 </body>
 </html>

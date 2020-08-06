@@ -12,7 +12,7 @@ $connect = new topicConTroller();
 $data_topic = $connect->getTopicByID($_GET['id']);
 $data_user = $connect->getUserbyID($data_topic['topic_by']);
 echo '<div class="blog">';
-echo '<h2>Topic ' . $data_topic['topic_subject'] . '</h2>';
+echo '<h2> ' . $data_topic['topic_subject'] . '</h2>';
 echo '<h4>Created by <span class="Unlinked"><a href="/GoPro_SE192/Userprofile.php?user_id=' .$data_user['user_id'].'">' . $data_user['user_nickname'] . '</a><span> | ';
 echo 'Created at ' .$data_topic['topic_date'] . '</h4>';
 echo '<p>'. nl2br($data_topic['topic_content']) . '</p>';

@@ -69,6 +69,7 @@ $(function() {
         var key = $("select#key").val();
         
         content = content.replace("+","[plus]");
+        content = content.replace("'","''");
         ansA = ansA.replace("+","[plus]");
         ansB = ansB.replace("+","[plus]");
         ansC = ansC.replace("+","[plus]");

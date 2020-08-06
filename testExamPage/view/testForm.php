@@ -1,12 +1,7 @@
 ﻿﻿<html id="testSlide">
 <link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
-<head>
-    <script>
-        window.onbeforeunload = function() {
-            return "Bạn có muốn hủy thi?";
-        };
-    </script>
-</head>
+<script>
+</script>
 <body>
 <?php
 include "../controller/testController.php";
@@ -48,7 +43,8 @@ class testForm {
         echo "<br>";
         echo "
         <div id='submitDiv'>
-        <input id='submitBtn' type='submit' name='submit' value='Nộp bài'/>
+        <input id='submitBtn' type='submit' name='submitted' value='Nộp bài'/>
+        <input type='hidden' name='submitted' value='10'/>
         </div>";
         echo "</form>";
         echo "
@@ -66,13 +62,16 @@ class testForm {
 }
 $viewExam = new testForm();
 $viewExam->onOpen();
-if (isset($_POST['submit'])) {
+$flag = false;
+if (isset($_POST['submitted'])) {
     include "resultForm.php";
+    $flag = true; 
 }
-?>          
-<script src="/GoPro_SE192/assets/js/countdownClockTest.js">
-    var deadline = new Date(Date.parse(new Date()) + 15*24*60*60*1000);
-    initializeClock('clockdiv', deadline);
-</script>
+if (!$flag) {
+    echo '<script src="/GoPro_SE192/assets/js/countdownClockTest.js">
+    </script>';
+}
+?>
+
 </body>
 </html>

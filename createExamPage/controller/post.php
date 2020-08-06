@@ -5,7 +5,7 @@
 
     $array;
     readJson("test.json", $array);
-
+    
     $question=  $_POST["question"];
     $content = $_POST["content"];
     $ansA    = $_POST["ansA"];
@@ -17,6 +17,7 @@
     $author  = $_POST["author"];
     $name    = $_POST["name"];
     $submit = $_POST["submit"];
+    $typeEx = $_POST["typeEx"];
 
     $idx = intval($question) - 1;
     $array[$idx]->__setQuestionInfo( $question, $content , $ansA, $ansB,$ansC, $ansD, $key);
@@ -33,7 +34,8 @@
             $sql = "INSERT INTO `pendingexamdb`(`name`, `subject`, `author`, `question`) VALUES ('$name','$subject','$author','$jsonData');";
         }
         else if (checkRole() == 1) {
-            $sql = "INSERT INTO `weeklyexamdb`(`name`, `subject`, `author`, `question`, `week`)  VALUES ('$name','$subject','$author','$jsonData','$week');";
+            if ($typeEx ==  'ranked') $sql = "INSERT INTO `weeklyexamdb`(`name`, `subject`, `author`, `question`, `week`)  VALUES ('$name','$subject','$author','$jsonData','$week');";
+            else $sql = "INSERT INTO `examdb`(`name`, `subject`, `author`, `question`)  VALUES ('$name','$subject','$author','$jsonData');";
         }
         else {
             echo "<script>";

@@ -1,10 +1,13 @@
 var questionAmount = 40;
 var subject = document.getElementById("subject").textContent;
-var examName = document.getElementById("name").textContent;;
-var author = document.getElementById("author").textContent;;
+var examName = document.getElementById("name").textContent;
+var author = document.getElementById("author").textContent;
+var usrLv = document.getElementById("usrLv").textContent;
+var typeEx = document.getElementById("typeEx").textContent;
+
 var confirmVar = 0;
 
-if (subject == "Toán") questionAmount = 50;
+if (subject == "Toán" || subject == "Anh") questionAmount = 50;
 
 function next() {
     var quantity_temp = document.getElementById("questionOrder").innerText;
@@ -65,6 +68,7 @@ $(function() {
         var key = $("select#key").val();
 
         var dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + examName + '&submit=' + confirmVar;
+        if (usrLv == 1) dataString = 'question=' + question + '&content=' + content + '&ansA=' + ansA + '&ansB=' + ansB + '&ansC=' + ansC + '&ansD=' + ansD + '&key=' + key + '&subject=' + subject + '&author=' + author + '&name=' + examName + '&submit=' + confirmVar + '&typeEx=' + typeEx;
         console.log(dataString);
         $.ajax({
             type: 'post',

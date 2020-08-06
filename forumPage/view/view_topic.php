@@ -18,7 +18,7 @@ echo 'Created at ' .$data_topic['topic_date'] . '</h4>';
 echo '<p>'. nl2br($data_topic['topic_content']) . '</p>';
 echo '</div>';
 //Reply sections 
-echo '<h2>Bình luận: </h2>';
+echo '<h2 id="titleComment">Bình luận: </h2>';
 // show replies
 $reply= $connect->getReply($_GET['id']);
 if(!isset($_SESSION['signed_in']) || $_SESSION['signed_in'] == false)
@@ -64,6 +64,7 @@ else
     }
     echo '</div>';
 }
+echo '<div id="manyComment">';
 foreach ($reply as $data_reply)
     {   echo '<div class="comments-box">';
         $data_reply_user = $connect->getUserbyID($data_reply['reply_by']);
@@ -85,6 +86,7 @@ foreach ($reply as $data_reply)
         }
         echo '</div>';
     }
+echo '</div>';
 echo '</div>';
 include $_SERVER['DOCUMENT_ROOT']."/GoPro_SE192/footer.php";
 ?>

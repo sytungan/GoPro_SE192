@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
   
     echo '<form method="post" action="">
-         <div class="joinOuterContainer">
+        <div class="joinOuterContainer">
          <div class="joinInnerContainer">
            <h1 class="heading">ĐĂNG KÍ</h1>
            <div>
@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
            <div>
              <input type="text" class="joinInput mt-20"  name="user_nickname" placeholder="Nickname"> <br>
            </div>
-           <div> 
+           <div>
            <input type="email" class="joinInput mt-20" name="user_email" placeholder="Email@"> <br>
            </div>
            <div id="typeUser">
@@ -105,7 +105,7 @@ else
        }
       else
        {
-        echo '<h3 class="notice">Đăng kí thành công. Bạn có thể <a href="signin.php">Đăng nhập</a> ngay bây giờ </h3>';
+        echo '<h3 class="notice">Đăng kí thành công. Bạn có thể &nbsp;<a href="signin.php">Đăng nhập</a> &nbsp; ngay bây giờ.</h3>';
        }
      }
 }

@@ -17,6 +17,7 @@
     <!--<script type="text/javascript" src="js/main.js"></script>-->
 </head>
 <body>
+    <br>
     <form action="view/createExamForm.php" method="POST">
         <label for=name>Tên đề thi:</label><br>
         <input type="text" id="name" name="name"><br><br>
@@ -36,7 +37,19 @@
 
         <label for=author>Tác giả:</label><br>
         <input type="text" id="author" name="author"><br><br>
-
+        <?php 
+        if(isset($_SESSION['signed_in'])) {
+            if ($_SESSION['user_level'] == 1) {
+                echo '
+                <label for=typeEx>Loại đề thi:</label><br>
+                <select name="typeEx" id="typeEx">
+                <option value="ranked">Đề thi thử xếp hạng tuần</option>
+                <option value="normal">Đề thi thử luyện tập</option>
+                </select>
+                <br><br>';
+            }
+        }
+        ?>
         <input name="submit" type="submit" id="submit" value="Tiếp tục"/> <br> <br>
     </form>
     <?php

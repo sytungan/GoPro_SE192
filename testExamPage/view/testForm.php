@@ -1,4 +1,13 @@
-﻿﻿<link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
+﻿﻿<html id="testSlide">
+<link rel="stylesheet" href="/GoPro_SE192/assets/css/style.css" />
+<head>
+    <script>
+        window.onbeforeunload = function() {
+            return "Bạn có muốn hủy thi?";
+        };
+    </script>
+</head>
+<body>
 <?php
 include "../controller/testController.php";
 class testForm {
@@ -19,19 +28,19 @@ class testForm {
                 <p class = 'content'>".$exam['content']."</p><br>";
                 echo "<p><input class='answerRadio' type='radio'   id='A".$exam['question']."'  value ='A' name ='".$exam['question']."'";
                 if (isset($_POST[$exam['question']]) && $_POST[$exam['question']] =='A') echo " checked";
-                echo "><label class='answer' for='A".$exam['question']."' > &#160".$exam['answerA']."</label>";
+                echo "><label class='answer' for='A".$exam['question']."' >  ".$exam['answerA']."</label>";
                 echo "</p><br>";
                 echo "<p><input class='answerRadio' type='radio' id='B".$exam['question']."'  value ='B' name ='".$exam['question']."'";
                 if (isset($_POST[$exam['question']]) && $_POST[$exam['question']] =='B') echo " checked";
-                echo "><label class='answer' for='B".$exam['question']."'>  &#160".$exam['answerB']."</label>";
+                echo "><label class='answer' for='B".$exam['question']."'>  ".$exam['answerB']."</label>";
                 echo "</p><br>";
                 echo "<p><input class='answerRadio' type='radio' id='C".$exam['question']."' value ='C' name ='".$exam['question']."'";
                 if (isset($_POST[$exam['question']]) && $_POST[$exam['question']] =='C') echo " checked";
-                echo "><label class='answer' for='C".$exam['question']."'>  &#160".$exam['answerC']."</label>";
+                echo "><label class='answer' for='C".$exam['question']."'>  ".$exam['answerC']."</label>";
                 echo "</p><br>";
                 echo "<p><input class='answerRadio' type='radio' id='D".$exam['question']."' value ='D' name ='".$exam['question']."'";
                 if (isset($_POST[$exam['question']]) && $_POST[$exam['question']] =='D') echo " checked";
-                echo "><label class='answer' for='D".$exam['question']."' >  &#160".$exam['answerD']."</label>";
+                echo "><label class='answer' for='D".$exam['question']."' >  ".$exam['answerD']."</label>";
                 echo "</p><br>";
                 echo "</div>";
                 $this->listKey[] = $exam['key'];
@@ -62,7 +71,8 @@ if (isset($_POST['submit'])) {
 }
 ?>          
 <script src="/GoPro_SE192/assets/js/countdownClockTest.js">
-        var deadline = new Date(Date.parse(new Date()) + 15*24*60*60*1000);
-        initializeClock('clockdiv', deadline);
+    var deadline = new Date(Date.parse(new Date()) + 15*24*60*60*1000);
+    initializeClock('clockdiv', deadline);
 </script>
-
+</body>
+</html>

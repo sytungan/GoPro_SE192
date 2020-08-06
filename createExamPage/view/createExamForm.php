@@ -42,7 +42,14 @@ else readJson("../controller/test.json", $array);
         <label for=name id="subject"><?php echo $subject ?></label>
         <br>
         <label for=name>Tác giả: &#160 </label>
-        <label for=name id="author"><?php echo $author ?></lable>
+        <label for=name id="author"><?php echo $author ?></label>
+        <br>
+        <?php
+        echo '<label for=name id="usrLv" style="display: none;">'. $_SESSION['user_level'].'</label>';
+        if ($_SESSION['user_level']) {
+            echo '<label for=name id="typeEx" style="display: none;">'. $_POST["typeEx"].'</label>';
+        }
+        ?>
     </div>
 
     <br>

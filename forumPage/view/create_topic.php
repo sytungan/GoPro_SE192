@@ -75,7 +75,9 @@ else
             }
         else
             {
-            echo 'Bài viết đã được đăng !';
+                echo 'Bài viết đã được đăng !';
+                $_url = '../view/view_listtopic.php?cat_id='.$_POST['topic_cat'].'&page=1';
+                header( "refresh:1; url=$_url");
             }
             //the form has been posted, so save it
             //insert the topic into the topics table first, then we'll save the post into the posts table

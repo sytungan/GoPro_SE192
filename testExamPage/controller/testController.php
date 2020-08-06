@@ -47,7 +47,7 @@ class testController {
             if(isset($_SESSION['signed_in'])) {
                 $markRecord = new markDB();
                 $pMR = $markRecord->insertMark($result, $_SESSION['user_id'], $_SESSION['user_name'], $_SESSION['user_nickname'], $this->id, $subject);
-                if ($pMR == null) return $result . " (Không được tính vào xếp hạng)";
+                if ($pMR == null) return -$result;
             }
         }
         return $result;
@@ -57,7 +57,7 @@ class testController {
 <script>
     function showTick(i, typeTick) {
         var answer = document.querySelectorAll("input[class='answerRadio']:checked");
-        answer[i].nextSibling.insertAdjacentHTML("afterend", "<img src='/GoPro_SE192/assets/image/"+ typeTick + ".png' width='20' height='20'>");
+        answer[i].nextElementSibling.innerHTML += ("&nbsp;<img src='/GoPro_SE192/assets/image/"+ typeTick + ".png' width='20' height='20'></img>");
     }
     function hideButton() {
         document.getElementById("submitBtn").remove();

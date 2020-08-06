@@ -69,8 +69,10 @@ include "../../header.php";
 //$connect->close();
     ?>
     <!-- <a href="" class="btn">Chỉnh</a> -->
+    <div id="btnFile">
     <a href="../controller/uploadfile.php" target="_blank" class="btn">Tải lên</a>
     <a href="deletefile.php" target="_blank" class="btn">Xóa</a>
+    </div>
     <br>
     <br>
     <br>

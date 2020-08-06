@@ -28,6 +28,9 @@ class listExamForm {
         <option value="GDCD">
     </datalist>
 </div>
+<div id="listExamOfSubject">
+
+</div>
 <script>
     $(document).on('change', 'input', function(){
         var options = $('datalist')[0].options;
@@ -41,8 +44,5 @@ class listExamForm {
     });
     function doneTask(){}
 </script>
-<div id="listExamOfSubject">
-
-</div>
 </body>
 </html>
